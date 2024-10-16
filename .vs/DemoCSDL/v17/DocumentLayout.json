@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "D:\\DataD\\c#\\DemoCSDL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\dao\\loaispdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:dao\\loaispdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\connection\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:connection\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\managerchildforms\\fmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\managerchildforms\\fmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\managerchildforms\\fmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\forms\\fmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:forms\\fmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\forms\\fmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:forms\\fmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\managerchildforms\\fmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,71 +38,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoaiSPDAO.cs",
-              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\DAO\\LoaiSPDAO.cs",
-              "RelativeDocumentMoniker": "DAO\\LoaiSPDAO.cs",
-              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\DAO\\LoaiSPDAO.cs",
-              "RelativeToolTip": "DAO\\LoaiSPDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T02:11:19.429Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DBConnection.cs",
-              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\Connection\\DBConnection.cs",
-              "RelativeDocumentMoniker": "Connection\\DBConnection.cs",
-              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\Connection\\DBConnection.cs",
-              "RelativeToolTip": "Connection\\DBConnection.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T02:08:30.087Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FManager.cs",
-              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\Forms\\FManager.cs",
-              "RelativeDocumentMoniker": "Forms\\FManager.cs",
-              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\Forms\\FManager.cs",
-              "RelativeToolTip": "Forms\\FManager.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwCYAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T01:41:11.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "FManager.cs [Design]",
               "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\Forms\\FManager.cs",
               "RelativeDocumentMoniker": "Forms\\FManager.cs",
               "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\Forms\\FManager.cs [Design]",
               "RelativeToolTip": "Forms\\FManager.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T01:38:43.928Z",
+              "WhenOpened": "2024-10-16T02:52:55.185Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T01:37:36.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "FMAddProduct.cs [Design]",
               "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMAddProduct.cs",
               "RelativeDocumentMoniker": "ManagerChildForms\\FMAddProduct.cs",
@@ -130,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "FMDashboard.cs [Design]",
               "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMDashboard.cs",
               "RelativeDocumentMoniker": "ManagerChildForms\\FMDashboard.cs",
