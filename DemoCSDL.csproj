@@ -112,6 +112,12 @@
     <Compile Include="ManagerChildForms\FMDashboard.Designer.cs">
       <DependentUpon>FMDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerChildForms\FMWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerChildForms\FMWarehouse.Designer.cs">
+      <DependentUpon>FMWarehouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\CaLamViec.cs" />
     <Compile Include="Models\CheBien.cs" />
     <Compile Include="Models\ChiTiet.cs" />
@@ -132,6 +138,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QLCFFDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLCFFDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="UserControls\MStaffInfoInDash.cs">
       <SubType>UserControl</SubType>
@@ -190,6 +201,9 @@
     <EmbeddedResource Include="ManagerChildForms\FMDashboard.resx">
       <DependentUpon>FMDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManagerChildForms\FMWarehouse.resx">
+      <DependentUpon>FMWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -228,6 +242,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QLCFFDataSet.xsc">
+      <DependentUpon>QLCFFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLCFFDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLCFFDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLCFFDataSet.xss">
+      <DependentUpon>QLCFFDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\iTotalUser.png" />
   </ItemGroup>
   <ItemGroup>

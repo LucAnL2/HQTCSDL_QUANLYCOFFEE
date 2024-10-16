@@ -12,9 +12,7 @@ namespace DemoCSDL.Connection
     public class DBConnection
     {
         //Tạo biến lưu đường dẫn kết nối với database
-        private static string stringConnection = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=QUANLYCOFFEE;Integrated Security=True";
-        SqlCommand sqlCommand;
-        SqlDataReader dataReader;
+        private static string stringConnection = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=QLCFF;Integrated Security=True";
 
         //Trả về đường dẫn kết nối với database
         public static SqlConnection GetSqlConnection()

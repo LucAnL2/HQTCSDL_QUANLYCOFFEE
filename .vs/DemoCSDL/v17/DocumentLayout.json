@@ -1,34 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\DataD\\c#\\DemoCSDL\\",
+  "WorkspaceRootPath": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\dao\\loaispdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:dao\\loaispdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/QLCFF/True/SqlTable/dbo.LoHang.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\connection\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\dao\\lohangdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:dao\\lohangdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\managerchildforms\\fmwarehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmwarehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\models\\lohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:models\\lohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\managerchildforms\\fmwarehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmwarehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\connection\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:connection\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\managerchildforms\\fmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\managerchildforms\\fmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\forms\\fmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:forms\\fmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\forms\\fmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:forms\\fmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,107 +33,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LoaiSPDAO.cs",
-              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\DAO\\LoaiSPDAO.cs",
-              "RelativeDocumentMoniker": "DAO\\LoaiSPDAO.cs",
-              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\DAO\\LoaiSPDAO.cs",
-              "RelativeToolTip": "DAO\\LoaiSPDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T02:11:19.429Z",
+              "Title": "dbo.LoHang [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/QLCFF/True/SqlTable/dbo.LoHang.sql",
+              "ToolTip": "dbo.LoHang [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-16T05:28:26.075Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DBConnection.cs",
-              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\Connection\\DBConnection.cs",
-              "RelativeDocumentMoniker": "Connection\\DBConnection.cs",
-              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\Connection\\DBConnection.cs",
-              "RelativeToolTip": "Connection\\DBConnection.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T02:08:30.087Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FManager.cs",
-              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\Forms\\FManager.cs",
-              "RelativeDocumentMoniker": "Forms\\FManager.cs",
-              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\Forms\\FManager.cs",
-              "RelativeToolTip": "Forms\\FManager.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwCYAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T01:41:11.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FManager.cs [Design]",
-              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\Forms\\FManager.cs",
-              "RelativeDocumentMoniker": "Forms\\FManager.cs",
-              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\Forms\\FManager.cs [Design]",
-              "RelativeToolTip": "Forms\\FManager.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T01:38:43.928Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T01:37:36.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FMAddProduct.cs [Design]",
-              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMAddProduct.cs",
-              "RelativeDocumentMoniker": "ManagerChildForms\\FMAddProduct.cs",
-              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMAddProduct.cs [Design]",
-              "RelativeToolTip": "ManagerChildForms\\FMAddProduct.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T01:37:33.398Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FMDashboard.cs [Design]",
-              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMDashboard.cs",
-              "RelativeDocumentMoniker": "ManagerChildForms\\FMDashboard.cs",
-              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMDashboard.cs [Design]",
-              "RelativeToolTip": "ManagerChildForms\\FMDashboard.cs [Design]",
+              "Title": "LoHang.cs",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\Models\\LoHang.cs",
+              "RelativeDocumentMoniker": "Models\\LoHang.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\Models\\LoHang.cs",
+              "RelativeToolTip": "Models\\LoHang.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAuwBcAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T01:36:53.956Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-16T05:24:45.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FMWarehouse.cs",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMWarehouse.cs",
+              "RelativeDocumentMoniker": "ManagerChildForms\\FMWarehouse.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMWarehouse.cs",
+              "RelativeToolTip": "ManagerChildForms\\FMWarehouse.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwC8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T04:00:09.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoHangDAO.cs",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\DAO\\LoHangDAO.cs",
+              "RelativeDocumentMoniker": "DAO\\LoHangDAO.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\DAO\\LoHangDAO.cs",
+              "RelativeToolTip": "DAO\\LoHangDAO.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAArwBwAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T04:56:05.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FMWarehouse.cs [Design]",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMWarehouse.cs",
+              "RelativeDocumentMoniker": "ManagerChildForms\\FMWarehouse.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMWarehouse.cs [Design]",
+              "RelativeToolTip": "ManagerChildForms\\FMWarehouse.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:14:54.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DBConnection.cs",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\Connection\\DBConnection.cs",
+              "RelativeDocumentMoniker": "Connection\\DBConnection.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\Connection\\DBConnection.cs",
+              "RelativeToolTip": "Connection\\DBConnection.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwAsAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:43:17.217Z"
             }
           ]
         },
@@ -148,11 +120,19 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "Name": "ST:1716410254:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
             }
           ]
         }

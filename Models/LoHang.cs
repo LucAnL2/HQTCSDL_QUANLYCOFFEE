@@ -9,21 +9,27 @@ namespace DemoCSDL.Models
     public class LoHang
     {
         private string maLH;
-        private DateTime ngayHatHan;
+        private DateTime ngayHetHan;
         private DateTime ngayNhap;
         private string maNL;
         private int soLuong;
-        private Decimal GiaTien;
+        private Decimal giaTien;
 
-        public LoHang()
+        public LoHang(string maLH, DateTime ngayHetHan, DateTime ngayNhap, string maNL, int soLuong, decimal giaTien)
         {
+            this.maLH = maLH;
+            this.ngayHetHan = ngayHetHan;
+            this.ngayNhap = ngayNhap;
+            this.maNL = maNL;
+            this.soLuong = soLuong;
+            this.giaTien = giaTien;
         }
 
         public string MaLH { get => maLH; set => maLH = value; }
-        public DateTime NgayHatHan { get => ngayHatHan; set => ngayHatHan = value; }
+        public DateTime NgayHetHan { get => ngayHetHan; set => ngayHetHan = value; }
         public DateTime NgayNhap { get => ngayNhap; set => ngayNhap = value; }
         public string MaNL { get => maNL; set => maNL = value; }
         public int SoLuong { get => soLuong; set => soLuong = value; }
-        public decimal GiaTien1 { get => GiaTien; set => GiaTien = value; }
+        public decimal GiaTien { get => giaTien; set => giaTien = value; }
     }
 }
