@@ -123,6 +123,16 @@ namespace DemoCSDL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icheck {
+            get {
+                object obj = ResourceManager.GetObject("icheck", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconsearch {
             get {
                 object obj = ResourceManager.GetObject("iconsearch", resourceCulture);
@@ -176,6 +186,16 @@ namespace DemoCSDL.Properties {
         internal static System.Drawing.Bitmap iuser {
             get {
                 object obj = ResourceManager.GetObject("iuser", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ix {
+            get {
+                object obj = ResourceManager.GetObject("ix", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

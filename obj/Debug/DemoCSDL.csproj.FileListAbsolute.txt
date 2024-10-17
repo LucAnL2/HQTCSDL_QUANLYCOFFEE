@@ -22,3 +22,5 @@ D:\DataD\c#\DemoCSDL\obj\Debug\DemoCSDL.ManagerChildForms.FMDashboard.resources
 D:\DataD\c#\DemoCSDL\obj\Debug\DemoCSDL.UserControls.MStaffInfoInDash.resources
 D:\DataD\c#\DemoCSDL\obj\Debug\DemoCSDL.UserControls.WProductInOrder.resources
 D:\DataD\c#\DemoCSDL\obj\Debug\DemoCSDL.ManagerChildForms.FMAddProduct.resources
+D:\DataD\c#\DemoCSDL\obj\Debug\DemoCSDL.ManagerChildForms.FMShift.resources
+D:\DataD\c#\DemoCSDL\obj\Debug\DemoCSDL.UserControls.MStaffRegisterShift.resources

@@ -40,8 +40,6 @@
             this.btnShift = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.panelFill = new System.Windows.Forms.Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.panelTop.SuspendLayout();
             this.panelLeft.SuspendLayout();
             this.SuspendLayout();
@@ -191,6 +189,7 @@
             this.panelFill.Size = new System.Drawing.Size(1250, 741);
             this.panelFill.TabIndex = 7;
             // 
+/*<<<<<<< Updated upstream
             // guna2Button1
             // 
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
@@ -215,6 +214,8 @@
             this.guna2Button2.Text = "Staff";
             this.guna2Button2.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
+=======
+>>>>>>> Stashed changes*/
             // FManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);

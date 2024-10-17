@@ -124,6 +124,9 @@
   <data name="iTotalRevenue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iTotalRevenue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="loadingBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loadingBG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="coffee" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coffee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,14 +142,14 @@
   <data name="iback" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iback.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="thumnailrm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thumnailrm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Pic1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pic1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iTotalUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iTotalUser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icheck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icheck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,8 +175,8 @@
   <data name="loadingBG2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loadingBG2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loadingBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loadingBG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="thumnailrm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thumnailrm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="heart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\heart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,10 +190,13 @@
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ipencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ipencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="store2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\store2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ipencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ipencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

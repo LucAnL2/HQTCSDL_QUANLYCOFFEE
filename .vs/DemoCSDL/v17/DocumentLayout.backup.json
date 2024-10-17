@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "D:\\DataD\\c#\\DemoCSDL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\managerchildforms\\fmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\dao\\calamviecdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:dao\\calamviecdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\forms\\fmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:forms\\fmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\connection\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:connection\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\managerchildforms\\fmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\managerchildforms\\fmshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\managerchildforms\\fmshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\usercontrols\\mstaffregistershift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:usercontrols\\mstaffregistershift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\workerchildforms\\fwmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:workerchildforms\\fwmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,37 +51,75 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FManager.cs [Design]",
-              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\Forms\\FManager.cs",
-              "RelativeDocumentMoniker": "Forms\\FManager.cs",
-              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\Forms\\FManager.cs [Design]",
-              "RelativeToolTip": "Forms\\FManager.cs [Design]",
+              "Title": "DBConnection.cs",
+              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\Connection\\DBConnection.cs",
+              "RelativeDocumentMoniker": "Connection\\DBConnection.cs",
+              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\Connection\\DBConnection.cs",
+              "RelativeToolTip": "Connection\\DBConnection.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T02:52:55.185Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FMAddProduct.cs [Design]",
-              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMAddProduct.cs",
-              "RelativeDocumentMoniker": "ManagerChildForms\\FMAddProduct.cs",
-              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMAddProduct.cs [Design]",
-              "RelativeToolTip": "ManagerChildForms\\FMAddProduct.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T01:37:33.398Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-16T05:44:28.305Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FMDashboard.cs [Design]",
-              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMDashboard.cs",
-              "RelativeDocumentMoniker": "ManagerChildForms\\FMDashboard.cs",
-              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMDashboard.cs [Design]",
-              "RelativeToolTip": "ManagerChildForms\\FMDashboard.cs [Design]",
+              "Title": "FMShift.cs",
+              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMShift.cs",
+              "RelativeDocumentMoniker": "ManagerChildForms\\FMShift.cs",
+              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMShift.cs",
+              "RelativeToolTip": "ManagerChildForms\\FMShift.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T01:36:53.956Z",
+              "WhenOpened": "2024-10-16T04:36:33.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CaLamViecDAO.cs",
+              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\DAO\\CaLamViecDAO.cs",
+              "RelativeDocumentMoniker": "DAO\\CaLamViecDAO.cs",
+              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\DAO\\CaLamViecDAO.cs",
+              "RelativeToolTip": "DAO\\CaLamViecDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T05:42:00.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FWMenu.cs [Design]",
+              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\WorkerChildForms\\FWMenu.cs",
+              "RelativeDocumentMoniker": "WorkerChildForms\\FWMenu.cs",
+              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\WorkerChildForms\\FWMenu.cs [Design]",
+              "RelativeToolTip": "WorkerChildForms\\FWMenu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T04:06:55.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MStaffRegisterShift.cs [Design]",
+              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\UserControls\\MStaffRegisterShift.cs",
+              "RelativeDocumentMoniker": "UserControls\\MStaffRegisterShift.cs",
+              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\UserControls\\MStaffRegisterShift.cs [Design]",
+              "RelativeToolTip": "UserControls\\MStaffRegisterShift.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T04:02:29.289Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FMShift.cs [Design]",
+              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMShift.cs",
+              "RelativeDocumentMoniker": "ManagerChildForms\\FMShift.cs",
+              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMShift.cs [Design]",
+              "RelativeToolTip": "ManagerChildForms\\FMShift.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:50:48.073Z",
               "EditorCaption": " [Design]"
             }
           ]

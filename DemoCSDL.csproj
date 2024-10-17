@@ -112,6 +112,12 @@
     <Compile Include="ManagerChildForms\FMDashboard.Designer.cs">
       <DependentUpon>FMDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerChildForms\FMShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerChildForms\FMShift.Designer.cs">
+      <DependentUpon>FMShift.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\CaLamViec.cs" />
     <Compile Include="Models\CheBien.cs" />
     <Compile Include="Models\ChiTiet.cs" />
@@ -138,6 +144,12 @@
     </Compile>
     <Compile Include="UserControls\MStaffInfoInDash.Designer.cs">
       <DependentUpon>MStaffInfoInDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MStaffRegisterShift.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MStaffRegisterShift.Designer.cs">
+      <DependentUpon>MStaffRegisterShift.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\WProduct.cs">
       <SubType>UserControl</SubType>
@@ -190,6 +202,9 @@
     <EmbeddedResource Include="ManagerChildForms\FMDashboard.resx">
       <DependentUpon>FMDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManagerChildForms\FMShift.resx">
+      <DependentUpon>FMShift.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -197,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MStaffInfoInDash.resx">
       <DependentUpon>MStaffInfoInDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MStaffRegisterShift.resx">
+      <DependentUpon>MStaffRegisterShift.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\WProduct.resx">
       <DependentUpon>WProduct.cs</DependentUpon>
@@ -298,6 +316,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ipencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icheck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ix.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
