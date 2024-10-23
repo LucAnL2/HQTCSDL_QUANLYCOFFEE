@@ -49,7 +49,8 @@ namespace DemoCSDL.Connection
             }
         }
 
-        public DataTable Load(string sqlStr)
+
+        public DataTable Load(string sqlStr, SqlParameter[] parameters = null)
         {
             DataTable dtData = new DataTable();
             try
@@ -58,6 +59,12 @@ namespace DemoCSDL.Connection
 
                 using (SqlCommand command = new SqlCommand(sqlStr, sqlCon))
                 {
+                    // Thêm tham số vào SqlCommand nếu có
+                    if (parameters != null)
+                    {
+                        command.Parameters.AddRange(parameters);
+                    }
+
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         dtData.Load(reader);
@@ -74,6 +81,59 @@ namespace DemoCSDL.Connection
             }
             return dtData;
         }
+
+        public void ExecuteNonQuery(string storeProcedure, SqlParameter[] parameters, CommandType commandType)
+        {
+            try
+            {
+                OpenConnection();
+                using (SqlCommand cmd = new SqlCommand(storeProcedure, sqlCon))
+                {
+                    cmd.CommandType = commandType;
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+
+        public object ExecuteScalar(string storeProcedure, SqlParameter[] parameters, CommandType commandType)
+        {
+            object result = null;
+            try
+            {
+                OpenConnection();
+                using (SqlCommand cmd = new SqlCommand(storeProcedure, sqlCon))
+                {
+                    cmd.CommandType = commandType;
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+                    result = cmd.ExecuteScalar();
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return result;
+        }
+
     }
 }
 

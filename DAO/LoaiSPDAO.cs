@@ -18,23 +18,24 @@ namespace DemoCSDL.DAO
 
         public List<loaiSP> layDSProduct()
         {
-            db.OpenConnection();
-            List<loaiSP> listSP = new List<loaiSP>();
-            string query = "SELECT MaLoaiSP, TenLoaiSP FROM LoaiSP";
-            using (SqlCommand command = new SqlCommand(query, db.sqlCon))
+            List<loaiSP> list = new List<loaiSP>();
+
+            string sql = "EXEC DSLoaiSanPham";
+
+
+            DataTable dt = db.Load(sql);
+
+            foreach (DataRow dr in dt.Rows)
             {
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        loaiSP sp = new loaiSP();
-                        sp.MaLoaiSP = reader.GetString(0);
-                        sp.TenLoaiSP = reader.GetString(1);
-                        listSP.Add(sp);
-                    }
-                }
+                loaiSP lsp = new loaiSP(
+                    dr["MaLoaiSP"].ToString(),
+                    dr["TenLoaiSP"].ToString()
+                );
+                list.Add(lsp);
+
             }
-            return listSP;  
+            return list;
+
         }
     }
 }

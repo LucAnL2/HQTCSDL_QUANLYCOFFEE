@@ -15,6 +15,13 @@ namespace DemoCSDL.Models
         {
         }
 
+
+        public loaiSP(string maLoaiSP, string tenLoaiSP)
+        {
+            this.maLoaiSP = maLoaiSP;
+            this.tenLoaiSP = tenLoaiSP;
+        }
+
         public string MaLoaiSP { get => maLoaiSP; set => maLoaiSP = value; }
         public string TenLoaiSP { get => tenLoaiSP; set => tenLoaiSP = value; }
     }

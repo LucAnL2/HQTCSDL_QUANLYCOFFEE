@@ -58,11 +58,20 @@ namespace DemoCSDL.ManagerChildForms
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            string tinhTrang = "Còn hàng";
-            string maLoaiSP = cbbMaLoaiSP.SelectedValue.ToString();
-            SanPham sp = new SanPham(txtMaSP.Text, maLoaiSP, txtTenSP.Text, tinhTrang, txtImagePath.Text, Decimal.Parse(txtGia.Text));
-            spd.AddProduct(sp);
-            FMAddProduct_Load(sender, e);
+            try
+            {
+                string tinhTrang = "Còn hàng";
+                string maLoaiSP = cbbMaLoaiSP.SelectedValue.ToString();
+                SanPham sp = new SanPham(txtMaSP.Text, maLoaiSP, txtTenSP.Text, tinhTrang, txtImagePath.Text, decimal.Parse(txtGia.Text));
+                spd.AddProduct(sp);
+                FMAddProduct_Load(sender, e);
+                MessageBox.Show("Thêm sản phẩm thành công");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void btnChoose_Click(object sender, EventArgs e)
@@ -112,23 +121,39 @@ namespace DemoCSDL.ManagerChildForms
 
         private void btnDeleteProduct_Click(object sender, EventArgs e)
         {
-            txtMaSP.ReadOnly = false;
-            SanPham sp = new SanPham(txtMaSP.Text);
-            spd.DeleteProduct(sp);
-            FMAddProduct_Load(sender, e);
-            clear();
+            try
+            {
+                txtMaSP.ReadOnly = false;
+                SanPham sp = new SanPham(txtMaSP.Text);
+                spd.DeleteProduct(sp);
+                FMAddProduct_Load(sender, e);
+                clear();
+                MessageBox.Show("Xóa sản phẩm thành công");
+            }
+            catch(Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void btnEditProduct_Click(object sender, EventArgs e)
         {
-            txtMaSP.ReadOnly = false;
-            string tinhTrang = "Còn hàng";
-            string maLoaiSP = cbbMaLoaiSP.SelectedValue.ToString();
-            SanPham sp = new SanPham(txtMaSP.Text, maLoaiSP, txtTenSP.Text, tinhTrang, txtImagePath.Text, Decimal.Parse(txtGia.Text));
-            spd.UpdateProDuct(sp);
-            FMAddProduct_Load(sender, e);
+            try
+            {
+                txtMaSP.ReadOnly = false;
+                string tinhTrang = "Còn hàng";
+                string maLoaiSP = cbbMaLoaiSP.SelectedValue.ToString();
+                SanPham sp = new SanPham(txtMaSP.Text, maLoaiSP, txtTenSP.Text, tinhTrang, txtImagePath.Text, Decimal.Parse(txtGia.Text));
+                spd.UpdateProDuct(sp);
+                FMAddProduct_Load(sender, e);
 
-            clear();
+                clear();
+                MessageBox.Show("Sửa sản phẩm thành công");
+            }
+            catch(Exception ex )
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
 
@@ -156,7 +181,7 @@ namespace DemoCSDL.ManagerChildForms
             txtImagePath.Text = "";
             txtTenSP.Text = "";
             txtGia.Text = "";
-
+            txtMaSP.ReadOnly = false;
             picProduct.Image = null;
         }
 

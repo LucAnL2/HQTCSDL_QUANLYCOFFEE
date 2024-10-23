@@ -15,6 +15,7 @@ namespace DemoCSDL.DAO
     public class SanPhamDAO
     {
         DBConnection db = new DBConnection();
+        public static List<SanPhamOrder> listOrder = new List<SanPhamOrder>();
         
         public DataTable LoadProduct()
         {
@@ -25,125 +26,103 @@ namespace DemoCSDL.DAO
 
         public void DeleteProduct(SanPham sp)
         {
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                    new SqlParameter("@MaSP", sp.MaSP),
+            };
             try
             {
-                SqlCommand cmd = new SqlCommand("DeleteProduct", db.sqlCon);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                // Thêm các tham số vào SqlCommand
-                cmd.Parameters.Add("@MaSP", SqlDbType.NVarChar).Value = sp.MaSP;
-
-                // Mở kết nối nếu chưa mở
-                if (db.sqlCon.State == ConnectionState.Closed)
-                {
-                    db.sqlCon.Open();
-                }
-
-                // Thực thi stored procedure
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Xóa sản phẩm thành công!");
+                db.ExecuteNonQuery("DeleteProduct", parameters, CommandType.StoredProcedure);
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
-            finally
-            {
-                // Đảm bảo kết nối sẽ được đóng
-                if (db.sqlCon.State == ConnectionState.Open)
-                {
-                    db.sqlCon.Close();
-                }
+                throw;
             }
         }
         public void UpdateProDuct(SanPham sp)
         {
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                    new SqlParameter("@MaSP", sp.MaSP),
+                    new SqlParameter("@MaLoaiSP", sp.MaLoaiSP),
+                    new SqlParameter("@TenSP", sp.TenSP),
+                    new SqlParameter("@TinhTrang", sp.TinhTrang),
+                    new SqlParameter("@HinhAnh", sp.HinhAnh),
+                    new SqlParameter("@Gia", sp.Gia)
+            };
             try
             {
-                SqlCommand cmd = new SqlCommand("UpdateProduct", db.sqlCon);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                // Thêm các tham số vào SqlCommand
-                cmd.Parameters.Add("@MaSP", SqlDbType.NVarChar).Value = sp.MaSP;
-                cmd.Parameters.Add("@MaLoaiSP", SqlDbType.NVarChar, 20).Value = sp.MaLoaiSP;
-                cmd.Parameters.Add("@TenSP", SqlDbType.NVarChar, 200).Value = sp.TenSP;
-                cmd.Parameters.Add("@TinhTrang", SqlDbType.NVarChar, 50).Value = sp.TinhTrang;
-                cmd.Parameters.Add("@HinhAnh", SqlDbType.VarChar, 1000).Value = sp.HinhAnh;
-                cmd.Parameters.Add("@Gia", SqlDbType.Decimal).Value = sp.Gia;
-
-                // Mở kết nối nếu chưa mở
-                if (db.sqlCon.State == ConnectionState.Closed)
-                {
-                    db.sqlCon.Open();
-                }
-
-                // Thực thi stored procedure
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Sửa thông tin sản phẩm thành công!");
+                db.ExecuteNonQuery("UpdateProduct", parameters, CommandType.StoredProcedure);
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
-            finally
-            {
-                // Đảm bảo kết nối sẽ được đóng
-                if (db.sqlCon.State == ConnectionState.Open)
-                {
-                    db.sqlCon.Close();
-                }
+                throw;
             }
         }
         public void AddProduct(SanPham sp)
         {
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                    new SqlParameter("@MaSP", sp.MaSP),
+                    new SqlParameter("@MaLoaiSP", sp.MaLoaiSP),
+                    new SqlParameter("@TenSP", sp.TenSP),
+                    new SqlParameter("@TinhTrang", sp.TinhTrang),
+                    new SqlParameter("@HinhAnh", sp.HinhAnh),
+                    new SqlParameter("@Gia", sp.Gia)
+            };
             try
             {
-                SqlCommand cmd = new SqlCommand("AddProduct", db.sqlCon);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                // Thêm các tham số vào SqlCommand
-                cmd.Parameters.Add("@MaSP", SqlDbType.NVarChar).Value = sp.MaSP;
-                cmd.Parameters.Add("@MaLoaiSP", SqlDbType.NVarChar, 20).Value = sp.MaLoaiSP;
-                cmd.Parameters.Add("@TenSP", SqlDbType.NVarChar, 200).Value = sp.TenSP;
-                cmd.Parameters.Add("@TinhTrang", SqlDbType.NVarChar, 50).Value = sp.TinhTrang;
-                cmd.Parameters.Add("@HinhAnh", SqlDbType.VarChar, 1000).Value = sp.HinhAnh;
-                cmd.Parameters.Add("@Gia", SqlDbType.Decimal).Value = sp.Gia;
-
-                // Mở kết nối nếu chưa mở
-                if (db.sqlCon.State == ConnectionState.Closed)
-                {
-                    db.sqlCon.Open();
-                }
-
-                // Thực thi stored procedure
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thêm sản phẩm thành công!");
+                db.ExecuteNonQuery("AddProduct", parameters, CommandType.StoredProcedure);
             }
-            catch(Exception ex)
+            catch
             {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
-            finally
-            {
-                // Đảm bảo kết nối sẽ được đóng
-                if (db.sqlCon.State == ConnectionState.Open)
-                {
-                    db.sqlCon.Close();
-                }
+                throw;
             }
         }
 
         public DataTable getDSSanPhamByString(string str)
         {
-            string fnName = "TimKiemSP";
-            using (SqlCommand command = new SqlCommand("Select MaSP as [Mã SP], MaLoaiSP as [Mã loại SP], TenSP as [Tên SP], TinhTrang as [Tình trạng], Gia as [Giá bán], HinhAnh as [Hình ảnh], TenLoaiSP as [Tên loại SP] from " + fnName + " (@searchString)", db.sqlCon))
+            string sql = "SELECT * FROM TimKiemSP(@searchString)";
+             // Tạo tham số cho hàm
+            SqlParameter[] parameters = new SqlParameter[]
             {
-                command.Parameters.Add("@searchString", SqlDbType.NChar).Value = str;
-                DataTable table = new DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(table);
-                return table;
+                new SqlParameter("@searchString", str)
+            };
+
+            // Gọi phương thức Load từ DBConnection, truyền câu lệnh và tham số
+            DataTable table = db.Load(sql, parameters);
+            return table;
+        }
+
+        public List<SanPham> DSSanPham(string maLoaiSP)
+        {
+            List<SanPham> listSP = new List<SanPham>();
+
+            // Thay đổi câu lệnh SQL để sử dụng tham số
+            string sql = "EXEC HienThiSP @MaLoaiSP";
+
+            // Tạo tham số
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@MaLoaiSP", maLoaiSP)
+            };
+
+            // Gọi phương thức Load với tham số
+            DataTable dt = db.Load(sql, parameters);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                SanPham sp = new SanPham(
+                    dr["MaSP"].ToString(),
+                    dr["MaLoaiSP"].ToString(),
+                    dr["TenSP"].ToString(),
+                    dr["TinhTrang"].ToString(),
+                    dr["HinhAnh"].ToString(),
+                    Convert.ToDecimal(dr["Gia"])
+                );
+                listSP.Add(sp);
             }
+            return listSP;
         }
 
 

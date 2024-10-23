@@ -8,18 +8,22 @@ namespace DemoCSDL.Models
 {
     public class PhuongThucTT
     {
-        private string maHD;
-        private string maKH;
-        private string phuongThuc;
-        private DateTime ngayThanhToan;
+        private string maPTTT;
+        private string tenPTTT;
 
         public PhuongThucTT()
         {
         }
 
-        public string MaHD { get => maHD; set => maHD = value; }
-        public string MaKH { get => maKH; set => maKH = value; }
-        public string PhuongThuc { get => phuongThuc; set => phuongThuc = value; }
-        public DateTime NgayThanhToan { get => ngayThanhToan; set => ngayThanhToan = value; }
+        public PhuongThucTT(string maPTTT, string tenPTTT)
+        {
+            this.maPTTT = maPTTT;
+            this.tenPTTT = tenPTTT;
+        }
+
+        public string MaPTTT { get => maPTTT; set => maPTTT = value; }
+        public string TenPTTT { get => tenPTTT; set => tenPTTT = value; }
+
+       
     }
 }

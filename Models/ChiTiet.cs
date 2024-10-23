@@ -11,17 +11,34 @@ namespace DemoCSDL.Models
         private string maHD;
         private string maSP;
         private int soLuong;
-        private Decimal tongTien;
-        private string donGia;
+        private decimal tongTien;
+        private decimal donGia;
 
         public ChiTiet()
         {
+        }
+
+        public ChiTiet(string maHD, string maSP, int soLuong, decimal donGia)
+        {
+            this.maHD = maHD;
+            this.maSP = maSP;
+            this.soLuong = soLuong;
+            this.donGia = donGia;
+        }
+        public ChiTiet(string maHD, string maSP, int soLuong, decimal tongTien, decimal donGia)
+        {
+            this.maHD = maHD;
+            this.maSP = maSP;
+            this.soLuong = soLuong;
+            this.tongTien = tongTien;
+            this.donGia = donGia;
+            
         }
 
         public string MaHD { get => maHD; set => maHD = value; }
         public string MaSP { get => maSP; set => maSP = value; }
         public int SoLuong { get => soLuong; set => soLuong = value; }
         public decimal TongTien { get => tongTien; set => tongTien = value; }
-        public string DonGia { get => donGia; set => donGia = value; }
+        public decimal DonGia { get => donGia; set => donGia = value; }
     }
 }

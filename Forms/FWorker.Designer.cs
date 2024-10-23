@@ -70,7 +70,6 @@
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(250, 741);
             this.panelLeft.TabIndex = 5;
-            this.panelLeft.Visible = false;
             // 
             // btnLogout
             // 
