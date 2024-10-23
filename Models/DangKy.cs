@@ -15,6 +15,17 @@ namespace DemoCSDL.Models
         {
         }
 
+        public DangKy(string maNV)
+        {
+            this.maNV = maNV;
+        }
+
+        public DangKy(string maNV, string maCa)
+        {
+            this.maNV = maNV;
+            this.maCa = maCa;
+        }
+
         public string MaNV { get => maNV; set => maNV = value; }
         public string MaCa { get => maCa; set => maCa = value; }
     }

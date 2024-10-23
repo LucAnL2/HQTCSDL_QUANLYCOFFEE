@@ -145,12 +145,6 @@
     <Compile Include="UserControls\MStaffInfoInDash.Designer.cs">
       <DependentUpon>MStaffInfoInDash.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\MStaffRegisterShift.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\MStaffRegisterShift.Designer.cs">
-      <DependentUpon>MStaffRegisterShift.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\WProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -180,6 +174,12 @@
     </Compile>
     <Compile Include="WorkerChildForms\FWMenu.Designer.cs">
       <DependentUpon>FWMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkerChildForms\FWShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkerChildForms\FWShift.Designer.cs">
+      <DependentUpon>FWShift.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
@@ -213,9 +213,6 @@
     <EmbeddedResource Include="UserControls\MStaffInfoInDash.resx">
       <DependentUpon>MStaffInfoInDash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\MStaffRegisterShift.resx">
-      <DependentUpon>MStaffRegisterShift.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\WProduct.resx">
       <DependentUpon>WProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WorkerChildForms\FWMenu.resx">
       <DependentUpon>FWMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkerChildForms\FWShift.resx">
+      <DependentUpon>FWShift.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
