@@ -7,24 +7,40 @@
       "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\dao\\nhanviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:dao\\nhanviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\managerchildforms\\fminformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fminformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\managerchildforms\\fminformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fminformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\managerchildforms\\fmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\managerchildforms\\fmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\usercontrols\\mstaffinfoindash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:usercontrols\\mstaffinfoindash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
       "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\workerchildforms\\fwinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:workerchildforms\\fwinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\dao\\nhanviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:dao\\nhanviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\shorttermvariables\\shorttermvariables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:shorttermvariables\\shorttermvariables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\workerchildforms\\fwinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:workerchildforms\\fwinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,20 +51,8 @@
       "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:usercontrols\\mstaffinfoindash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\usercontrols\\mstaffinfoindash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:usercontrols\\mstaffinfoindash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\usercontrols\\mstaffinfoindash.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:usercontrols\\mstaffinfoindash.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\managerchildforms\\fminformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fminformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\managerchildforms\\fminformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fminformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\workerchildforms\\fwinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -61,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\managerchildforms\\fmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\workerchildforms\\fwcontainproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -138,11 +138,92 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FMDashboard.cs",
+              "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMDashboard.cs",
+              "RelativeDocumentMoniker": "ManagerChildForms\\FMDashboard.cs",
+              "ToolTip": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMDashboard.cs",
+              "RelativeToolTip": "ManagerChildForms\\FMDashboard.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAxwB4AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T07:02:24.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FMDashboard.cs [Design]",
+              "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMDashboard.cs",
+              "RelativeDocumentMoniker": "ManagerChildForms\\FMDashboard.cs",
+              "ToolTip": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMDashboard.cs [Design]",
+              "RelativeToolTip": "ManagerChildForms\\FMDashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T01:36:53.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FMinformation.cs [Design]",
+              "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMinformation.cs",
+              "RelativeDocumentMoniker": "ManagerChildForms\\FMinformation.cs",
+              "ToolTip": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMinformation.cs [Design]",
+              "RelativeToolTip": "ManagerChildForms\\FMinformation.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T07:27:55.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FMAddProduct.cs [Design]",
+              "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMAddProduct.cs",
+              "RelativeDocumentMoniker": "ManagerChildForms\\FMAddProduct.cs",
+              "ToolTip": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMAddProduct.cs [Design]",
+              "RelativeToolTip": "ManagerChildForms\\FMAddProduct.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T01:37:33.398Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "FMinformation.cs",
+              "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMinformation.cs",
+              "RelativeDocumentMoniker": "ManagerChildForms\\FMinformation.cs",
+              "ToolTip": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMinformation.cs",
+              "RelativeToolTip": "ManagerChildForms\\FMinformation.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAgwHkAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T07:31:07.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NhanVienDAO.cs",
+              "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\DAO\\NhanVienDAO.cs",
+              "RelativeDocumentMoniker": "DAO\\NhanVienDAO.cs",
+              "ToolTip": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\DAO\\NhanVienDAO.cs",
+              "RelativeToolTip": "DAO\\NhanVienDAO.cs",
+              "ViewState": "AQIAAMgAAAAAAAAAAAAUwNUAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T00:38:52.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MStaffInfoInDash.cs [Design]",
+              "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\UserControls\\MStaffInfoInDash.cs",
+              "RelativeDocumentMoniker": "UserControls\\MStaffInfoInDash.cs",
+              "ToolTip": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\UserControls\\MStaffInfoInDash.cs [Design]",
+              "RelativeToolTip": "UserControls\\MStaffInfoInDash.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T07:15:35.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Settings.settings",
               "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\Properties\\Settings.settings",
               "RelativeDocumentMoniker": "Properties\\Settings.settings",
@@ -154,65 +235,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "MStaffInfoInDash.cs [Design]",
-              "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\UserControls\\MStaffInfoInDash.cs",
-              "RelativeDocumentMoniker": "UserControls\\MStaffInfoInDash.cs",
-              "ToolTip": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\UserControls\\MStaffInfoInDash.cs [Design]",
-              "RelativeToolTip": "UserControls\\MStaffInfoInDash.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T07:15:35.128Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FMDashboard.cs",
-              "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMDashboard.cs",
-              "RelativeDocumentMoniker": "ManagerChildForms\\FMDashboard.cs",
-              "ToolTip": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMDashboard.cs",
-              "RelativeToolTip": "ManagerChildForms\\FMDashboard.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAACmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T07:02:24.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FMDashboard.cs [Design]",
-              "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMDashboard.cs",
-              "RelativeDocumentMoniker": "ManagerChildForms\\FMDashboard.cs",
-              "ToolTip": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMDashboard.cs [Design]",
-              "RelativeToolTip": "ManagerChildForms\\FMDashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T01:36:53.956Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T01:37:36.444Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NhanVienDAO.cs",
-              "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\DAO\\NhanVienDAO.cs",
-              "RelativeDocumentMoniker": "DAO\\NhanVienDAO.cs",
-              "ToolTip": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\DAO\\NhanVienDAO.cs",
-              "RelativeToolTip": "DAO\\NhanVienDAO.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAzwHQAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T00:38:52.855Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "ShortTermVariables.cs",
               "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ShortTermVariables\\ShortTermVariables.cs",
               "RelativeDocumentMoniker": "ShortTermVariables\\ShortTermVariables.cs",
@@ -224,7 +246,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T01:37:36.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "FWinformation.cs",
               "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\WorkerChildForms\\FWinformation.cs",
               "RelativeDocumentMoniker": "WorkerChildForms\\FWinformation.cs",
@@ -236,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "MStaffInfoInDash.cs",
               "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\UserControls\\MStaffInfoInDash.cs",
               "RelativeDocumentMoniker": "UserControls\\MStaffInfoInDash.cs",
@@ -248,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "MStaffInfoInDash.Designer.cs",
               "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\UserControls\\MStaffInfoInDash.Designer.cs",
               "RelativeDocumentMoniker": "UserControls\\MStaffInfoInDash.Designer.cs",
@@ -260,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "FWinformation.cs [Design]",
               "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\WorkerChildForms\\FWinformation.cs",
               "RelativeDocumentMoniker": "WorkerChildForms\\FWinformation.cs",
@@ -271,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "FLogin.cs",
               "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\FLogin.cs",
               "RelativeDocumentMoniker": "FLogin.cs",
@@ -280,29 +314,6 @@
               "ViewState": "AQIAABsAAAAAAAAAAAAuwCUAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-18T01:18:56.404Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FMinformation.cs [Design]",
-              "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMinformation.cs",
-              "RelativeDocumentMoniker": "ManagerChildForms\\FMinformation.cs",
-              "ToolTip": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMinformation.cs [Design]",
-              "RelativeToolTip": "ManagerChildForms\\FMinformation.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T07:27:55.897Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FMinformation.cs",
-              "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMinformation.cs",
-              "RelativeDocumentMoniker": "ManagerChildForms\\FMinformation.cs",
-              "ToolTip": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMinformation.cs",
-              "RelativeToolTip": "ManagerChildForms\\FMinformation.cs",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAuwHoAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T07:31:07.576Z"
             },
             {
               "$type": "Document",
@@ -317,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "NguyenLieuDAO.cs",
               "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\DAO\\NguyenLieuDAO.cs",
               "RelativeDocumentMoniker": "DAO\\NguyenLieuDAO.cs",
@@ -326,17 +337,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-22T15:59:39.967Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "FMAddProduct.cs [Design]",
-              "DocumentMoniker": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMAddProduct.cs",
-              "RelativeDocumentMoniker": "ManagerChildForms\\FMAddProduct.cs",
-              "ToolTip": "D:\\Study\\Database\\DBMS\\FinalProject\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMAddProduct.cs [Design]",
-              "RelativeToolTip": "ManagerChildForms\\FMAddProduct.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T01:37:33.398Z"
             },
             {
               "$type": "Document",

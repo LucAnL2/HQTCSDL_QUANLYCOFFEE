@@ -27,12 +27,17 @@ namespace DemoCSDL.ManagerChildForms
             populateItems();
             NhanVienDAO dao = new NhanVienDAO();
             //lay du lieu tu bang tong cac dot loi nhuan roi dua vao totallb
+            decimal rs = dao.GetTotalProfit();
+            totallb.Text = rs.ToString();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             NhanVienDAO dao = new NhanVienDAO();
+            DateTime today = DateTime.Today;
             //goi function tinh doanh thu trong hom nay
+            decimal rs = dao.GetRevenuePerDay(today);
+            totallb.Text = rs.ToString();
         }
         private void populateItems()
         {
@@ -61,6 +66,21 @@ namespace DemoCSDL.ManagerChildForms
         {
             NhanVienDAO dao = new NhanVienDAO();
             //goi function tinh tong tien hoa don trong 1 thang + tong tien lo hang trong 1 thang - tong luong nhan vien rtong 1 thang roi luu vao bang tong loi nhuan
+            int currentMonth = DateTime.Now.Month;
+            int currentYear = DateTime.Now.Year;
+            decimal rs = dao.GetOutcome(currentMonth, currentYear); //tong tien nhap hang
+            decimal rs1 = dao.GetRevenue(currentMonth, currentYear); //tong tien hoa don 
+            // luong nhan vien rs2 = ....
+            decimal finalres = rs1 - rs;
+            totallb.Text = rs1.ToString();
+            
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            NhanVienDAO dao = new NhanVienDAO();
+            decimal rs = dao.GetTotalProfit();
+            totallb.Text = rs.ToString();
         }
     }
 }

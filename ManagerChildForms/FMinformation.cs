@@ -112,8 +112,17 @@ namespace DemoCSDL.ManagerChildForms
 
         private void FMinformation_Load(object sender, EventArgs e)
         {
-            string unem = ShortTermVariables.ShortTermVariables.unameEmp;
             NhanVienDAO dao = new NhanVienDAO();
+            DataTable dt1 = new DataTable();
+            dt1=dao.StaffInfo_View();
+            int staffs = dt1.Rows.Count - 1;
+            if (Properties.Settings.Default.StaffsF == staffs)
+            {
+                calcbtn.Enabled = true;
+                calcbtn.Visible = true;
+            }
+            string unem = ShortTermVariables.ShortTermVariables.unameEmp;
+           
             DataTable dt = dao.DisplayInfo(unem);
             if (dt.Rows.Count > 0)
             {

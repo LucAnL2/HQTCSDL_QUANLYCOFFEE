@@ -3,10 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace DemoCSDL.DAO
 {
@@ -126,6 +128,102 @@ namespace DemoCSDL.DAO
                 conn.CloseConnection(); 
             }
             return dt;
+        }
+
+        public decimal GetRevenue(int month, int year)
+        {
+            conn = new DBConnection();
+            conn.OpenConnection();
+            decimal res = 0;
+            try
+            {
+                string sqlQuery = "SELECT dbo.TongTienHoaDonTheoThang(@Thang, @Nam) AS TongDoanhThu";
+                SqlCommand sqlcmd = new SqlCommand(sqlQuery,conn.sqlCon);
+                sqlcmd.Parameters.AddWithValue("@Thang", month);
+                sqlcmd.Parameters.AddWithValue("@Nam", year);
+                object result = sqlcmd.ExecuteScalar();
+                res = (result != DBNull.Value) ? Convert.ToDecimal(result) : 0;
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+            finally
+            {
+                conn.CloseConnection();
+            }
+            return res;
+        }
+
+        public decimal GetOutcome(int month, int year)
+        {
+            conn = new DBConnection();
+            conn.OpenConnection();
+            decimal res = 0;
+            try
+            {
+                string sqlQuery = "SELECT dbo.TongTienNhapHangTheoThang(@Thang, @Nam) AS TongNhapHang";
+                SqlCommand sqlcmd = new SqlCommand(sqlQuery, conn.sqlCon);
+                sqlcmd.Parameters.AddWithValue("@Thang", month);
+                sqlcmd.Parameters.AddWithValue("@Nam", year);
+                object result = sqlcmd.ExecuteScalar();
+                res = (result != DBNull.Value) ? Convert.ToDecimal(result) : 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+            finally
+            {
+                conn.CloseConnection();
+            }
+            return res;
+        }
+        public decimal GetRevenuePerDay(DateTime datet)
+        {
+            conn = new DBConnection();
+            conn.OpenConnection();
+            decimal res = 0;
+            try
+            {
+                string sqlQuery = "SELECT dbo.TongTienHoaDonTheoNgay(@Ngay) AS TongTheoNgay";
+                SqlCommand sqlcmd = new SqlCommand(sqlQuery, conn.sqlCon);
+                sqlcmd.Parameters.AddWithValue("@Ngay", datet);
+                object result = sqlcmd.ExecuteScalar();
+                res = (result != DBNull.Value) ? Convert.ToDecimal(result) : 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+            finally
+            {
+                conn.CloseConnection();
+            }
+            return res;
+        }
+        public decimal GetTotalProfit()
+        {
+            conn = new DBConnection();
+            conn.OpenConnection();
+            decimal res = 0;
+            try
+            {
+                string sqlQuery = "SELECT dbo.LayTongLoiNhuan() AS TongLN";
+                SqlCommand sqlcmd = new SqlCommand(sqlQuery, conn.sqlCon);
+                object result = sqlcmd.ExecuteScalar();
+                res = (result != DBNull.Value) ? Convert.ToDecimal(result) : 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+            finally
+            {
+                conn.CloseConnection();
+            }
+            return res;
+
         }
     }
 }

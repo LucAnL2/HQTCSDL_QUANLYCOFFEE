@@ -34,5 +34,17 @@ namespace DemoCSDL.Properties {
                 this["WithdrawStatus"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int StaffsF {
+            get {
+                return ((int)(this["StaffsF"]));
+            }
+            set {
+                this["StaffsF"] = value;
+            }
+        }
     }
 }
