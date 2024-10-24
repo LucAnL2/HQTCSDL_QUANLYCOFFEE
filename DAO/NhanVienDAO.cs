@@ -225,5 +225,31 @@ namespace DemoCSDL.DAO
             return res;
 
         }
+        public DataTable GetProfittb(string datet)
+        {
+            conn = new DBConnection();
+
+            DataTable dt = new DataTable();
+            try
+            {
+                conn.OpenConnection();
+                SqlCommand sqlcmd = new SqlCommand("LayTongLoiNhuanTheoThangNam", conn.sqlCon);
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                sqlcmd.Parameters.AddWithValue("@ThangNam", datet);
+                SqlDataAdapter da = new SqlDataAdapter(sqlcmd);
+                da.Fill(dt);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+            finally
+            {
+                conn.CloseConnection();
+            }
+            return dt;
+
+        }
     }
 }
