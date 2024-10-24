@@ -54,6 +54,7 @@ namespace DemoCSDL.ManagerChildForms
                 clvDAO.themCaLamViec(clv);
                 MessageBox.Show("Ca làm việc được thêm thành công");
                 gvContainShift.DataSource = clvDAO.hienThiCaLam();
+                resetTabPhanCong();
                 resetControls();
             }
             catch (Exception ex)
@@ -88,6 +89,7 @@ namespace DemoCSDL.ManagerChildForms
                 clvDAO.xoaCaLamViec(clv);
                 MessageBox.Show("Xóa thành công");
                 gvContainShift.DataSource = clvDAO.hienThiCaLam();
+                resetTabPhanCong();
                 resetControls();
             }
             catch (Exception ex)
@@ -113,6 +115,9 @@ namespace DemoCSDL.ManagerChildForms
 
         private void resetTabPhanCong()
         {
+            danhSachMaCaNVDaDuocPhanCongCV = nvDAO.layDanhSachMaMVDaDuocPhanCongCV();
+            danhSachNhanVien = nvDAO.layDanhSachMaMVCuaTatCaNV();
+            danhSachTatCaMaCa = clvDAO.layDanhSachTatCaMaCa();
             //Hiển thị danh sách ca làm việc đã tạo lên datagridviews
             gvContainShift.DataSource = clvDAO.hienThiCaLam();
             //Hiển thị danh sách ca làm đã được phân công cho nhân viên lên datagirdviews

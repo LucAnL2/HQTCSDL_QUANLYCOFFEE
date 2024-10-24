@@ -47,5 +47,11 @@ namespace DemoCSDL.WorkerChildForms
             DangKy dk = new DangKy(MaNV);
             MessageBox.Show(dkDAO.tinhLuong(dk).ToString());
         }
+
+        private void btnTakeSalary_Click(object sender, EventArgs e)
+        {
+            dkDAO.rutLuong();
+            MessageBox.Show("Rút lương thành công");
+        }
     }
 }

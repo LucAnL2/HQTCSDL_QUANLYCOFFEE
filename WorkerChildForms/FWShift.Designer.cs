@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.gvStaffRegisterShift = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnViewSalary = new Guna.UI2.WinForms.Guna2Button();
             this.btnShowAll = new Guna.UI2.WinForms.Guna2Button();
             this.cbbMaca = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnViewSalary = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTakeSalary = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvStaffRegisterShift)).BeginInit();
             this.guna2Panel6.SuspendLayout();
@@ -59,29 +60,29 @@
             // 
             // gvStaffRegisterShift
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gvStaffRegisterShift.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Tan;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvStaffRegisterShift.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gvStaffRegisterShift.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Tan;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvStaffRegisterShift.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gvStaffRegisterShift.ColumnHeadersHeight = 40;
             this.gvStaffRegisterShift.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvStaffRegisterShift.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvStaffRegisterShift.DefaultCellStyle = dataGridViewCellStyle3;
             this.gvStaffRegisterShift.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gvStaffRegisterShift.Location = new System.Drawing.Point(3, 53);
             this.gvStaffRegisterShift.Name = "gvStaffRegisterShift";
@@ -115,6 +116,7 @@
             // 
             // guna2Panel6
             // 
+            this.guna2Panel6.Controls.Add(this.btnTakeSalary);
             this.guna2Panel6.Controls.Add(this.btnViewSalary);
             this.guna2Panel6.Controls.Add(this.btnShowAll);
             this.guna2Panel6.Controls.Add(this.cbbMaca);
@@ -126,6 +128,22 @@
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(1250, 54);
             this.guna2Panel6.TabIndex = 2;
+            // 
+            // btnViewSalary
+            // 
+            this.btnViewSalary.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewSalary.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnViewSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnViewSalary.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.btnViewSalary.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewSalary.ForeColor = System.Drawing.Color.White;
+            this.btnViewSalary.Location = new System.Drawing.Point(503, 3);
+            this.btnViewSalary.Name = "btnViewSalary";
+            this.btnViewSalary.Size = new System.Drawing.Size(193, 36);
+            this.btnViewSalary.TabIndex = 6;
+            this.btnViewSalary.Text = "Views Salary";
+            this.btnViewSalary.Click += new System.EventHandler(this.btnViewSalary_Click);
             // 
             // btnShowAll
             // 
@@ -183,21 +201,21 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "SHIFTS";
             // 
-            // btnViewSalary
+            // btnTakeSalary
             // 
-            this.btnViewSalary.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnViewSalary.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnViewSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnViewSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnViewSalary.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.btnViewSalary.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewSalary.ForeColor = System.Drawing.Color.White;
-            this.btnViewSalary.Location = new System.Drawing.Point(375, 3);
-            this.btnViewSalary.Name = "btnViewSalary";
-            this.btnViewSalary.Size = new System.Drawing.Size(148, 36);
-            this.btnViewSalary.TabIndex = 6;
-            this.btnViewSalary.Text = "Views Salary";
-            this.btnViewSalary.Click += new System.EventHandler(this.btnViewSalary_Click);
+            this.btnTakeSalary.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTakeSalary.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTakeSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTakeSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTakeSalary.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.btnTakeSalary.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTakeSalary.ForeColor = System.Drawing.Color.White;
+            this.btnTakeSalary.Location = new System.Drawing.Point(261, 3);
+            this.btnTakeSalary.Name = "btnTakeSalary";
+            this.btnTakeSalary.Size = new System.Drawing.Size(193, 36);
+            this.btnTakeSalary.TabIndex = 6;
+            this.btnTakeSalary.Text = "Take Salary";
+            this.btnTakeSalary.Click += new System.EventHandler(this.btnTakeSalary_Click);
             // 
             // FWShift
             // 
@@ -227,5 +245,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbbMaca;
         private Guna.UI2.WinForms.Guna2Button btnShowAll;
         private Guna.UI2.WinForms.Guna2Button btnViewSalary;
+        private Guna.UI2.WinForms.Guna2Button btnTakeSalary;
     }
 }

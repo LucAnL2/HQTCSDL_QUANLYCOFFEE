@@ -3,44 +3,48 @@
   "WorkspaceRootPath": "D:\\DataD\\c#\\DemoCSDL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\dao\\dangkydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:dao\\dangkydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\dao\\calamviecdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:dao\\calamviecdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\connection\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:connection\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\managerchildforms\\fmshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\workerchildforms\\fwshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:workerchildforms\\fwshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\models\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:models\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\managerchildforms\\fmshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\managerchildforms\\fmshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\datad\\c#\\democsdl\\workerchildforms\\fwshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:workerchildforms\\fwshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\dao\\nhanviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:dao\\nhanviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\dao\\calamviecdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:dao\\calamviecdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\workerchildforms\\fwshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:workerchildforms\\fwshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\connection\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:connection\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\workerchildforms\\fwshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:workerchildforms\\fwshift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\dao\\dangkydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:dao\\dangkydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\workerchildforms\\fwshift.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:workerchildforms\\fwshift.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\DataD\\c#\\DemoCSDL\\models\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:models\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,84 +70,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBUAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T01:29:46.186Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "FWShift.cs",
               "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\WorkerChildForms\\FWShift.cs",
               "RelativeDocumentMoniker": "WorkerChildForms\\FWShift.cs",
               "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\WorkerChildForms\\FWShift.cs",
               "RelativeToolTip": "WorkerChildForms\\FWShift.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAAC4AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAewDUAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T01:25:50.177Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-22T01:25:50.177Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "DBConnection.cs",
               "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\Connection\\DBConnection.cs",
               "RelativeDocumentMoniker": "Connection\\DBConnection.cs",
               "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\Connection\\DBConnection.cs",
               "RelativeToolTip": "Connection\\DBConnection.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAGkAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAG8AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T00:47:40.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-22T00:47:40.178Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "FWShift.cs [Design]",
               "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\WorkerChildForms\\FWShift.cs",
               "RelativeDocumentMoniker": "WorkerChildForms\\FWShift.cs",
               "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\WorkerChildForms\\FWShift.cs [Design]",
               "RelativeToolTip": "WorkerChildForms\\FWShift.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T17:18:56.793Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-21T17:18:56.793Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "NhanVienDAO.cs",
               "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\DAO\\NhanVienDAO.cs",
               "RelativeDocumentMoniker": "DAO\\NhanVienDAO.cs",
               "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\DAO\\NhanVienDAO.cs",
               "RelativeToolTip": "DAO\\NhanVienDAO.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAuwBAAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T16:31:48.951Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-20T16:31:48.951Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "CaLamViecDAO.cs",
               "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\DAO\\CaLamViecDAO.cs",
               "RelativeDocumentMoniker": "DAO\\CaLamViecDAO.cs",
               "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\DAO\\CaLamViecDAO.cs",
               "RelativeToolTip": "DAO\\CaLamViecDAO.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAcwEgAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAFYAAAAAAAAAAADgv2AAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T07:59:18.905Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "FMShift.cs [Design]",
               "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMShift.cs",
               "RelativeDocumentMoniker": "ManagerChildForms\\FMShift.cs",
@@ -155,20 +142,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "FMShift.cs",
+              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMShift.cs",
+              "RelativeDocumentMoniker": "ManagerChildForms\\FMShift.cs",
+              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMShift.cs",
+              "RelativeToolTip": "ManagerChildForms\\FMShift.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAvwCAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T08:08:08.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T01:29:46.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "DangKyDAO.cs",
               "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\DAO\\DangKyDAO.cs",
               "RelativeDocumentMoniker": "DAO\\DangKyDAO.cs",
               "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\DAO\\DangKyDAO.cs",
               "RelativeToolTip": "DAO\\DangKyDAO.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAcwCkAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAADwvyAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T18:24:46.374Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T08:03:07.846Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
+              "Title": "FWShift.Designer.cs",
+              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\WorkerChildForms\\FWShift.Designer.cs",
+              "RelativeDocumentMoniker": "WorkerChildForms\\FWShift.Designer.cs",
+              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\WorkerChildForms\\FWShift.Designer.cs",
+              "RelativeToolTip": "WorkerChildForms\\FWShift.Designer.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T06:16:26.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "DangKy.cs",
               "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\Models\\DangKy.cs",
               "RelativeDocumentMoniker": "Models\\DangKy.cs",
@@ -176,21 +200,7 @@
               "RelativeToolTip": "Models\\DangKy.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T18:40:06.853Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FMShift.cs",
-              "DocumentMoniker": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMShift.cs",
-              "RelativeDocumentMoniker": "ManagerChildForms\\FMShift.cs",
-              "ToolTip": "D:\\DataD\\c#\\DemoCSDL\\ManagerChildForms\\FMShift.cs",
-              "RelativeToolTip": "ManagerChildForms\\FMShift.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAADIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T08:08:08.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-22T18:40:06.853Z"
             }
           ]
         },

@@ -30,6 +30,21 @@ namespace DemoCSDL.DAO
             }
         }
 
+        public void rutLuong()
+        {
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+            };
+            try
+            {
+                connect.ExecuteNonQuery("RutLuong", parameters, CommandType.StoredProcedure);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public decimal tinhLuong(DangKy dk)
         {
             decimal luong = 0;
