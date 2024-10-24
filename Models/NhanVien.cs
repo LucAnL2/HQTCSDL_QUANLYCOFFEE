@@ -33,5 +33,19 @@ namespace DemoCSDL.Models
         public string TaiKhoan { get => taiKhoan; set => taiKhoan = value; }
         public string MatKhau { get => matKhau; set => matKhau = value; }
         public string MaCV { get => maCV; set => maCV = value; }
+
+        public NhanVien(string manv, string hten, int tuoi, string dChi, string gTinh, string sDT, DateTime nTuyenDung, string taiKhoan, string matKhau, string maCV)
+        {
+            MaNV = manv;
+            HTen = hten;
+            Tuoi = tuoi;
+            DChi = dChi;
+            GTinh = gTinh;
+            SDT = sDT;
+            NTuyenDung = nTuyenDung;
+            TaiKhoan = taiKhoan;
+            MatKhau = matKhau;
+            MaCV = maCV;
+        }
     }
 }

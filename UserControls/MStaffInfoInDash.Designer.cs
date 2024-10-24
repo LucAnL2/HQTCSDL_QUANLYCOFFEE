@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
+            this.nameuc = new System.Windows.Forms.Label();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.iduc = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
+            // nameuc
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.label2.Location = new System.Drawing.Point(110, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 22);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Eric Archer";
+            this.nameuc.AutoSize = true;
+            this.nameuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.nameuc.Location = new System.Drawing.Point(110, 33);
+            this.nameuc.Name = "nameuc";
+            this.nameuc.Size = new System.Drawing.Size(110, 22);
+            this.nameuc.TabIndex = 6;
+            this.nameuc.Text = "Eric Archer";
             // 
             // guna2CircleButton1
             // 
@@ -62,16 +62,16 @@
             this.guna2CircleButton1.Size = new System.Drawing.Size(60, 60);
             this.guna2CircleButton1.TabIndex = 7;
             // 
-            // label1
+            // iduc
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.label1.Location = new System.Drawing.Point(342, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 22);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "ID: 238943";
+            this.iduc.AutoSize = true;
+            this.iduc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iduc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.iduc.Location = new System.Drawing.Point(342, 33);
+            this.iduc.Name = "iduc";
+            this.iduc.Size = new System.Drawing.Size(107, 22);
+            this.iduc.TabIndex = 6;
+            this.iduc.Text = "ID: 238943";
             // 
             // guna2PictureBox1
             // 
@@ -92,8 +92,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
             this.Controls.Add(this.guna2CircleButton1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.iduc);
+            this.Controls.Add(this.nameuc);
             this.Controls.Add(this.guna2PictureBox1);
             this.Name = "MStaffInfoInDash";
             this.Size = new System.Drawing.Size(675, 93);
@@ -106,8 +106,8 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label nameuc;
+        private System.Windows.Forms.Label iduc;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
     }
 }

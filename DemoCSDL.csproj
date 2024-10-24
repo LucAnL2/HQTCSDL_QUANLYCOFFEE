@@ -112,6 +112,12 @@
     <Compile Include="ManagerChildForms\FMDashboard.Designer.cs">
       <DependentUpon>FMDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerChildForms\FMinformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerChildForms\FMinformation.Designer.cs">
+      <DependentUpon>FMinformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\CaLamViec.cs" />
     <Compile Include="Models\CheBien.cs" />
     <Compile Include="Models\ChiTiet.cs" />
@@ -133,6 +139,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ShortTermVariables\ShortTermVariables.cs" />
     <Compile Include="UserControls\MStaffInfoInDash.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -189,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerChildForms\FMDashboard.resx">
       <DependentUpon>FMDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerChildForms\FMinformation.resx">
+      <DependentUpon>FMinformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -299,5 +309,6 @@
   <ItemGroup>
     <None Include="Resources\ipencil.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

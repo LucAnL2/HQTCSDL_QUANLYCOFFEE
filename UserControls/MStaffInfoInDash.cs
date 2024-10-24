@@ -16,5 +16,20 @@ namespace DemoCSDL.UserControls
         {
             InitializeComponent();
         }
+        private string name;
+        private string id;
+
+        #region properties
+        public string Nameuc
+        {
+            get { return name; }
+            set { name = value; nameuc.Text = value; }
+        }
+        public string Iduc
+        {
+            get { return id; }
+            set { id = value; iduc.Text = value; }
+        }
+        #endregion
     }
 }

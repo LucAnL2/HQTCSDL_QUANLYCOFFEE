@@ -11,35 +11,68 @@ namespace DemoCSDL.Connection
 {
     public class DBConnection
     {
-        //Tạo biến lưu đường dẫn kết nối với database
-        private static string stringConnection = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=QUANLYCOFFEE;Integrated Security=True";
-        SqlCommand sqlCommand;
-        SqlDataReader dataReader;
+        public string strCon = @"Data Source=.;Initial Catalog=FinalProjectDBMS;User ID=sa;Password=12345678;";
+        public SqlConnection sqlCon = null;
 
-        //Trả về đường dẫn kết nối với database
-        public static SqlConnection GetSqlConnection()
+        public void OpenConnection()
         {
-            return new SqlConnection(stringConnection);
+            try
+            {
+                if (sqlCon == null)
+                {
+                    sqlCon = new SqlConnection(strCon);
+                }
+
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void CloseConnection()
+        {
+            try
+            {
+                if (sqlCon != null && sqlCon.State == ConnectionState.Open)
+                {
+                    sqlCon.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         public DataTable Load(string sqlStr)
         {
+            DataTable dtData = new DataTable();
             try
             {
-                using (SqlConnection connection = GetSqlConnection())
+                OpenConnection();
+
+                using (SqlCommand command = new SqlCommand(sqlStr, sqlCon))
                 {
-                    connection.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, connection);
-                    DataTable dtperson = new DataTable();
-                    adapter.Fill(dtperson);
-                    return dtperson;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        dtData.Load(reader);
+                    }
                 }
             }
-            catch (Exception exc)
+            catch (Exception ex)
             {
-                MessageBox.Show(exc.Message);
+                MessageBox.Show(ex.Message);
             }
-            return null;
+            finally
+            {
+                CloseConnection();
+            }
+            return dtData;
         }
     }
 }

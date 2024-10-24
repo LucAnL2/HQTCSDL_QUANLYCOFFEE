@@ -50,6 +50,11 @@ namespace DemoCSDL.Forms
             }
         }
 
+        private void btnUser_Click(object sender, EventArgs e)
+        {
 
+            Active active = new Active();
+            active.OpenChildForm(new ManagerChildForms.FMinformation(), ref Active.activeForm, panelFill);
+        }
     }
 }

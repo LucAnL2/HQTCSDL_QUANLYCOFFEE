@@ -61,7 +61,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.settingbtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnOpenCream = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -139,7 +139,7 @@
             this.panelRight.Controls.Add(this.label19);
             this.panelRight.Controls.Add(this.flowLayoutPanel1);
             this.panelRight.Controls.Add(this.guna2Panel5);
-            this.panelRight.Controls.Add(this.guna2Button1);
+            this.panelRight.Controls.Add(this.settingbtn);
             this.panelRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelRight.Location = new System.Drawing.Point(954, 0);
             this.panelRight.Name = "panelRight";
@@ -520,7 +520,7 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(23, 27);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 20);
+            this.label13.Size = new System.Drawing.Size(90, 20);
             this.label13.TabIndex = 1;
             this.label13.Text = "Sub total:";
             // 
@@ -539,25 +539,25 @@
             this.guna2Button2.TabIndex = 0;
             this.guna2Button2.Text = "Finish";
             // 
-            // guna2Button1
+            // settingbtn
             // 
-            this.guna2Button1.BorderRadius = 8;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(188)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.guna2Button1.Image = global::DemoCSDL.Properties.Resources.user;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(50, 50);
-            this.guna2Button1.Location = new System.Drawing.Point(38, 12);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(223, 53);
-            this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "Eric   >";
-            this.guna2Button1.TextOffset = new System.Drawing.Point(10, 0);
+            this.settingbtn.BorderRadius = 8;
+            this.settingbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.settingbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.settingbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.settingbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.settingbtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(188)))));
+            this.settingbtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.settingbtn.Image = global::DemoCSDL.Properties.Resources.user;
+            this.settingbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.settingbtn.ImageSize = new System.Drawing.Size(50, 50);
+            this.settingbtn.Location = new System.Drawing.Point(38, 12);
+            this.settingbtn.Name = "settingbtn";
+            this.settingbtn.Size = new System.Drawing.Size(223, 53);
+            this.settingbtn.TabIndex = 0;
+            this.settingbtn.Text = "Eric   >";
+            this.settingbtn.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // guna2Panel1
             // 
@@ -1052,6 +1052,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FWMenu";
             this.Text = "FWMenu";
+            this.Load += new System.EventHandler(this.FWMenu_Load);
             this.panelRight.ResumeLayout(false);
             this.panelRight.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -1140,7 +1141,7 @@
         private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button settingbtn;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.Label label16;
