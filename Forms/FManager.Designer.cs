@@ -35,11 +35,13 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddProduct = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.panelFill = new System.Windows.Forms.Panel();
-            this.btnAddProduct = new Guna.UI2.WinForms.Guna2Button();
+            this.btnShift = new Guna.UI2.WinForms.Guna2Button();
             this.panelTop.SuspendLayout();
             this.panelLeft.SuspendLayout();
             this.SuspendLayout();
@@ -122,6 +124,8 @@
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.panelLeft.Controls.Add(this.guna2Button1);
+            this.panelLeft.Controls.Add(this.btnShift);
             this.panelLeft.Controls.Add(this.btnAddProduct);
             this.panelLeft.Controls.Add(this.btnLogout);
             this.panelLeft.Controls.Add(this.btnUser);
@@ -132,6 +136,30 @@
             this.panelLeft.Size = new System.Drawing.Size(250, 741);
             this.panelLeft.TabIndex = 6;
             this.panelLeft.Visible = false;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.guna2Button1.Location = new System.Drawing.Point(0, 207);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(250, 63);
+            this.guna2Button1.TabIndex = 5;
+            this.guna2Button1.Text = "Storage";
+            this.guna2Button1.Click += new System.EventHandler(this.btnStorage_Click);
+            // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.btnAddProduct.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.btnAddProduct.Location = new System.Drawing.Point(0, 138);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(250, 63);
+            this.btnAddProduct.TabIndex = 4;
+            this.btnAddProduct.Text = "Add Product";
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // btnLogout
             // 
@@ -175,17 +203,17 @@
             this.panelFill.Size = new System.Drawing.Size(1250, 741);
             this.panelFill.TabIndex = 7;
             // 
-            // btnAddProduct
+            // btnShift
             // 
-            this.btnAddProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
-            this.btnAddProduct.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.btnAddProduct.Location = new System.Drawing.Point(0, 138);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(250, 63);
-            this.btnAddProduct.TabIndex = 4;
-            this.btnAddProduct.Text = "Add Product";
-            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            this.btnShift.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.btnShift.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShift.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.btnShift.Location = new System.Drawing.Point(0, 276);
+            this.btnShift.Name = "btnShift";
+            this.btnShift.Size = new System.Drawing.Size(250, 63);
+            this.btnShift.TabIndex = 4;
+            this.btnShift.Text = "Add Shift";
+            this.btnShift.Click += new System.EventHandler(this.btnShift_Click);
             // 
             // FManager
             // 
@@ -220,5 +248,7 @@
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         public System.Windows.Forms.Panel panelFill;
         private Guna.UI2.WinForms.Guna2Button btnAddProduct;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnShift;
     }
 }

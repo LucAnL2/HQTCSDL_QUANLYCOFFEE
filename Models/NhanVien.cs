@@ -14,7 +14,6 @@ namespace DemoCSDL.Models
         private string dChi;
         private string gTinh;
         private string sDT;
-        private DateTime nTuyenDung;
         private string taiKhoan;
         private string matKhau;
         private string maCV;
@@ -29,7 +28,6 @@ namespace DemoCSDL.Models
         public string DChi { get => dChi; set => dChi = value; }
         public string GTinh { get => gTinh; set => gTinh = value; }
         public string SDT { get => sDT; set => sDT = value; }
-        public DateTime NTuyenDung { get => nTuyenDung; set => nTuyenDung = value; }
         public string TaiKhoan { get => taiKhoan; set => taiKhoan = value; }
         public string MatKhau { get => matKhau; set => matKhau = value; }
         public string MaCV { get => maCV; set => maCV = value; }

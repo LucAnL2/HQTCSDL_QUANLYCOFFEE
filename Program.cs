@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DemoCSDL.Forms;
 using DemoCSDL.ManagerChildForms;
+using DemoCSDL.WorkerChildForms;
 
 namespace DemoCSDL
 {
@@ -18,7 +19,7 @@ namespace DemoCSDL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FMWarehouse());
+            Application.Run(new FManager());
         }
     }
 }

@@ -13,8 +13,12 @@ namespace DemoCSDL.Models
         private DateTime gia;
         private int soLuong;
 
-        public NguyenLieu()
+        public NguyenLieu(string maNL, string tenNL, DateTime gia, int soLuong)
         {
+            this.maNL = maNL;
+            this.tenNL = tenNL;
+            this.gia = gia;
+            this.soLuong = soLuong;
         }
 
         public string MaNL { get => maNL; set => maNL = value; }

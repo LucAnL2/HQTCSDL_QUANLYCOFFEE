@@ -43,6 +43,7 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.btnShift = new Guna.UI2.WinForms.Guna2Button();
             this.panelLeft.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +63,7 @@
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.panelLeft.Controls.Add(this.btnShift);
             this.panelLeft.Controls.Add(this.btnLogout);
             this.panelLeft.Controls.Add(this.btnUser);
             this.panelLeft.Controls.Add(this.btnMenu);
@@ -82,7 +84,7 @@
             this.btnLogout.Size = new System.Drawing.Size(250, 63);
             this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Log out";
-            this.btnLogout.Click += new System.EventHandler(this.btnMenu_Click);
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnUser
             // 
@@ -197,6 +199,18 @@
             this.guna2DragControl3.TargetControl = panelFill;
             this.guna2DragControl3.UseTransparentDrag = true;
             // 
+            // btnShift
+            // 
+            this.btnShift.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.btnShift.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShift.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.btnShift.Location = new System.Drawing.Point(0, 138);
+            this.btnShift.Name = "btnShift";
+            this.btnShift.Size = new System.Drawing.Size(250, 63);
+            this.btnShift.TabIndex = 4;
+            this.btnShift.Text = "Shift";
+            this.btnShift.Click += new System.EventHandler(this.btnShift_Click);
+            // 
             // FWorker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -230,6 +244,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btnUser;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
+        private Guna.UI2.WinForms.Guna2Button btnShift;
         public static System.Windows.Forms.Panel panelFill;
     }
 }

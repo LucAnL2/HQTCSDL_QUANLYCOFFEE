@@ -24,36 +24,75 @@ namespace DemoCSDL.ManagerChildForms
 
         private void FMWarehouse_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLCFFDataSet.NguyenLieu' table. You can move, or remove it, as needed.
-            this.nguyenLieuTableAdapter.Fill(this.qLCFFDataSet.NguyenLieu);
-            AddColumn();
+            LoadNguyenLieu();
+            LoadLoHang();
         }
-
-        public void AddColumn()
-        {
-            DataGridViewButtonColumn dBC = new DataGridViewButtonColumn();
-            dBC.HeaderText = "Nhập Hàng";
-            dBC.Text = "Nhập Hàng";
-            dBC.UseColumnTextForButtonValue = true;
-            gvNhapHang.Columns.Add(dBC);
-        }
-
+        // Xu li datagridview
         private void gvNhapHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >=0)
             {
-                string maNL = gvNhapHang.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string maNL = gvNguyenLieu.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string donGia = gvNguyenLieu.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtMaNL.Text = maNL;
+                txtDonGia.Text = donGia;
             }
         }
 
+        // Lay du lieu
+        public void LoadNguyenLieu()
+        {
+            try
+            {
+                NguyenLieuDAO nguyenLieuDAO = new NguyenLieuDAO();
+                gvNguyenLieu.DataSource = nguyenLieuDAO.LayNguyenLieu();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi xảy ra: " + ex.Message);
+            }
+        }
+        public void LoadLoHang()
+        {
+            try
+            {
+                LoHangDAO loHangDAO = new LoHangDAO();
+                gvLoHang.DataSource = loHangDAO.LayLoHang();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi xảy ra: " + ex.Message);
+            }
+        }
+        // Chuc nang
         private void btnNhapHang_Click(object sender, EventArgs e)
         {
-            LoHang lh = new LoHang(txtMalohang.Text, dtNgayHetHan.Value, dtNgayNhap.Value, txtMaNL.Text, Convert.ToInt32(txtSoluong.Text),
-                Convert.ToDecimal(txtGiatien.Text));
-            LoHangDAO lhDAO = new LoHangDAO();
-            lhDAO.ThemLoHang(lh);
-            
+            try
+            {
+                LoHang lh = new LoHang(
+                    txtMaNL.Text,
+                    DateTime.Now,
+                    Convert.ToInt32(txtSoluong.Text),
+                    Convert.ToDecimal(txtDonGia.Text)
+                );
+                LoHangDAO lhDAO = new LoHangDAO();
+                lhDAO.ThemLoHang(lh);
+                LoadLoHang();
+                LoadNguyenLieu();
+                MessageBox.Show("Thêm lô hàng thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi xảy ra: " + ex.Message);
+            }
+        }
+
+        private void txtSoluong_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSoluong.Text != "")
+                txtTongTien.Text = Convert.ToString(Convert.ToInt32(txtSoluong.Text) * Convert.ToInt32(txtDonGia.Text));
+            else
+                txtTongTien.Text = "0";
         }
     }
 }

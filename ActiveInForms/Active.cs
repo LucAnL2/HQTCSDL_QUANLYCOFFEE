@@ -10,12 +10,11 @@ namespace DemoCSDL.ActiveInForms
     //Class này định nghĩa các hoạt động trong form ví dụ: mở form con, tải usercontrol lên panel....
     public class Active
     {
-
         //Khai báo biến này để xác định form con nào hiện đang được hiển thị trên panel
         public static Form activeForm;
 
         //Hàm này dùng để mở form con lên panel đầu vào là tên form, "ref Form activeForm" và tên panel
-        public void OpenChildForm(Form childForm, ref Form activeForm, Panel panel)
+        public static void OpenChildForm(Form childForm, ref Form activeForm, Panel panel)
         {
             if (activeForm != null)
             {

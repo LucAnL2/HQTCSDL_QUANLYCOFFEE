@@ -20,24 +20,20 @@ namespace DemoCSDL.Forms
 
         private void FWorker_Load(object sender, EventArgs e)
         {
-            Active active = new Active();
-            active.OpenChildForm(new WorkerChildForms.FWMenu(), ref Active.activeForm, panelFill);
+            Active.OpenChildForm(new WorkerChildForms.FWMenu(), ref Active.activeForm, panelFill);
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            Active active = new Active();
-            active.OpenChildForm(new WorkerChildForms.FWMenu(), ref Active.activeForm, panelFill);
+            Active.OpenChildForm(new WorkerChildForms.FWMenu(), ref Active.activeForm, panelFill);
         }
         private void btnUser_Click(object sender, EventArgs e)
         {
-            Active active = new Active();
-            active.OpenChildForm(new WorkerChildForms.FWinformation(), ref Active.activeForm, panelFill);
+            Active.OpenChildForm(new WorkerChildForms.FWinformation(), ref Active.activeForm, panelFill);
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Active active = new Active();
-            active.OpenChildForm(new WorkerChildForms.FWContainProduct(), ref Active.activeForm, panelFill);
+            Active.OpenChildForm(new WorkerChildForms.FWContainProduct(), ref Active.activeForm, panelFill);
         }
         private void btnSideBar_Click(object sender, EventArgs e)
         {
@@ -54,8 +50,15 @@ namespace DemoCSDL.Forms
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        } 
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
-
+        private void btnShift_Click(object sender, EventArgs e)
+        {
+            Active.OpenChildForm(new WorkerChildForms.FWShift(), ref Active.activeForm, panelFill);
+        }
     }
 }

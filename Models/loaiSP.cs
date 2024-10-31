@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace DemoCSDL.Models
 {
-    public class loaiSP
+    public class LoaiSP
     {
         private string maLoaiSP;
         private string tenLoaiSP;
 
-        public loaiSP()
+        public LoaiSP(string maLoaiSP, string tenLoaiSP)
         {
+            this.MaLoaiSP = maLoaiSP;
+            this.TenLoaiSP = tenLoaiSP;
         }
 
         public string MaLoaiSP { get => maLoaiSP; set => maLoaiSP = value; }

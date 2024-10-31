@@ -19,24 +19,28 @@ namespace DemoCSDL.Forms
         }
         private void FManager_Load(object sender, EventArgs e)
         {
-            Active active = new Active();
-            active.OpenChildForm(new ManagerChildForms.FMDashboard(), ref Active.activeForm, panelFill);
+            Active.OpenChildForm(new ManagerChildForms.FMDashboard(), ref Active.activeForm, panelFill);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            FLogin fLogin = new FLogin();
+            fLogin.Show();
+            this.Hide();
+            this.Close();
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            Active active = new Active();
-            active.OpenChildForm(new ManagerChildForms.FMDashboard(), ref Active.activeForm, panelFill);
+            Active.OpenChildForm(new ManagerChildForms.FMDashboard(), ref Active.activeForm, panelFill);
         }
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            Active active = new Active();
-            active.OpenChildForm(new ManagerChildForms.FMAddProduct(), ref Active.activeForm, panelFill);
+            Active.OpenChildForm(new ManagerChildForms.FMAddProduct(), ref Active.activeForm, panelFill);
+        }
+        private void btnStorage_Click(object sender, EventArgs e)
+        {
+            Active.OpenChildForm(new ManagerChildForms.FMWarehouse(), ref Active.activeForm, panelFill);
         }
         private void btnSideBar_Click(object sender, EventArgs e)
         {
@@ -50,6 +54,9 @@ namespace DemoCSDL.Forms
             }
         }
 
-
+        private void btnShift_Click(object sender, EventArgs e)
+        {
+            Active.OpenChildForm(new ManagerChildForms.FMShift(), ref Active.activeForm, panelFill);
+        }
     }
 }

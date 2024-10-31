@@ -36,6 +36,24 @@
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -62,7 +80,6 @@
     <Compile Include="DAO\CongViecDAO.cs" />
     <Compile Include="DAO\DangKyDAO.cs" />
     <Compile Include="DAO\HoaDonDAO.cs" />
-    <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\LoaiSPDAO.cs" />
     <Compile Include="DAO\LoHangDAO.cs" />
     <Compile Include="DAO\NguyenLieuDAO.cs" />
@@ -70,12 +87,6 @@
     <Compile Include="DAO\PhuongThucTTDAO.cs" />
     <Compile Include="DAO\SanPhamDAO.cs" />
     <Compile Include="DAO\ThucHienDAO.cs" />
-    <Compile Include="FLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FLogin.Designer.cs">
-      <DependentUpon>FLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FForgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +98,12 @@
     </Compile>
     <Compile Include="Forms\FLoading.Designer.cs">
       <DependentUpon>FLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FManager.cs">
       <SubType>Form</SubType>
@@ -112,6 +129,18 @@
     <Compile Include="ManagerChildForms\FMDashboard.Designer.cs">
       <DependentUpon>FMDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerChildForms\FMinformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerChildForms\FMinformation.Designer.cs">
+      <DependentUpon>FMinformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerChildForms\FMShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerChildForms\FMShift.Designer.cs">
+      <DependentUpon>FMShift.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerChildForms\FMWarehouse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,13 +153,13 @@
     <Compile Include="Models\CongViec.cs" />
     <Compile Include="Models\DangKy.cs" />
     <Compile Include="Models\HoaDon.cs" />
-    <Compile Include="Models\KhachHang.cs" />
-    <Compile Include="Models\loaiSP.cs" />
+    <Compile Include="Models\LoaiSP.cs" />
     <Compile Include="Models\LoHang.cs" />
     <Compile Include="Models\NguyenLieu.cs" />
     <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Models\PhuongThucTT.cs" />
     <Compile Include="Models\SanPham.cs" />
+    <Compile Include="Models\SanPhamOrder.cs" />
     <Compile Include="Models\ThucHien.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -139,11 +168,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="QLCFFDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLCFFDataSet.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="ShortTermVariables\ShortTermVariables.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="ThaoTacAnh.cs" />
     <Compile Include="UserControls\MStaffInfoInDash.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -180,14 +207,28 @@
     <Compile Include="WorkerChildForms\FWMenu.Designer.cs">
       <DependentUpon>FWMenu.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FLogin.resx">
-      <DependentUpon>FLogin.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="WorkerChildForms\FWShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkerChildForms\FWShift.Designer.cs">
+      <DependentUpon>FWShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkerChildForms\FWThanhToan.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="WorkerChildForms\FWThanhToan.Designer.cs">
+      <DependentUpon>FWThanhToan.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <EmbeddedResource Include="Forms\FForgotPassword.resx">
       <DependentUpon>FForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FLoading.resx">
       <DependentUpon>FLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FManager.resx">
       <DependentUpon>FManager.cs</DependentUpon>
@@ -200,6 +241,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerChildForms\FMDashboard.resx">
       <DependentUpon>FMDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerChildForms\FMinformation.resx">
+      <DependentUpon>FMinformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerChildForms\FMShift.resx">
+      <DependentUpon>FMShift.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerChildForms\FMWarehouse.resx">
       <DependentUpon>FMWarehouse.cs</DependentUpon>
@@ -227,6 +274,13 @@
     <EmbeddedResource Include="WorkerChildForms\FWMenu.resx">
       <DependentUpon>FWMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WorkerChildForms\FWShift.resx">
+      <DependentUpon>FWShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkerChildForms\FWThanhToan.resx">
+      <DependentUpon>FWThanhToan.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -242,17 +296,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="QLCFFDataSet.xsc">
-      <DependentUpon>QLCFFDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLCFFDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLCFFDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLCFFDataSet.xss">
-      <DependentUpon>QLCFFDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Resources\iTotalUser.png" />
   </ItemGroup>
   <ItemGroup>
@@ -323,6 +366,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ipencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dc_lohang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

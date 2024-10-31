@@ -35,7 +35,6 @@
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -44,16 +43,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.totallb = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.mStaffInfoInDash1 = new DemoCSDL.UserControls.MStaffInfoInDash();
-            this.mStaffInfoInDash2 = new DemoCSDL.UserControls.MStaffInfoInDash();
-            this.mStaffInfoInDash3 = new DemoCSDL.UserControls.MStaffInfoInDash();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel3.SuspendLayout();
@@ -77,7 +72,6 @@
             this.guna2Panel1.Controls.Add(this.guna2Button4);
             this.guna2Panel1.Controls.Add(this.guna2Button3);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
-            this.guna2Panel1.Controls.Add(this.guna2Button2);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
             this.guna2Panel1.Location = new System.Drawing.Point(12, 18);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -100,6 +94,7 @@
             this.guna2Button4.Size = new System.Drawing.Size(180, 45);
             this.guna2Button4.TabIndex = 3;
             this.guna2Button4.Text = "ALL";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Button3
             // 
@@ -112,11 +107,12 @@
             this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
-            this.guna2Button3.Location = new System.Drawing.Point(41, 180);
+            this.guna2Button3.Location = new System.Drawing.Point(41, 151);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(180, 45);
             this.guna2Button3.TabIndex = 3;
             this.guna2Button3.Text = "1 month ago";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button1
             // 
@@ -129,28 +125,12 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
-            this.guna2Button1.Location = new System.Drawing.Point(41, 22);
+            this.guna2Button1.Location = new System.Drawing.Point(41, 52);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
             this.guna2Button1.TabIndex = 3;
             this.guna2Button1.Text = "Today";
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.guna2Button2.BorderThickness = 2;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
-            this.guna2Button2.Location = new System.Drawing.Point(41, 101);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button2.TabIndex = 3;
-            this.guna2Button2.Text = "7 days ago";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // chart1
             // 
@@ -165,7 +145,7 @@
             chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.Location = new System.Drawing.Point(279, 3);
+            this.chart1.Location = new System.Drawing.Point(288, 3);
             this.chart1.Name = "chart1";
             series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
             series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
@@ -197,9 +177,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
-            this.flowLayoutPanel1.Controls.Add(this.mStaffInfoInDash1);
-            this.flowLayoutPanel1.Controls.Add(this.mStaffInfoInDash2);
-            this.flowLayoutPanel1.Controls.Add(this.mStaffInfoInDash3);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(550, 9);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(688, 368);
@@ -258,7 +235,7 @@
             // 
             this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.guna2Panel3.BorderThickness = 3;
-            this.guna2Panel3.Controls.Add(this.label4);
+            this.guna2Panel3.Controls.Add(this.totallb);
             this.guna2Panel3.Controls.Add(this.label5);
             this.guna2Panel3.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
@@ -267,17 +244,17 @@
             this.guna2Panel3.Size = new System.Drawing.Size(274, 87);
             this.guna2Panel3.TabIndex = 3;
             // 
-            // label4
+            // totallb
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.label4.Location = new System.Drawing.Point(123, 47);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 29);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "$2370";
+            this.totallb.AutoSize = true;
+            this.totallb.BackColor = System.Drawing.Color.Transparent;
+            this.totallb.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totallb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.totallb.Location = new System.Drawing.Point(123, 47);
+            this.totallb.Name = "totallb";
+            this.totallb.Size = new System.Drawing.Size(83, 29);
+            this.totallb.TabIndex = 4;
+            this.totallb.Text = "$2370";
             // 
             // label5
             // 
@@ -286,9 +263,9 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
             this.label5.Location = new System.Drawing.Point(105, 11);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 22);
+            this.label5.Size = new System.Drawing.Size(110, 22);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Total revenue";
+            this.label5.Text = "Total Profit";
             // 
             // guna2PictureBox2
             // 
@@ -302,30 +279,6 @@
             this.guna2PictureBox2.TabIndex = 4;
             this.guna2PictureBox2.TabStop = false;
             this.guna2PictureBox2.UseTransparentBackground = true;
-            // 
-            // mStaffInfoInDash1
-            // 
-            this.mStaffInfoInDash1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
-            this.mStaffInfoInDash1.Location = new System.Drawing.Point(3, 3);
-            this.mStaffInfoInDash1.Name = "mStaffInfoInDash1";
-            this.mStaffInfoInDash1.Size = new System.Drawing.Size(675, 93);
-            this.mStaffInfoInDash1.TabIndex = 0;
-            // 
-            // mStaffInfoInDash2
-            // 
-            this.mStaffInfoInDash2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
-            this.mStaffInfoInDash2.Location = new System.Drawing.Point(3, 102);
-            this.mStaffInfoInDash2.Name = "mStaffInfoInDash2";
-            this.mStaffInfoInDash2.Size = new System.Drawing.Size(675, 93);
-            this.mStaffInfoInDash2.TabIndex = 1;
-            // 
-            // mStaffInfoInDash3
-            // 
-            this.mStaffInfoInDash3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
-            this.mStaffInfoInDash3.Location = new System.Drawing.Point(3, 201);
-            this.mStaffInfoInDash3.Name = "mStaffInfoInDash3";
-            this.mStaffInfoInDash3.Size = new System.Drawing.Size(675, 93);
-            this.mStaffInfoInDash3.TabIndex = 2;
             // 
             // FMDashboard
             // 
@@ -345,7 +298,6 @@
             this.panel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -365,7 +317,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
@@ -373,11 +324,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label totallb;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private UserControls.MStaffInfoInDash mStaffInfoInDash1;
-        private UserControls.MStaffInfoInDash mStaffInfoInDash2;
-        private UserControls.MStaffInfoInDash mStaffInfoInDash3;
     }
 }

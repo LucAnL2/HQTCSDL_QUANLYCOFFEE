@@ -33,5 +33,29 @@ namespace DemoCSDL.Properties {
                 return ((string)(this["QLCFFConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int StaffsF {
+            get {
+                return ((int)(this["StaffsF"]));
+            }
+            set {
+                this["StaffsF"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int WithdrawStatus {
+            get {
+                return ((int)(this["WithdrawStatus"]));
+            }
+            set {
+                this["WithdrawStatus"] = value;
+            }
+        }
     }
 }

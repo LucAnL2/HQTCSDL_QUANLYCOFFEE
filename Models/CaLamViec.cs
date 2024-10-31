@@ -12,9 +12,15 @@ namespace DemoCSDL.Models
         private DateTime ngayLam;
         private DateTime gioBatDau;
         private DateTime gioKetThuc;
-        public CaLamViec()
+        public CaLamViec(string maCa, DateTime ngayLam, DateTime gioBatDau, DateTime gioKetThuc)
         {
+            MaCa = maCa;
+            NgayLam = ngayLam;
+            GioBatDau = gioBatDau;
+            GioKetThuc = gioKetThuc;
         }
+
+        public CaLamViec() { }
 
         public string MaCa { get => maCa; set => maCa = value; }
         public DateTime NgayLam { get => ngayLam; set => ngayLam = value; }

@@ -14,33 +14,36 @@ namespace DemoCSDL.DAO
 {
     public class LoHangDAO
     {
+        DBConnection dbConnection = new DBConnection();
         public void ThemLoHang(LoHang lh)
         {
-            using (SqlConnection connection = DBConnection.GetSqlConnection())
+            SqlParameter[] parameters = new SqlParameter[]
             {
-                using (SqlCommand cmd = new SqlCommand("ThemLoHang"))
-                {
-                    cmd.Connection = connection;
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@MaLH", lh.MaLH);
-                    cmd.Parameters.AddWithValue("@NgayHetHan", lh.NgayHetHan);
-                    cmd.Parameters.AddWithValue("@NgayNhap", lh.NgayNhap);
-                    cmd.Parameters.AddWithValue("@MaNL", lh.MaNL);
-                    cmd.Parameters.AddWithValue("@SoLuong", lh.SoLuong);
-                    cmd.Parameters.AddWithValue("@GiaTien", lh.GiaTien);
-
-                    try
-                    {
-                        connection.Open();
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Thêm Thành Công");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                }
-            }   
+                new SqlParameter("@MaNL", lh.MaNL),
+                new SqlParameter("@NgayNhap", lh.NgayNhap),
+                new SqlParameter("@SoLuong", lh.SoLuong),
+                new SqlParameter("@DonGia", lh.DonGia),
+            };
+            try
+            {
+                dbConnection.ExecuteNonQuery("ThemLoHang", parameters, CommandType.StoredProcedure);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        public DataTable LayLoHang()
+        {
+            try
+            {
+                DataTable dtData = dbConnection.Load("Select * from LoHang");
+                return dtData;
+            }
+            catch
+            {
+                throw;
+            }
         }
     }
 }

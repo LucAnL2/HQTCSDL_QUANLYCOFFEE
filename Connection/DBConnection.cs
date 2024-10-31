@@ -11,33 +11,196 @@ namespace DemoCSDL.Connection
 {
     public class DBConnection
     {
-        //Tạo biến lưu đường dẫn kết nối với database
-        private static string stringConnection = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=QLCFF;Integrated Security=True";
+        public string strCon = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=QLQCF;Integrated Security=True";
+        public SqlConnection sqlCon = null;
 
-        //Trả về đường dẫn kết nối với database
-        public static SqlConnection GetSqlConnection()
-        {
-            return new SqlConnection(stringConnection);
-        }
-
-        public DataTable Load(string sqlStr)
+        public void OpenConnection()
         {
             try
             {
-                using (SqlConnection connection = GetSqlConnection())
+                if (sqlCon == null)
                 {
-                    connection.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, connection);
-                    DataTable dtperson = new DataTable();
-                    adapter.Fill(dtperson);
-                    return dtperson;
+                    sqlCon = new SqlConnection(strCon);
+                }
+
+                if (sqlCon.State == ConnectionState.Closed)
+                {
+                    sqlCon.Open();
                 }
             }
-            catch (Exception exc)
+            catch 
             {
-                MessageBox.Show(exc.Message);
+                throw;
             }
-            return null;
+        }
+
+        public void CloseConnection()
+        {
+            try
+            {
+                if (sqlCon != null && sqlCon.State == ConnectionState.Open)
+                {
+                    sqlCon.Close();
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public void ExecuteNonQuery(string storeProcedure, SqlParameter[] parameters, CommandType commandType)
+        {
+            try
+            {
+                OpenConnection();
+                using (SqlCommand cmd = new SqlCommand(storeProcedure, sqlCon))
+                {
+                    cmd.CommandType = commandType;
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+
+        public DataTable Load(string sqlStr, SqlParameter[] parameters = null)
+        {
+            DataTable dtData = new DataTable();
+            try
+            {
+                OpenConnection();
+
+                using (SqlCommand command = new SqlCommand(sqlStr, sqlCon))
+                {
+                    if (parameters != null)
+                    {
+                        command.Parameters.AddRange(parameters);
+                    }
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        dtData.Load(reader);
+                    }
+                }
+            }
+            catch 
+            {
+                throw;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return dtData;
+        }
+        public object ExecuteScalar(string storeProcedure, SqlParameter[] parameters, CommandType commandType)
+        {
+            object result = null;
+            try
+            {
+                OpenConnection();
+                using (SqlCommand cmd = new SqlCommand(storeProcedure, sqlCon))
+                {
+                    cmd.CommandType = commandType;
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+                    result = cmd.ExecuteScalar();
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return result;
+        }
+
+        public decimal ExecuteScalarDecimal(string storeProcedure, SqlParameter[] parameters, CommandType commandType)
+        {
+            decimal result = 0;
+
+            try
+            {
+                OpenConnection();
+                using (SqlCommand cmd = new SqlCommand(storeProcedure, sqlCon))
+                {
+                    cmd.CommandType = commandType;
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+
+                    var scalarResult = cmd.ExecuteScalar();
+                    if (scalarResult != null)
+                    {
+                        result = Convert.ToDecimal(scalarResult); // Sử dụng Convert.ToDecimal cho giá trị lớn
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+
+            return result;
+        }
+
+        public List<T> GetObjects<T>(string storeProcedure, SqlParameter[] parameters, Func<SqlDataReader, T> mapFunction)
+        {
+            List<T> result = new List<T>();
+
+            try
+            {
+                OpenConnection();
+                using (SqlCommand cmd = new SqlCommand(storeProcedure, sqlCon))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Ánh xạ từng bản ghi từ SqlDataReader sang đối tượng T
+                            T item = mapFunction(reader);
+                            result.Add(item);
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+
+            return result;
         }
     }
 }
