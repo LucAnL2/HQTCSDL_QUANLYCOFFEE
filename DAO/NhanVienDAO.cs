@@ -10,6 +10,8 @@ using System.Data;
 using System.Windows.Forms;
 using Microsoft.Reporting.Map.WebForms.BingMaps;
 using System.Xml.Linq;
+using System.Drawing;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DemoCSDL.DAO
 {
@@ -307,6 +309,112 @@ namespace DemoCSDL.DAO
             {
                 connect.CloseConnection();
             }
+        }
+        public decimal CalcProfitPerMonth(int month, int year)
+        {
+            connect = new DBConnection();
+            connect.OpenConnection();
+            decimal res = 0;
+            try
+            {
+                string sqlQuery = "SELECT dbo.TinhLoiNhuan(@Thang, @Nam) AS TinhLN";
+                SqlCommand sqlcmd = new SqlCommand(sqlQuery, connect.sqlCon);
+                sqlcmd.Parameters.AddWithValue("@Thang", month);
+                sqlcmd.Parameters.AddWithValue("@Nam", year);
+                object result = sqlcmd.ExecuteScalar();
+                res = (result != DBNull.Value) ? Convert.ToDecimal(result) : 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+            finally
+            {
+                connect.CloseConnection();
+            }
+            return res;
+        }
+        public void AddProfitInfo(string daTe, decimal luongNv, decimal doanhThu, decimal tienNh, decimal loiNhuan)
+        {
+            connect = new DBConnection();
+
+            try
+            {
+                connect.OpenConnection();
+                SqlCommand sqlcmd = new SqlCommand();
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                sqlcmd.CommandText = "ThemLoiNhuan";
+                sqlcmd.Connection = connect.sqlCon;
+                sqlcmd.Parameters.AddWithValue("@date", daTe);
+                sqlcmd.Parameters.AddWithValue("@luongnv", luongNv);
+                sqlcmd.Parameters.AddWithValue("@doanhthu", doanhThu);
+                sqlcmd.Parameters.AddWithValue("@tiennh", tienNh);
+                sqlcmd.Parameters.AddWithValue("@loinhuan", loiNhuan);
+                int rowsAffected = sqlcmd.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Save Successfully!");
+                }
+                else
+                {
+                    MessageBox.Show("Error ! Please Try Again");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+            finally
+            {
+                connect.CloseConnection();
+            }
+        }
+        public decimal CalcTotalSalary()
+        {
+            connect = new DBConnection();
+            connect.OpenConnection();
+            decimal res = 0;
+            try
+            {
+                string sqlQuery = "SELECT dbo.TongLuongNV() AS TongLNV";
+                SqlCommand sqlcmd = new SqlCommand(sqlQuery, connect.sqlCon);
+                object result = sqlcmd.ExecuteScalar();
+                res = (result != DBNull.Value) ? Convert.ToDecimal(result) : 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+            finally
+            {
+                connect.CloseConnection();
+            }
+            return res;
+        }
+        public DataTable GetProfitFromLastMonth(string date)
+        {
+            connect = new DBConnection();
+
+            DataTable dt = new DataTable();
+            try
+            {
+                connect.OpenConnection();
+                SqlCommand sqlcmd = new SqlCommand("LayLoiNhuanThangTruoc", connect.sqlCon);
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                sqlcmd.Parameters.AddWithValue("@date", date);
+                SqlDataAdapter da = new SqlDataAdapter(sqlcmd);
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+            finally
+            {
+                connect.CloseConnection();
+            }
+            return dt;
         }
     }
 }

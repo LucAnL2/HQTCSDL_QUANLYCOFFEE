@@ -38,6 +38,7 @@ namespace DemoCSDL.ManagerChildForms
             //goi function tinh doanh thu trong hom nay
             decimal rs = dao.GetRevenuePerDay(today);
             totallb.Text = rs.ToString();
+            label5.Text = "Total Revenue";
         }
         private void populateItems()
         {
@@ -64,23 +65,40 @@ namespace DemoCSDL.ManagerChildForms
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
+            DataTable dt = new DataTable();
             NhanVienDAO dao = new NhanVienDAO();
             //goi function tinh tong tien hoa don trong 1 thang + tong tien lo hang trong 1 thang - tong luong nhan vien rtong 1 thang roi luu vao bang tong loi nhuan
-            int currentMonth = DateTime.Now.Month;
+            int currentMonth = DateTime.Now.Month - 1;
             int currentYear = DateTime.Now.Year;
-            decimal rs = dao.GetOutcome(currentMonth, currentYear); //tong tien nhap hang
-            decimal rs1 = dao.GetRevenue(currentMonth, currentYear); //tong tien hoa don 
-            // luong nhan vien rs2 = ....
-            decimal finalres = rs1 - rs;
-            totallb.Text = rs1.ToString();
-            
+            string combinedString = $"{currentMonth}-{currentYear}";
+            //Goi Procedure truyen tham so nay vao de lay thong tin trong bang tongloinhuan
+            dt = dao.GetProfitFromLastMonth(combinedString);
+            DataRow dr = dt.Rows[0];
+            totallb.Text = dr["LoiNhuan"].ToString();
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
+            //All BTN
             NhanVienDAO dao = new NhanVienDAO();
             decimal rs = dao.GetTotalProfit();
             totallb.Text = rs.ToString();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            //Calc Button
+            int currentMonth = DateTime.Now.Month;
+            int currentYear = DateTime.Now.Year;
+            string combinedString = $"{currentMonth}-{currentYear}";
+            NhanVienDAO dao = new NhanVienDAO();
+            decimal tongLuongNV = dao.CalcTotalSalary();
+            decimal doanhthu = dao.GetRevenue(currentMonth, currentYear);
+            decimal tiennh = dao.GetOutcome(currentMonth, currentYear);
+            decimal loinhuan = dao.CalcProfitPerMonth(currentMonth, currentYear);
+            dao.AddProfitInfo(combinedString,tongLuongNV,doanhthu,tiennh, loinhuan);
+            
+            FMDashboard_Load(sender, e);
         }
     }
 }
