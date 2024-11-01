@@ -85,5 +85,13 @@ namespace DemoCSDL
             fForgotPassword.ShowDialog();
             this.Close();       
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FRegister fRegister = new FRegister();
+            fRegister.ShowDialog();
+            this.Close();
+        }
     }
 }

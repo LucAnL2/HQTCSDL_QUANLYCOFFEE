@@ -111,6 +111,12 @@
     <Compile Include="Forms\FManager.Designer.cs">
       <DependentUpon>FManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FRegister.Designer.cs">
+      <DependentUpon>FRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FWorker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FManager.resx">
       <DependentUpon>FManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FRegister.resx">
+      <DependentUpon>FRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FWorker.resx">
       <DependentUpon>FWorker.cs</DependentUpon>

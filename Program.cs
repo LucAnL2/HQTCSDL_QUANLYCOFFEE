@@ -19,7 +19,7 @@ namespace DemoCSDL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FMWarehouse());
+            Application.Run(new FLogin());
         }
     }
 }

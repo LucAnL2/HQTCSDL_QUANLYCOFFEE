@@ -8,6 +8,8 @@ using DemoCSDL.Models;
 using DemoCSDL.Connection;
 using System.Data;
 using System.Windows.Forms;
+using Microsoft.Reporting.Map.WebForms.BingMaps;
+using System.Xml.Linq;
 
 namespace DemoCSDL.DAO
 {
@@ -248,6 +250,63 @@ namespace DemoCSDL.DAO
             }
             return res;
 
+        }
+        public string GenerateMaNV()
+        {
+            connect = new DBConnection();
+            connect.OpenConnection();
+            string res = "";
+            try
+            {
+                string sqlQuery = "SELECT dbo.TaoMaNV() AS TaoMaNV";
+                SqlCommand sqlcmd = new SqlCommand(sqlQuery, connect.sqlCon);
+                object result = sqlcmd.ExecuteScalar();
+                res = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+            finally
+            {
+                connect.CloseConnection();
+            }
+            return res;
+        }
+        public void AddNewStaff(NhanVien nv)
+        {
+            connect = new DBConnection();
+
+            try
+            {
+                connect.OpenConnection();
+                SqlCommand sqlcmd = new SqlCommand();
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                sqlcmd.CommandText = "ThemNVIEN";
+                sqlcmd.Connection = connect.sqlCon;
+                sqlcmd.Parameters.AddWithValue("@manv", nv.MaNV);
+                sqlcmd.Parameters.AddWithValue("@hten",nv.HTen);
+                sqlcmd.Parameters.AddWithValue("@uname",nv.TaiKhoan);
+                sqlcmd.Parameters.AddWithValue("@pass",nv.MatKhau);
+                int rowsAffected = sqlcmd.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Register Successfully!");
+                }
+                else
+                {
+                    MessageBox.Show("Error ! Please Try Again");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+            finally
+            {
+                connect.CloseConnection();
+            }
         }
     }
 }

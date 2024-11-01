@@ -11,7 +11,7 @@ namespace DemoCSDL.Connection
 {
     public class DBConnection
     {
-        public string strCon = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=QLQCF;Integrated Security=True";
+        public string strCon = @"Data Source=.;Initial Catalog=QLQCF;Persist Security Info=True;User ID=sa;Password=12345678;";
         public SqlConnection sqlCon = null;
 
         public void OpenConnection()

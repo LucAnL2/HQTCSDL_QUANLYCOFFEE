@@ -21,7 +21,13 @@ namespace DemoCSDL.Models
         public NhanVien()
         {
         }
-
+        public NhanVien(string manv, string hten, string taikhoan, string matkhau)
+        {
+            maNV = manv;
+            hTen = hten;
+            taiKhoan = taikhoan;
+            matKhau = matkhau;
+        }
         public string MaNV { get => maNV; set => maNV = value; }
         public string HTen { get => hTen; set => hTen = value; }
         public int Tuoi { get => tuoi; set => tuoi = value; }
