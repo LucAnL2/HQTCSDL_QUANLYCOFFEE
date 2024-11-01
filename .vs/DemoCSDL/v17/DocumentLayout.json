@@ -3,23 +3,20 @@
   "WorkspaceRootPath": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/QLQCF/True/SqlTable/dbo.SanPham.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\tai lieu hoc\\pjhqlcsdl\\hqtcsdl_quanlycoffee\\dao\\nguyenlieudao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:dao\\nguyenlieudao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\tai lieu hoc\\pjhqlcsdl\\hqtcsdl_quanlycoffee\\managerchildforms\\fmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\tai lieu hoc\\pjhqlcsdl\\hqtcsdl_quanlycoffee\\managerchildforms\\fmwarehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmwarehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\tai lieu hoc\\pjhqlcsdl\\hqtcsdl_quanlycoffee\\managerchildforms\\fmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\tai lieu hoc\\pjhqlcsdl\\hqtcsdl_quanlycoffee\\managerchildforms\\fmwarehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmwarehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\tai lieu hoc\\pjhqlcsdl\\hqtcsdl_quanlycoffee\\thaotacanh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:thaotacanh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\tai lieu hoc\\pjhqlcsdl\\hqtcsdl_quanlycoffee\\forms\\fworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:forms\\fworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\tai lieu hoc\\pjhqlcsdl\\hqtcsdl_quanlycoffee\\models\\nguyenlieu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:models\\nguyenlieu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,61 +39,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "dbo.SanPham [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/QLQCF/True/SqlTable/dbo.SanPham.sql",
-              "ToolTip": "dbo.SanPham [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-10-25T06:29:03.885Z",
+              "Title": "NguyenLieuDAO.cs",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\DAO\\NguyenLieuDAO.cs",
+              "RelativeDocumentMoniker": "DAO\\NguyenLieuDAO.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\DAO\\NguyenLieuDAO.cs",
+              "RelativeToolTip": "DAO\\NguyenLieuDAO.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwCIAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T01:23:05.25Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ThaoTacAnh.cs",
-              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\ThaoTacAnh.cs",
-              "RelativeDocumentMoniker": "ThaoTacAnh.cs",
-              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\ThaoTacAnh.cs",
-              "RelativeToolTip": "ThaoTacAnh.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAbAAAA",
+              "Title": "NguyenLieu.cs",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\Models\\NguyenLieu.cs",
+              "RelativeDocumentMoniker": "Models\\NguyenLieu.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\Models\\NguyenLieu.cs",
+              "RelativeToolTip": "Models\\NguyenLieu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T06:20:28.629Z",
+              "WhenOpened": "2024-11-01T01:19:14.03Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FMAddProduct.cs",
-              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMAddProduct.cs",
-              "RelativeDocumentMoniker": "ManagerChildForms\\FMAddProduct.cs",
-              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMAddProduct.cs",
-              "RelativeToolTip": "ManagerChildForms\\FMAddProduct.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAEwAAAA1AAAA",
+              "Title": "FMWarehouse.cs",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMWarehouse.cs",
+              "RelativeDocumentMoniker": "ManagerChildForms\\FMWarehouse.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMWarehouse.cs",
+              "RelativeToolTip": "ManagerChildForms\\FMWarehouse.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAowGoAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T06:16:14.454Z",
+              "WhenOpened": "2024-11-01T00:36:22.031Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FMAddProduct.cs [Design]",
-              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMAddProduct.cs",
-              "RelativeDocumentMoniker": "ManagerChildForms\\FMAddProduct.cs",
-              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMAddProduct.cs [Design]",
-              "RelativeToolTip": "ManagerChildForms\\FMAddProduct.cs [Design]",
+              "Title": "FMWarehouse.cs [Design]",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMWarehouse.cs",
+              "RelativeDocumentMoniker": "ManagerChildForms\\FMWarehouse.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMWarehouse.cs [Design]",
+              "RelativeToolTip": "ManagerChildForms\\FMWarehouse.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T06:16:11.062Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FWorker.cs [Design]",
-              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\Forms\\FWorker.cs",
-              "RelativeDocumentMoniker": "Forms\\FWorker.cs",
-              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\Forms\\FWorker.cs [Design]",
-              "RelativeToolTip": "Forms\\FWorker.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T02:54:54.783Z",
+              "WhenOpened": "2024-11-01T00:12:39.828Z",
               "EditorCaption": " [Design]"
             }
           ]

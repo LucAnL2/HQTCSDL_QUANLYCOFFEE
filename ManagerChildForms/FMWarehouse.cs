@@ -46,6 +46,7 @@ namespace DemoCSDL.ManagerChildForms
             {
                 NguyenLieuDAO nguyenLieuDAO = new NguyenLieuDAO();
                 gvNguyenLieu.DataSource = nguyenLieuDAO.LayNguyenLieu();
+                gvDSNguyenLieu.DataSource = nguyenLieuDAO.LayNguyenLieu();
             }
             catch (Exception ex)
             {
@@ -93,6 +94,28 @@ namespace DemoCSDL.ManagerChildForms
                 txtTongTien.Text = Convert.ToString(Convert.ToInt32(txtSoluong.Text) * Convert.ToInt32(txtDonGia.Text));
             else
                 txtTongTien.Text = "0";
+        }
+
+        private void txtThemNhuyenLieu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                NguyenLieu lh = new NguyenLieu(
+                    txtMaNguyenLieu.Text,
+                    txtTenNguyenLieu.Text,
+                    Convert.ToInt32(txtGia.Text),
+                    0
+                );
+                NguyenLieuDAO nlDAO = new NguyenLieuDAO();
+                nlDAO.ThemNguyenLieu(lh);
+                LoadLoHang();
+                LoadNguyenLieu();
+                MessageBox.Show("Thêm nguyên liệu thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi xảy ra: " + ex.Message);
+            }
         }
     }
 }
