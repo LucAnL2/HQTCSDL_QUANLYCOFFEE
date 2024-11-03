@@ -87,6 +87,11 @@ namespace DemoCSDL.ManagerChildForms
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
+            //Phan code cua Toan
+
+
+            //
+
             //Calc Button
             int currentMonth = DateTime.Now.Month;
             int currentYear = DateTime.Now.Year;
