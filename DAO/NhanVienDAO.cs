@@ -158,55 +158,6 @@ namespace DemoCSDL.DAO
             return dt;
         }
 
-        public decimal GetRevenue(int month, int year)
-        {
-            connect = new DBConnection();
-            connect.OpenConnection();
-            decimal res = 0;
-            try
-            {
-                string sqlQuery = "SELECT dbo.TongTienHoaDonTheoThang(@Thang, @Nam) AS TongDoanhThu";
-                SqlCommand sqlcmd = new SqlCommand(sqlQuery, connect.sqlCon);
-                sqlcmd.Parameters.AddWithValue("@Thang", month);
-                sqlcmd.Parameters.AddWithValue("@Nam", year);
-                object result = sqlcmd.ExecuteScalar();
-                res = (result != DBNull.Value) ? Convert.ToDecimal(result) : 0;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error" + ex.Message);
-            }
-            finally
-            {
-                connect.CloseConnection();
-            }
-            return res;
-        }
-
-        public decimal GetOutcome(int month, int year)
-        {
-            connect = new DBConnection();
-            connect.OpenConnection();
-            decimal res = 0;
-            try
-            {
-                string sqlQuery = "SELECT dbo.TongTienNhapHangTheoThang(@Thang, @Nam) AS TongNhapHang";
-                SqlCommand sqlcmd = new SqlCommand(sqlQuery, connect.sqlCon);
-                sqlcmd.Parameters.AddWithValue("@Thang", month);
-                sqlcmd.Parameters.AddWithValue("@Nam", year);
-                object result = sqlcmd.ExecuteScalar();
-                res = (result != DBNull.Value) ? Convert.ToDecimal(result) : 0;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error" + ex.Message);
-            }
-            finally
-            {
-                connect.CloseConnection();
-            }
-            return res;
-        }
         public decimal GetRevenuePerDay(DateTime datet)
         {
             connect = new DBConnection();
@@ -310,31 +261,7 @@ namespace DemoCSDL.DAO
                 connect.CloseConnection();
             }
         }
-        public decimal CalcProfitPerMonth(int month, int year)
-        {
-            connect = new DBConnection();
-            connect.OpenConnection();
-            decimal res = 0;
-            try
-            {
-                string sqlQuery = "SELECT dbo.TinhLoiNhuan(@Thang, @Nam) AS TinhLN";
-                SqlCommand sqlcmd = new SqlCommand(sqlQuery, connect.sqlCon);
-                sqlcmd.Parameters.AddWithValue("@Thang", month);
-                sqlcmd.Parameters.AddWithValue("@Nam", year);
-                object result = sqlcmd.ExecuteScalar();
-                res = (result != DBNull.Value) ? Convert.ToDecimal(result) : 0;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error" + ex.Message);
-            }
-            finally
-            {
-                connect.CloseConnection();
-            }
-            return res;
-        }
-        public void AddProfitInfo(string daTe, decimal luongNv, decimal doanhThu, decimal tienNh, decimal loiNhuan)
+        public void AddProfitInfo(string daTe)
         {
             connect = new DBConnection();
 
@@ -346,10 +273,6 @@ namespace DemoCSDL.DAO
                 sqlcmd.CommandText = "ThemLoiNhuan";
                 sqlcmd.Connection = connect.sqlCon;
                 sqlcmd.Parameters.AddWithValue("@date", daTe);
-                sqlcmd.Parameters.AddWithValue("@luongnv", luongNv);
-                sqlcmd.Parameters.AddWithValue("@doanhthu", doanhThu);
-                sqlcmd.Parameters.AddWithValue("@tiennh", tienNh);
-                sqlcmd.Parameters.AddWithValue("@loinhuan", loiNhuan);
                 int rowsAffected = sqlcmd.ExecuteNonQuery();
 
                 if (rowsAffected > 0)
@@ -370,28 +293,7 @@ namespace DemoCSDL.DAO
                 connect.CloseConnection();
             }
         }
-        public decimal CalcTotalSalary()
-        {
-            connect = new DBConnection();
-            connect.OpenConnection();
-            decimal res = 0;
-            try
-            {
-                string sqlQuery = "SELECT dbo.TongLuongNV() AS TongLNV";
-                SqlCommand sqlcmd = new SqlCommand(sqlQuery, connect.sqlCon);
-                object result = sqlcmd.ExecuteScalar();
-                res = (result != DBNull.Value) ? Convert.ToDecimal(result) : 0;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error" + ex.Message);
-            }
-            finally
-            {
-                connect.CloseConnection();
-            }
-            return res;
-        }
+
         public DataTable GetProfitFromLastMonth(string date)
         {
             connect = new DBConnection();
