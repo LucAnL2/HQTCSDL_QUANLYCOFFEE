@@ -14,6 +14,39 @@ namespace DemoCSDL.DAO
     public class NhanVienDAO
     {
         DBConnection connect = new DBConnection();
+
+        public List<NhanVien> LayDSNhanVien()
+        {
+            string sql = "EXEC LayDanhSachNV";
+
+            List<NhanVien> listNV = new List<NhanVien>();
+
+            NhanVien nv = new NhanVien("NV00", "Tất cả");
+            listNV.Add(nv);
+            DataTable dt = connect.Load(sql);
+            foreach (DataRow dr in dt.Rows)
+            {
+                NhanVien nv1 = new NhanVien(
+                        dr["MaNV"].ToString(),
+                        dr["HTen"].ToString()
+                    );
+                listNV.Add(nv1);
+            }
+            return listNV;
+        }
+        public DataTable LayNhanVien()
+        {
+            try
+            {
+                DBConnection dbConnection = new DBConnection();
+                DataTable dtData = dbConnection.Load("Select * from NhanVien");
+                return dtData;
+            }
+            catch
+            {
+                throw;
+            }
+        }
         public List<NhanVien> LayDanhSachMaMVDaDuocPhanCongCV()
         {
             string storeProcedure = "LayDanhSachMaNVDaDuocPhanCa";
@@ -48,9 +81,6 @@ namespace DemoCSDL.DAO
             {
                 connect.OpenConnection();
                 SqlCommand sqlcmd = new SqlCommand();
-                sqlcmd.CommandType = CommandType.StoredProcedure;
-                sqlcmd.CommandText = "CapNhatTTND";
-                sqlcmd.Connection = connect.sqlCon;
                 sqlcmd.Parameters.AddWithValue("@ID", id);
                 sqlcmd.Parameters.AddWithValue("@HoTen", name);
                 sqlcmd.Parameters.AddWithValue("@UserName", uname);
@@ -59,6 +89,9 @@ namespace DemoCSDL.DAO
                 sqlcmd.Parameters.AddWithValue("@Address", address);
                 sqlcmd.Parameters.AddWithValue("@Phone", phone);
                 sqlcmd.Parameters.AddWithValue("@Password", pass);
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                sqlcmd.CommandText = "CapNhatTTND";
+                sqlcmd.Connection = connect.sqlCon;
                 int rowsAffected = sqlcmd.ExecuteNonQuery();
 
                 if (rowsAffected > 0)
@@ -129,7 +162,7 @@ namespace DemoCSDL.DAO
             return dt;
         }
 
-        public DataTable StaffInfo_View()
+        public DataTable ThongTinNV()
         {
             string query = "Select * From ViewThucHien";
             connect = new DBConnection();
@@ -143,9 +176,9 @@ namespace DemoCSDL.DAO
                 SqlDataAdapter da = new SqlDataAdapter(sqlcmd);
                 da.Fill(dt);
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show("Error" + ex.Message);
+                throw;
             }
             finally
             {
@@ -218,7 +251,7 @@ namespace DemoCSDL.DAO
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error" + ex.Message);
+                MessageBox.Show("Error " + ex.Message);
             }
             finally
             {
@@ -238,6 +271,87 @@ namespace DemoCSDL.DAO
                 object result = sqlcmd.ExecuteScalar();
                 res = (result != DBNull.Value) ? Convert.ToDecimal(result) : 0;
             }
+            catch 
+            {
+                throw;
+            }
+            finally
+            {
+                connect.CloseConnection();
+            }
+            return res;
+
+        }
+
+        public DataTable GetProfitFromLastMonth(string date)
+        {
+            connect = new DBConnection();
+
+            DataTable dt = new DataTable();
+            try
+            {
+                connect.OpenConnection();
+                SqlCommand sqlcmd = new SqlCommand("LayLoiNhuanThangTruoc", connect.sqlCon);
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                sqlcmd.Parameters.AddWithValue("@date", date);
+                SqlDataAdapter da = new SqlDataAdapter(sqlcmd);
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex.Message);
+            }
+            finally
+            {
+                connect.CloseConnection();
+            }
+            return dt;
+        }
+
+        public void AddProfitInfo(string daTe)
+        {
+            connect = new DBConnection();
+
+            try
+            {
+                connect.OpenConnection();
+                SqlCommand sqlcmd = new SqlCommand();
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                sqlcmd.CommandText = "ThemLoiNhuan";
+                sqlcmd.Connection = connect.sqlCon;
+                sqlcmd.Parameters.AddWithValue("@date", daTe);
+                int rowsAffected = sqlcmd.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Save Successfully!");
+                }
+                else
+                {
+                    MessageBox.Show("Error ! Please Try Again");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+            finally
+            {
+                connect.CloseConnection();
+            }
+        }
+        public string GenerateMaNV()
+        {
+            connect = new DBConnection();
+            connect.OpenConnection();
+            string res = "";
+            try
+            {
+                string sqlQuery = "SELECT dbo.TaoMaNV() AS TaoMaNV";
+                SqlCommand sqlcmd = new SqlCommand(sqlQuery, connect.sqlCon);
+                object result = sqlcmd.ExecuteScalar();
+                res = result.ToString();
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Error" + ex.Message);
@@ -247,7 +361,55 @@ namespace DemoCSDL.DAO
                 connect.CloseConnection();
             }
             return res;
+        }
+        public void AddNewStaff(NhanVien nv)
+        {
+            connect = new DBConnection();
 
+            try
+            {
+                connect.OpenConnection();
+                SqlCommand sqlcmd = new SqlCommand();
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                sqlcmd.CommandText = "ThemNVIEN";
+                sqlcmd.Connection = connect.sqlCon;
+                sqlcmd.Parameters.AddWithValue("@manv", nv.MaNV);
+                sqlcmd.Parameters.AddWithValue("@hten", nv.HTen);
+                sqlcmd.Parameters.AddWithValue("@uname", nv.TaiKhoan);
+                sqlcmd.Parameters.AddWithValue("@pass", nv.MatKhau);
+                int rowsAffected = sqlcmd.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Register Successfully!");
+                }
+                else
+                {
+                    MessageBox.Show("Error ! Please Try Again");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+            finally
+            {
+                connect.CloseConnection();
+            }
+        }
+        public void PhatLuong()
+        {
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+            };
+            try
+            {
+                connect.ExecuteNonQuery("PhatLuong", parameters, CommandType.StoredProcedure);
+            }
+            catch
+            {
+                throw;
+            }
         }
     }
 }

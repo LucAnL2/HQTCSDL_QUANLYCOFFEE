@@ -40,9 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupbox = new System.Windows.Forms.GroupBox();
             this.btnLammoi = new Guna.UI2.WinForms.Guna2Button();
-            this.txtImagePath = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblImagePath = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnEditProduct = new Guna.UI2.WinForms.Guna2Button();
             this.btnDeleteProduct = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddProduct = new Guna.UI2.WinForms.Guna2Button();
@@ -68,7 +66,7 @@
             this.txtMaSP.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMaSP.ForeColor = System.Drawing.Color.Black;
             this.txtMaSP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaSP.Location = new System.Drawing.Point(295, 259);
+            this.txtMaSP.Location = new System.Drawing.Point(295, 84);
             this.txtMaSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaSP.Name = "txtMaSP";
             this.txtMaSP.PasswordChar = '\0';
@@ -89,7 +87,7 @@
             this.txtTenSP.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTenSP.ForeColor = System.Drawing.Color.Black;
             this.txtTenSP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenSP.Location = new System.Drawing.Point(295, 84);
+            this.txtTenSP.Location = new System.Drawing.Point(295, 166);
             this.txtTenSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.PasswordChar = '\0';
@@ -110,7 +108,7 @@
             this.txtGia.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtGia.ForeColor = System.Drawing.Color.Black;
             this.txtGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGia.Location = new System.Drawing.Point(295, 163);
+            this.txtGia.Location = new System.Drawing.Point(295, 245);
             this.txtGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGia.Name = "txtGia";
             this.txtGia.PasswordChar = '\0';
@@ -122,9 +120,10 @@
             // picProduct
             // 
             this.picProduct.ImageRotate = 0F;
-            this.picProduct.Location = new System.Drawing.Point(17, 113);
+            this.picProduct.Location = new System.Drawing.Point(17, 84);
             this.picProduct.Name = "picProduct";
-            this.picProduct.Size = new System.Drawing.Size(243, 200);
+            this.picProduct.Size = new System.Drawing.Size(243, 229);
+            this.picProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picProduct.TabIndex = 2;
             this.picProduct.TabStop = false;
             // 
@@ -175,7 +174,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(295, 61);
+            this.label2.Location = new System.Drawing.Point(295, 143);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 19);
             this.label2.TabIndex = 5;
@@ -185,7 +184,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(295, 140);
+            this.label3.Location = new System.Drawing.Point(295, 222);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 19);
             this.label3.TabIndex = 5;
@@ -195,7 +194,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(295, 236);
+            this.label4.Location = new System.Drawing.Point(295, 61);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 19);
             this.label4.TabIndex = 5;
@@ -205,9 +204,7 @@
             // 
             this.groupbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
             this.groupbox.Controls.Add(this.btnLammoi);
-            this.groupbox.Controls.Add(this.txtImagePath);
             this.groupbox.Controls.Add(this.lblImagePath);
-            this.groupbox.Controls.Add(this.label5);
             this.groupbox.Controls.Add(this.label1);
             this.groupbox.Controls.Add(this.btnChoose);
             this.groupbox.Controls.Add(this.label3);
@@ -248,28 +245,6 @@
             this.btnLammoi.Text = "Làm mới";
             this.btnLammoi.Click += new System.EventHandler(this.btnLammoi_Click);
             // 
-            // txtImagePath
-            // 
-            this.txtImagePath.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtImagePath.DefaultText = "";
-            this.txtImagePath.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtImagePath.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtImagePath.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtImagePath.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtImagePath.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtImagePath.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtImagePath.ForeColor = System.Drawing.Color.Black;
-            this.txtImagePath.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtImagePath.Location = new System.Drawing.Point(17, 84);
-            this.txtImagePath.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtImagePath.Name = "txtImagePath";
-            this.txtImagePath.PasswordChar = '\0';
-            this.txtImagePath.PlaceholderText = "";
-            this.txtImagePath.ReadOnly = true;
-            this.txtImagePath.SelectedText = "";
-            this.txtImagePath.Size = new System.Drawing.Size(243, 22);
-            this.txtImagePath.TabIndex = 15;
-            // 
             // lblImagePath
             // 
             this.lblImagePath.AutoSize = true;
@@ -279,16 +254,6 @@
             this.lblImagePath.Size = new System.Drawing.Size(80, 19);
             this.lblImagePath.TabIndex = 7;
             this.lblImagePath.Text = "Upoad ảnh";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 61);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 19);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Ảnh sản phẩm";
             // 
             // btnEditProduct
             // 
@@ -395,7 +360,7 @@
             this.txtSearch.Size = new System.Drawing.Size(444, 30);
             this.txtSearch.TabIndex = 16;
             this.txtSearch.TabStop = false;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged_1);
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // gvProduct
             // 
@@ -446,10 +411,8 @@
         private Guna.UI2.WinForms.Guna2Button btnAddProduct;
         private Guna.UI2.WinForms.Guna2Button btnDeleteProduct;
         private Guna.UI2.WinForms.Guna2Button btnEditProduct;
-        private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private Guna.UI2.WinForms.Guna2TextBox txtImagePath;
         private System.Windows.Forms.Label lblImagePath;
         private System.Windows.Forms.DataGridView gvProduct;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;

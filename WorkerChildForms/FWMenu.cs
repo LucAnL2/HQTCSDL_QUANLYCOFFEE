@@ -17,9 +17,9 @@ namespace DemoCSDL.WorkerChildForms
 {
     public partial class FWMenu : Form
     {
-        PhuongThucTTDAO ptttDAO = new PhuongThucTTDAO();
-        HoaDonDAO hdDAO = new HoaDonDAO();
-        ChiTietDAO ctDAO = new ChiTietDAO();
+        private readonly PhuongThucTTDAO ptttDAO = new PhuongThucTTDAO();
+        private readonly HoaDonDAO hdDAO = new HoaDonDAO();
+        private readonly ChiTietDAO ctDAO = new ChiTietDAO();
         public FWMenu()
         {
             InitializeComponent();
@@ -48,62 +48,64 @@ namespace DemoCSDL.WorkerChildForms
             maLoaiSP = "ML4";
             Active.OpenChildForm(new WorkerChildForms.FWContainProduct(maLoaiSP), ref Active.activeForm, FWorker.panelFill);
         }
-
-        List<PhuongThucTT> listPttt;
         private void FWMenu_Load(object sender, EventArgs e)
+        {
+            datetimeHoadon.Value = DateTime.Now;
+            LoadOrderProducts();
+            LoadPaymentMethods();
+            UpdateInvoiceButtonState();
+        }
+        private void UpdateInvoiceButtonState()
+        {
+            btnTaoMa.Enabled = string.IsNullOrEmpty(HoaDonDAO.MaHD);
+            lblMaHD.Text = HoaDonDAO.MaHD ?? string.Empty;
+        }
+        private void LoadPaymentMethods()
+        {
+            var listPttt = ptttDAO.LayDSPhuongThuc();
+            cbbPTTT.DataSource = listPttt;
+            cbbPTTT.DisplayMember = "TenPTTT";
+            cbbPTTT.ValueMember = "MaPTTT";
+        }
+
+        private void LoadOrderProducts()
         {
             if (SanPhamDAO.listOrder != null)
             {
-                foreach (SanPhamOrder i in SanPhamDAO.listOrder)
+                foreach (SanPhamOrder order in SanPhamDAO.listOrder)
                 {
-                    WProductInOrder productOder = new WProductInOrder(i);
-                    productOder.Margin = new Padding();
-                    FLPanelOrder.Controls.Add(productOder);
+                    WProductInOrder productInOrder = new WProductInOrder(order) { Margin = new Padding() };
+                    FLPanelOrder.Controls.Add(productInOrder);
                 }
             }
-            listPttt = ptttDAO.LayDSPhuongThuc();
-            cbbPTTT.DataSource = listPttt;
-            cbbPTTT.DisplayMember = "TenPTTT"; // Thuộc tính hiển thị
-            cbbPTTT.ValueMember = "MaPTTT";
-
-            if (HoaDonDAO.MaHD != null)
-            {
-                lblMaHD.Text = HoaDonDAO.MaHD;
-                btnTaoMa.Enabled = false;
-            }
-            else
-            {
-                btnTaoMa.Enabled = true;
-            }
-
         }
         private void btnInvoice_Click(object sender, EventArgs e)
         {
             try
             {
-                foreach (SanPhamOrder spo in SanPhamDAO.listOrder)
-                {
-                    ChiTiet ct = new ChiTiet(lblMaHD.Text, spo.MaSP, spo.SoLuongOrder, spo.Gia);
-                    ctDAO.ThemChiTietHD(ct);
-                }
-                List<ChiTiet> listChiTiet = ctDAO.LoadCTHD(lblMaHD.Text);
-                List<HoaDon> listHoaDon = hdDAO.LoadHD(lblMaHD.Text);
-                FWThanhToan fthanhtoan = new FWThanhToan(listChiTiet, listHoaDon);
+                CreateInvoiceDetails();
+                var listChiTiet = ctDAO.LoadCTHD(lblMaHD.Text);
+                var listHoaDon = hdDAO.LoadHD(lblMaHD.Text);
 
                 SanPhamDAO.listOrder.Clear();
                 HoaDonDAO.MaHD = null;
-                
+
                 Active.OpenChildForm(new WorkerChildForms.FWMenu(), ref Active.activeForm, FWorker.panelFill);
-               
-                fthanhtoan.Show();
+                new FWThanhToan(listChiTiet, listHoaDon).Show();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
         }
-
+        private void CreateInvoiceDetails()
+        {
+            foreach (SanPhamOrder order in SanPhamDAO.listOrder)
+            {
+                ChiTiet ct = new ChiTiet(lblMaHD.Text, order.MaSP, order.SoLuongOrder, order.Gia);
+                ctDAO.ThemChiTietHD(ct);
+            }
+        }
         private void btnTotal_Click(object sender, EventArgs e)
         {
             decimal tongOrder = hdDAO.TinhTienOrder(SanPhamDAO.listOrder);

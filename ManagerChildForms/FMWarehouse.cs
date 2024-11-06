@@ -117,5 +117,61 @@ namespace DemoCSDL.ManagerChildForms
                 MessageBox.Show("Có lỗi xảy ra: " + ex.Message);
             }
         }
+
+        private void gvDSNguyenLieu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                string maNL = gvDSNguyenLieu.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string tenNL = gvDSNguyenLieu.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string donGia = gvDSNguyenLieu.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtMaNguyenLieu.Text = maNL;
+                txtTenNguyenLieu.Text = tenNL;
+                txtGia.Text = donGia;
+            }
+        }
+
+        private void btnSuaNL_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                NguyenLieu lh = new NguyenLieu(
+                    txtMaNguyenLieu.Text,
+                    txtTenNguyenLieu.Text,
+                    Convert.ToDecimal(txtGia.Text),
+                    0
+                );
+
+                NguyenLieuDAO nlDAO = new NguyenLieuDAO();
+                nlDAO.SuaNguyenLieu(lh); // Gọi phương thức sửa
+
+                LoadLoHang();
+                LoadNguyenLieu();
+                MessageBox.Show("Sửa nguyên liệu thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi xảy ra: " + ex.Message);
+            }
+        }
+
+        private void btnXoaNL_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string maNguyenLieu = txtMaNguyenLieu.Text;
+
+                NguyenLieuDAO nlDAO = new NguyenLieuDAO();
+                nlDAO.XoaNguyenLieu(maNguyenLieu);
+
+                LoadLoHang();
+                LoadNguyenLieu();
+                MessageBox.Show("Xóa nguyên liệu thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi xảy ra: " + ex.Message);
+            }
+        }
     }
 }

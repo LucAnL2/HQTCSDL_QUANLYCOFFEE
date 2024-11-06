@@ -17,117 +17,105 @@ namespace DemoCSDL.ManagerChildForms
 {
     public partial class FMAddProduct : Form
     {
+        private readonly SanPhamDAO spDAO = new SanPhamDAO();
+        private readonly LoaiSPDAO loaiSPDAO = new LoaiSPDAO();
+        private string fileName = "";
+        private List<LoaiSP> listLSP;
         public FMAddProduct()
         {
             InitializeComponent();
-            txtSearch.TextChanged += txtSearch_TextChanged_1;
+            txtSearch.TextChanged += txtSearch_TextChanged;
         }
-        SanPhamDAO spDAO = new SanPhamDAO();
-        LoaiSPDAO loaiSPDAO = new LoaiSPDAO();
-        string fileName = "";
-        List<LoaiSP> listLSP;
         private void FMAddProduct_Load(object sender, EventArgs e)
         {
             txtMaSP.ReadOnly = false;
+            LoadProductCategories();
+            LoadProducts();
+        }
+        private void LoadProductCategories()
+        {
             listLSP = loaiSPDAO.LayDSProduct();
             cbbMaLoaiSP.DataSource = listLSP;
-            cbbMaLoaiSP.DisplayMember = "TenLoaiSP"; // Thuộc tính hiển thị
+            cbbMaLoaiSP.DisplayMember = "TenLoaiSP";
             cbbMaLoaiSP.ValueMember = "MaLoaiSP";
+        }
+        private void LoadProducts()
+        {
             gvProduct.DataSource = spDAO.LaySanPham();
         }
-
-        //public void LoadImage(PictureBox picProduct, Guna2TextBox ImagePath)
-        //{
-        //    OpenFileDialog openFileDialog = new OpenFileDialog();
-        //    openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
-        //    openFileDialog.Multiselect = false; // Only allow single file selection
-
-        //    if (openFileDialog.ShowDialog() == DialogResult.OK)
-        //    {
-        //        string fileName = openFileDialog.FileName;
-        //        Image image = Image.FromFile(fileName);
-
-        //        // Set the PictureBox and TextBox
-        //        picProduct.SizeMode = PictureBoxSizeMode.Zoom;
-        //        picProduct.Image = image; // Directly set the image
-        //        ImagePath.Text = fileName; // Set the path of the image
-        //    }
-        //}
-
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
             try
             {
-                string tinhTrang = "Còn hàng";
-                string maLoaiSP = cbbMaLoaiSP.SelectedValue.ToString();
-                SanPham sp = new SanPham(txtMaSP.Text, maLoaiSP, txtTenSP.Text, tinhTrang, decimal.Parse(txtGia.Text), txtImagePath.Text);
+                var sp = CreateProductFromInputs();
                 spDAO.ThemSanPham(sp);
-                FMAddProduct_Load(sender, e);
+                LoadProducts();
                 MessageBox.Show("Thêm sản phẩm thành công");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }          
+            }
+        }
+        private SanPham CreateProductFromInputs()
+        {
+            string maLoaiSP = cbbMaLoaiSP.SelectedValue.ToString();
+            return new SanPham(txtMaSP.Text, maLoaiSP, txtTenSP.Text, "Còn hàng", decimal.Parse(txtGia.Text), fileName);
         }
 
         private void btnChoose_Click(object sender, EventArgs e)
         {
-            // LoadImage(picProduct, txtImagePath);
             picProduct.Image = ThaoTacAnh.ThemMotAnh(ref fileName);
         }
 
         private void gvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-      
+
+            if (e.RowIndex < 0) return;
+
             try
             {
-                if (e.RowIndex >= 0)
-                {
-                    txtMaSP.ReadOnly = true;
-                    DataGridViewRow row = gvProduct.Rows[e.RowIndex];
-
-                    txtMaSP.Text = row.Cells[0].Value.ToString();
-                    string maLoaiSP = row.Cells[1].Value.ToString(); // Giả sử ô 1 chứa MaLoaiSP
-
-                    // Gán tên loại sản phẩm vào ComboBox
-                    var selectedItem = listLSP.FirstOrDefault(lsp => lsp.MaLoaiSP == maLoaiSP);
-                    if (selectedItem != null)
-                    {
-                        cbbMaLoaiSP.SelectedValue = selectedItem.MaLoaiSP; // Gán giá trị tương ứng
-                    }
-
-                    txtTenSP.Text = row.Cells[2].Value.ToString();
-                    txtGia.Text = row.Cells[4].Value.ToString();
-
-                    string imagePath = row.Cells[5].Value.ToString();
-                   
-                    Image image = Image.FromFile(imagePath);
-                    picProduct.SizeMode = PictureBoxSizeMode.Zoom;
-                    picProduct.Image = image;
-                    txtImagePath.Text = imagePath; // Gán đường dẫn vào TextBox
-                   
-                }
+                txtMaSP.ReadOnly = true;
+                var row = gvProduct.Rows[e.RowIndex];
+                LoadProductToInputs(row);
             }
-            catch { }
-         
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+        private void LoadProductToInputs(DataGridViewRow row)
+        {
+            txtMaSP.Text = row.Cells[0].Value.ToString();
+            string maLoaiSP = row.Cells[1].Value.ToString();
 
+            // Gán tên loại sản phẩm vào ComboBox
+            var selectedItem = listLSP.FirstOrDefault(lsp => lsp.MaLoaiSP == maLoaiSP);
+            if (selectedItem != null)
+            {
+                cbbMaLoaiSP.SelectedValue = selectedItem.MaLoaiSP;
+            }
+
+            txtTenSP.Text = row.Cells[2].Value.ToString();
+            txtGia.Text = row.Cells[4].Value.ToString();
+            picProduct.Image = ThaoTacAnh.LayAnh(row.Cells[5].Value.ToString());
+            fileName = row.Cells[5].Value.ToString();
+        }
         private void btnDeleteProduct_Click(object sender, EventArgs e)
         {
             try
             {
                 txtMaSP.ReadOnly = false;
-                SanPham sp = new SanPham(txtMaSP.Text);
+                var sp = new SanPham(txtMaSP.Text);
                 spDAO.XoaSanPham(sp);
-                FMAddProduct_Load(sender, e);
-                clear();
+                LoadProducts();
+                ClearInputs();
                 MessageBox.Show("Xóa sản phẩm thành công");
             }
-            catch(Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
-            
         }
 
         private void btnEditProduct_Click(object sender, EventArgs e)
@@ -135,50 +123,42 @@ namespace DemoCSDL.ManagerChildForms
             try
             {
                 txtMaSP.ReadOnly = false;
-                string tinhTrang = "Còn hàng";
-                string maLoaiSP = cbbMaLoaiSP.SelectedValue.ToString();
-                SanPham sp = new SanPham(txtMaSP.Text, maLoaiSP, txtTenSP.Text, tinhTrang, Decimal.Parse(txtGia.Text), txtImagePath.Text);
+                var sp = CreateProductFromInputs();
                 spDAO.CapNhatSanPham(sp);
-                FMAddProduct_Load(sender, e);
-
-                clear();
+                LoadProducts();
+                ClearInputs();
                 MessageBox.Show("Sửa sản phẩm thành công");
             }
-            catch(Exception ex )
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
-
-        private void txtSearch_TextChanged_1(object sender, EventArgs e)
+        private void ClearInputs()
         {
-            if(txtSearch.Text == "")
-            {
-                gvProduct.DataSource = spDAO.LaySanPham();
-                FMAddProduct_Load(sender, e);
-            }
-            else
-            {
-                string searchString = txtSearch.Text;
-                DataTable productTable = spDAO.LayDSSanPhamBangChuoi(searchString);
-                gvProduct.DataSource = productTable;             
-            }            
-        }
-
-        private void clear()
-        {
-            txtMaSP.Text = "";
-            txtImagePath.Text = "";
-            txtTenSP.Text = "";
-            txtGia.Text = "";
+            txtMaSP.Clear();
+            txtTenSP.Clear();
+            txtGia.Clear();
             txtMaSP.ReadOnly = false;
             picProduct.Image = null;
         }
 
         private void btnLammoi_Click(object sender, EventArgs e)
         {
-            clear();
+            ClearInputs();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSearch.Text))
+            {
+                LoadProducts();
+            }
+            else
+            {
+                string searchString = txtSearch.Text;
+                gvProduct.DataSource = spDAO.LayDSSanPhamBangChuoi(searchString);
+            }
         }
     }
 }

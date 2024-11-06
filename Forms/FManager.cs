@@ -58,5 +58,20 @@ namespace DemoCSDL.Forms
         {
             Active.OpenChildForm(new ManagerChildForms.FMShift(), ref Active.activeForm, panelFill);
         }
+
+        private void btnMBill_Click(object sender, EventArgs e)
+        {
+            Active.OpenChildForm(new ManagerChildForms.FMBill(), ref Active.activeForm, panelFill);
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            Active.OpenChildForm(new ManagerChildForms.FMinformation(), ref Active.activeForm, panelFill);
+        }
+
+        private void btnPM_Click(object sender, EventArgs e)
+        {
+            Active.OpenChildForm(new ManagerChildForms.FMPersonnelManagement(), ref Active.activeForm, panelFill);
+        }
     }
 }

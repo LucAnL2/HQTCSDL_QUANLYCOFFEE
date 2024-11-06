@@ -33,6 +33,39 @@ namespace DemoCSDL.DAO
             return tongOrder;
         }
 
+        public void XoaHoaDonCu(int soNgay)
+        {
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@Songay", soNgay)
+            };
+            try
+            {
+                db.ExecuteNonQuery("XoaHoaDonCu", parameters, CommandType.StoredProcedure);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public DataTable QuanLyHD(string maNV, DateTime ngayBD, DateTime ngayKT)
+        {
+
+            string sql = "EXEC HienThiHoaDonTheoDK @MaNV, @NgayBD, @NgayKT";
+
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@MaNV", maNV),
+                new SqlParameter("@NgayBD", ngayBD.Date),
+                new SqlParameter("@NgayKT", ngayKT.Date)
+            };
+            DataTable dt = db.Load(sql, parameters);
+
+            return dt;
+
+        }
+
         public void ThemHoaDon(HoaDon hd)
         {
             SqlParameter[] parameters = new SqlParameter[]

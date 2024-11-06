@@ -17,11 +17,11 @@ namespace DemoCSDL.WorkerChildForms
 {
     public partial class FWContainProduct : Form
     {
-        string maLoaiSP;
-        SanPhamDAO spDAO = new SanPhamDAO();
-        PhuongThucTTDAO ptttDAO = new PhuongThucTTDAO();
-        HoaDonDAO hdDAO = new HoaDonDAO();
-        ChiTietDAO ctDAO = new ChiTietDAO();
+        private string maLoaiSP;
+        private readonly SanPhamDAO spDAO = new SanPhamDAO();
+        private readonly PhuongThucTTDAO ptttDAO = new PhuongThucTTDAO();
+        private readonly HoaDonDAO hdDAO = new HoaDonDAO();
+        private readonly ChiTietDAO ctDAO = new ChiTietDAO();
         public FWContainProduct()
         {
             InitializeComponent();
@@ -35,42 +35,45 @@ namespace DemoCSDL.WorkerChildForms
         List<PhuongThucTT> listPttt;
         private void FWContainProduct_Load(object sender, EventArgs e)
         {
-            List<SanPham> lsp = new List<SanPham>();
-            lsp = spDAO.DSSanPham(maLoaiSP);
-            foreach (SanPham j in lsp)
-            {
-                WProduct product = new WProduct(j);
-                product.Margin = new Padding(0, 0, 8, 8);
-                fLPanelSP.Controls.Add(product);
-            }
-
-            if (SanPhamDAO.listOrder != null)
-            {
-                foreach(SanPhamOrder i in SanPhamDAO.listOrder)
-                {
-                    WProductInOrder productOder = new WProductInOrder(i);
-                    productOder.Margin = new Padding();
-                    FLPanelOrder.Controls.Add(productOder);
-                }
-            }
-
-            listPttt = ptttDAO.LayDSPhuongThuc();
-            cbbPTTT.DataSource = listPttt;
-            cbbPTTT.DisplayMember = "TenPTTT"; // Thuộc tính hiển thị
-            cbbPTTT.ValueMember = "MaPTTT";
-
-
-            if (HoaDonDAO.MaHD != null)
-            {
-                lblMaHD.Text = HoaDonDAO.MaHD;
-                btnTaoMa.Enabled = false;
-            }
-            else
-            {
-                btnTaoMa.Enabled = true;
-            }
+            datetimeHoadon.Value = DateTime.Now;
+            LoadProducts();
+            LoadOrderProducts();
+            LoadPaymentMethods();
+            UpdateInvoiceButtonState();
+        }
+        private void UpdateInvoiceButtonState()
+        {
+            btnTaoMa.Enabled = string.IsNullOrEmpty(HoaDonDAO.MaHD);
+            lblMaHD.Text = HoaDonDAO.MaHD ?? string.Empty;
         }
 
+        private void LoadProducts()
+        {
+            List<SanPham> products = spDAO.DSSanPham(maLoaiSP);
+            foreach (SanPham product in products)
+            {
+                WProduct productControl = new WProduct(product) { Margin = new Padding(0, 0, 8, 8) };
+                fLPanelSP.Controls.Add(productControl);
+            }
+        }
+        private void LoadOrderProducts()
+        {
+            if (SanPhamDAO.listOrder != null)
+            {
+                foreach (SanPhamOrder order in SanPhamDAO.listOrder)
+                {
+                    WProductInOrder productOrderControl = new WProductInOrder(order) { Margin = new Padding() };
+                    FLPanelOrder.Controls.Add(productOrderControl);
+                }
+            }
+        }
+        private void LoadPaymentMethods()
+        {
+            var paymentMethods = ptttDAO.LayDSPhuongThuc();
+            cbbPTTT.DataSource = paymentMethods;
+            cbbPTTT.DisplayMember = "TenPTTT";
+            cbbPTTT.ValueMember = "MaPTTT";
+        }
         private void btnBack_Click(object sender, EventArgs e)
         {
             Active.OpenChildForm(new WorkerChildForms.FWMenu(), ref Active.activeForm, FWorker.panelFill);
@@ -84,17 +87,24 @@ namespace DemoCSDL.WorkerChildForms
     
         private void btnFinish_Click_1(object sender, EventArgs e)
         {
-            decimal discount = Convert.ToDecimal(txtDiscount.Text);
-            decimal subtotal = Convert.ToDecimal(lblTongTien.Text);
-            decimal total = subtotal - discount;
-            lblTotal.Text = total.ToString();
-
             try
             {
+                decimal discount = Convert.ToDecimal(txtDiscount.Text);
+                decimal subtotal = Convert.ToDecimal(lblTongTien.Text);
+                decimal total = subtotal - discount;
+                lblTotal.Text = total.ToString();
+
                 string maPTTT = cbbPTTT.SelectedValue.ToString();
                 string maNV = ShortTermVariables.ShortTermVariables.idEmp;
-                HoaDon hd = new HoaDon(lblMaHD.Text, maNV, datetimeHoadon.Value, maPTTT, txtNote.Text, Convert.ToInt32(lblTotal.Text));
+                var hd = new HoaDon(lblMaHD.Text, maNV, datetimeHoadon.Value, maPTTT, txtNote.Text, Convert.ToInt32(lblTotal.Text));
                 hdDAO.ThemHoaDon(hd);
+
+                foreach (var order in SanPhamDAO.listOrder)
+                {
+                    ChiTiet ct = new ChiTiet(lblMaHD.Text, order.MaSP, order.SoLuongOrder, order.Gia);
+                    ctDAO.ThemChiTietHD(ct);
+                }
+
                 MessageBox.Show("Thêm hóa đơn thành công");
             }
             catch (Exception ex)
@@ -107,19 +117,21 @@ namespace DemoCSDL.WorkerChildForms
         {
             try
             {
-                foreach (SanPhamOrder spo in SanPhamDAO.listOrder)
+                foreach (SanPhamOrder order in SanPhamDAO.listOrder)
                 {
-                    ChiTiet ct = new ChiTiet(lblMaHD.Text, spo.MaSP, spo.SoLuongOrder, spo.Gia);
+                    ChiTiet ct = new ChiTiet(lblMaHD.Text, order.MaSP, order.SoLuongOrder, order.Gia);
                     ctDAO.ThemChiTietHD(ct);
                 }
-                List<ChiTiet> listChiTiet = ctDAO.LoadCTHD(lblMaHD.Text);
-                List<HoaDon> listHoaDon = hdDAO.LoadHD(lblMaHD.Text);
-                FWThanhToan fthanhtoan = new FWThanhToan(listChiTiet, listHoaDon);
+
+                var listChiTiet = ctDAO.LoadCTHD(lblMaHD.Text);
+                var listHoaDon = hdDAO.LoadHD(lblMaHD.Text);
+                var paymentForm = new FWThanhToan(listChiTiet, listHoaDon);
+
                 SanPhamDAO.listOrder.Clear();
                 HoaDonDAO.MaHD = null;
                 Active.OpenChildForm(new WorkerChildForms.FWMenu(), ref Active.activeForm, FWorker.panelFill);
-                
-                fthanhtoan.Show();
+
+                paymentForm.Show();
             }
             catch (Exception ex)
             {

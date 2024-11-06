@@ -36,8 +36,19 @@ namespace DemoCSDL.DAO
             }
             return maHD; // Trả về mã HD mới
         }
+        public DataTable QLChiTietHD(string maHD)
+        {
+            string sql = "EXEC QLChiTietHD @MaHD";
 
+            SqlParameter[] parameter = new SqlParameter[]
+            {
+                new SqlParameter("@MaHD", maHD)
+            };
 
+            DataTable dt = db.Load(sql, parameter);
+            return dt;
+
+        }
         public void ThemChiTietHD(ChiTiet ct)
         {
             SqlParameter[] parameters = new SqlParameter[]

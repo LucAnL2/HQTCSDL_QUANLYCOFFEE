@@ -26,7 +26,6 @@ namespace DemoCSDL.ManagerChildForms
         List<NhanVien> danhSachNhanVien = new List<NhanVien>();
         List<CaLamViec> danhSachTatCaMaCa = new List<CaLamViec>();
 
-
         public FMShift()
         {
             InitializeComponent();

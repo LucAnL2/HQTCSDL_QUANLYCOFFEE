@@ -52,17 +52,17 @@ namespace DemoCSDL
                                 this.Hide();
                                 FLoading fLoading = new FLoading();
                                 fLoading.ShowDialog();
-                                FManager fManager = new FManager();
-                                fManager.ShowDialog();
+                                FWorker fworker = new FWorker();
+                                fworker.ShowDialog();
                                 this.Close();
                             }
                             else
                             {
-                                this.Hide();
-                                FLoading fLoading = new FLoading();
-                                fLoading.ShowDialog();
-                                FWorker fworker = new FWorker();
-                                fworker.ShowDialog();
+                                //this.Hide();
+                                //FLoading fLoading = new FLoading();
+                                //fLoading.ShowDialog();
+                                FManager fManager = new FManager();
+                                fManager.ShowDialog();
                                 this.Close();
                             }
                         }
@@ -84,6 +84,14 @@ namespace DemoCSDL
             FForgotPassword fForgotPassword = new FForgotPassword();
             fForgotPassword.ShowDialog();
             this.Close();       
+        }
+
+        private void btnDangKy_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FRegister fRegister = new FRegister();
+            fRegister.ShowDialog();
+            this.Close();
         }
     }
 }

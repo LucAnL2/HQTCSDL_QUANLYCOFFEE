@@ -14,73 +14,82 @@ namespace DemoCSDL.ManagerChildForms
 {
     public partial class FMDashboard : Form
     {
-        //MStaffInfoInDash mStaffInfoInDash = new MStaffInfoInDash();
+        private NhanVienDAO dao;
         public FMDashboard()
         {
             InitializeComponent();
-            //this.Controls.Add(this.mStaffInfoInDash);
-            //mStaffInfoInDash.Show();
+            dao = new NhanVienDAO();
         }
 
         private void FMDashboard_Load(object sender, EventArgs e)
         {
-            populateItems();
-            NhanVienDAO dao = new NhanVienDAO();
-            //lay du lieu tu bang tong cac dot loi nhuan roi dua vao totallb
-            decimal rs = dao.GetTotalProfit();
-            totallb.Text = rs.ToString();
+            PopulateItems();
+            UpdateTotalProfit();
         }
+        private void PopulateItems()
+        {
+            pnlNhanVien.Controls.Clear();
+            DataTable dt = dao.ThongTinNV();
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            NhanVienDAO dao = new NhanVienDAO();
-            DateTime today = DateTime.Today;
-            //goi function tinh doanh thu trong hom nay
-            decimal rs = dao.GetRevenuePerDay(today);
-            totallb.Text = rs.ToString();
-        }
-        private void populateItems()
-        {
-            NhanVienDAO dao = new NhanVienDAO();
-            flowLayoutPanel1.Controls.Clear();
-            DataTable dt = new DataTable();
-            dt = dao.StaffInfo_View();
-            MStaffInfoInDash[] mStaffs = new MStaffInfoInDash[dt.Rows.Count];
-            for (int i =0;i< mStaffs.Length; i++)
+            foreach (DataRow dr in dt.Rows)
             {
-                DataRow dr = dt.Rows[i];
-                mStaffs[i] = new MStaffInfoInDash();
-                mStaffs[i].Nameuc = dr["HTen"].ToString();
-                mStaffs[i].Iduc = dr["MaNV"].ToString();
-                if(flowLayoutPanel1.Controls.Count < 0)
+                var mStaff = new MStaffInfoInDash
                 {
-                    flowLayoutPanel1.Controls.Clear();
-                }
-                else
-                    flowLayoutPanel1.Controls.Add(mStaffs[i]);
+                    Nameuc = dr["HTen"].ToString(),
+                    Iduc = dr["MaNV"].ToString()
+                };
+                pnlNhanVien.Controls.Add(mStaff);
             }
-            label3.Text = dt.Rows.Count.ToString();
+            lblSoNV.Text = dt.Rows.Count.ToString();
+        }
+        private void UpdateTotalProfit()
+        {
+            decimal totalProfit = dao.GetTotalProfit();
+            totallb.Text = totalProfit.ToString();
+        }
+        private void btnDTNgay_Click(object sender, EventArgs e)
+        {
+            UpdateRevenueForToday();
+        }
+        private void UpdateRevenueForToday()
+        {
+            decimal todayRevenue = dao.GetRevenuePerDay(DateTime.Today);
+            totallb.Text = todayRevenue.ToString();
+            lblRevenue.Text = "Total Revenue";
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
+        private void btnDTThang_Click(object sender, EventArgs e)
         {
-            NhanVienDAO dao = new NhanVienDAO();
-            //goi function tinh tong tien hoa don trong 1 thang + tong tien lo hang trong 1 thang - tong luong nhan vien rtong 1 thang roi luu vao bang tong loi nhuan
-            int currentMonth = DateTime.Now.Month;
+            int currentMonth = DateTime.Now.Month - 1;
             int currentYear = DateTime.Now.Year;
-            decimal rs = dao.GetOutcome(currentMonth, currentYear); //tong tien nhap hang
-            decimal rs1 = dao.GetRevenue(currentMonth, currentYear); //tong tien hoa don 
-            // luong nhan vien rs2 = ....
-            decimal finalres = rs1 - rs;
-            totallb.Text = rs1.ToString();
-            
+            string combinedString = $"{currentYear}-{currentMonth}";
+            DataTable dt = dao.GetProfitFromLastMonth(combinedString);
+            if (dt.Rows.Count > 0)
+            {
+                totallb.Text = dt.Rows[0]["LoiNhuan"].ToString();
+            }
         }
 
-        private void guna2Button4_Click(object sender, EventArgs e)
+        private void btnDTAll_Click(object sender, EventArgs e)
         {
-            NhanVienDAO dao = new NhanVienDAO();
-            decimal rs = dao.GetTotalProfit();
-            totallb.Text = rs.ToString();
+            UpdateTotalProfit();
+        }
+
+        private void btnPhatLuong_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dao.PhatLuong();
+                int currentMonth = DateTime.Now.Month;
+                int currentYear = DateTime.Now.Year;
+                string combinedString = $"{currentYear}-{currentMonth}";
+                dao.AddProfitInfo(combinedString);
+                FMDashboard_Load(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Có lỗi xảy ra: {ex.Message}");
+            }
         }
     }
 }

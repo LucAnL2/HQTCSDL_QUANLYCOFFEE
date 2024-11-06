@@ -23,8 +23,7 @@ namespace DemoCSDL.UserControls
             this.spo = spo;
             lblWOrderTen.Text = spo.TenSP;
             lblWOrderGia.Text = spo.Gia.ToString();
-            string image = spo.HinhAnh;
-            picWOrderImage.Image = Image.FromFile(image);
+            picWOrderImage.Image = ThaoTacAnh.LayAnh(spo.HinhAnh);
             lblOrderSL.Text = spo.SoLuongOrder.ToString();
         }
 

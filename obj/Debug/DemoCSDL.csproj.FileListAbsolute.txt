@@ -106,3 +106,6 @@ D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\bin\Debug\zh-CHT\Microsoft.Report
 D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\bin\Debug\WorkerChildForms\FWThanhToan.resx
 D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\bin\Debug\WorkerChildForms\FWThanhToan.cs
 D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\bin\Debug\WorkerChildForms\FWThanhToan.Designer.cs
+D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.ManagerChildForms.FMPersonnelManagement.resources
+D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.Forms.FRegister.resources
+D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.ManagerChildForms.FMBill.resources

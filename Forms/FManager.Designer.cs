@@ -35,13 +35,15 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.btnMBill = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnShift = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddProduct = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.panelFill = new System.Windows.Forms.Panel();
-            this.btnShift = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPM = new Guna.UI2.WinForms.Guna2Button();
             this.panelTop.SuspendLayout();
             this.panelLeft.SuspendLayout();
             this.SuspendLayout();
@@ -124,6 +126,8 @@
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.panelLeft.Controls.Add(this.btnPM);
+            this.panelLeft.Controls.Add(this.btnMBill);
             this.panelLeft.Controls.Add(this.guna2Button1);
             this.panelLeft.Controls.Add(this.btnShift);
             this.panelLeft.Controls.Add(this.btnAddProduct);
@@ -137,6 +141,18 @@
             this.panelLeft.TabIndex = 6;
             this.panelLeft.Visible = false;
             // 
+            // btnMBill
+            // 
+            this.btnMBill.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.btnMBill.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.btnMBill.Location = new System.Drawing.Point(0, 339);
+            this.btnMBill.Name = "btnMBill";
+            this.btnMBill.Size = new System.Drawing.Size(250, 63);
+            this.btnMBill.TabIndex = 6;
+            this.btnMBill.Text = "Bill Management";
+            this.btnMBill.Click += new System.EventHandler(this.btnMBill_Click);
+            // 
             // guna2Button1
             // 
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
@@ -148,6 +164,18 @@
             this.guna2Button1.TabIndex = 5;
             this.guna2Button1.Text = "Storage";
             this.guna2Button1.Click += new System.EventHandler(this.btnStorage_Click);
+            // 
+            // btnShift
+            // 
+            this.btnShift.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.btnShift.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShift.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.btnShift.Location = new System.Drawing.Point(0, 276);
+            this.btnShift.Name = "btnShift";
+            this.btnShift.Size = new System.Drawing.Size(250, 63);
+            this.btnShift.TabIndex = 4;
+            this.btnShift.Text = "Add Shift";
+            this.btnShift.Click += new System.EventHandler(this.btnShift_Click);
             // 
             // btnAddProduct
             // 
@@ -182,6 +210,7 @@
             this.btnUser.Size = new System.Drawing.Size(250, 63);
             this.btnUser.TabIndex = 3;
             this.btnUser.Text = "User";
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // btnDashboard
             // 
@@ -203,17 +232,17 @@
             this.panelFill.Size = new System.Drawing.Size(1250, 741);
             this.panelFill.TabIndex = 7;
             // 
-            // btnShift
+            // btnPM
             // 
-            this.btnShift.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
-            this.btnShift.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShift.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.btnShift.Location = new System.Drawing.Point(0, 276);
-            this.btnShift.Name = "btnShift";
-            this.btnShift.Size = new System.Drawing.Size(250, 63);
-            this.btnShift.TabIndex = 4;
-            this.btnShift.Text = "Add Shift";
-            this.btnShift.Click += new System.EventHandler(this.btnShift_Click);
+            this.btnPM.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.btnPM.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.btnPM.Location = new System.Drawing.Point(0, 408);
+            this.btnPM.Name = "btnPM";
+            this.btnPM.Size = new System.Drawing.Size(250, 63);
+            this.btnPM.TabIndex = 7;
+            this.btnPM.Text = "Personnal Management";
+            this.btnPM.Click += new System.EventHandler(this.btnPM_Click);
             // 
             // FManager
             // 
@@ -250,5 +279,7 @@
         private Guna.UI2.WinForms.Guna2Button btnAddProduct;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button btnShift;
+        private Guna.UI2.WinForms.Guna2Button btnMBill;
+        private Guna.UI2.WinForms.Guna2Button btnPM;
     }
 }

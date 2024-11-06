@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.nameuc = new System.Windows.Forms.Label();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.iduc = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -46,28 +45,12 @@
             this.nameuc.TabIndex = 6;
             this.nameuc.Text = "Eric Archer";
             // 
-            // guna2CircleButton1
-            // 
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Image = global::DemoCSDL.Properties.Resources.ipencil;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(589, 12);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(60, 60);
-            this.guna2CircleButton1.TabIndex = 7;
-            // 
             // iduc
             // 
             this.iduc.AutoSize = true;
             this.iduc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iduc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.iduc.Location = new System.Drawing.Point(342, 33);
+            this.iduc.Location = new System.Drawing.Point(243, 33);
             this.iduc.Name = "iduc";
             this.iduc.Size = new System.Drawing.Size(107, 22);
             this.iduc.TabIndex = 6;
@@ -91,12 +74,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
-            this.Controls.Add(this.guna2CircleButton1);
             this.Controls.Add(this.iduc);
             this.Controls.Add(this.nameuc);
             this.Controls.Add(this.guna2PictureBox1);
             this.Name = "MStaffInfoInDash";
-            this.Size = new System.Drawing.Size(675, 93);
+            this.Size = new System.Drawing.Size(362, 93);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -108,6 +90,5 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label nameuc;
         private System.Windows.Forms.Label iduc;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
     }
 }

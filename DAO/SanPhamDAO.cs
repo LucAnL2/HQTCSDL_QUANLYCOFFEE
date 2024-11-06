@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DemoCSDL.Models;
 using DemoCSDL.Connection;
+using System.Windows.Forms;
 
 namespace DemoCSDL.DAO
 {
@@ -31,7 +32,7 @@ namespace DemoCSDL.DAO
                 throw;
             }
         }
-
+       
         public void XoaSanPham(SanPham sp)
         {
             SqlParameter[] parameters = new SqlParameter[]
@@ -87,7 +88,35 @@ namespace DemoCSDL.DAO
                 throw;
             }
         }
+        public bool CheckNguyenLieu(string maSP, int soLuongOrder)
+        {
+            bool isEnough = false; // Mặc định là không đủ
 
+            // Tạo tham số cho stored procedure
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@MaSP", maSP),
+                new SqlParameter("@SoLuong", soLuongOrder)
+            };
+
+            try
+            {
+                // Gọi stored procedure và nhận kết quả từ ExecuteScalar
+                object result = dbConnection.ExecuteScalar("CheckNguyenLieu", parameters, CommandType.StoredProcedure);
+
+                // Kiểm tra kết quả
+                if (result != null)
+                {
+                    isEnough = Convert.ToInt32(result) == 1; // Kết quả từ procedure
+                }
+            }
+            catch
+            {
+                throw;
+            }
+
+            return isEnough; // Trả về kết quả kiểm tra
+        }
         public DataTable LayDSSanPhamBangChuoi(string str)
         {
             string sql = "SELECT * FROM TimKiemSP(@searchString)";

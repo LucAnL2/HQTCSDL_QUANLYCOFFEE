@@ -18,6 +18,7 @@ namespace DemoCSDL.UserControls
     {
         SanPhamOrder spo = new SanPhamOrder();
         SanPham sp;
+        SanPhamDAO spDAO = new SanPhamDAO();
         public WProduct(SanPham sp)
         {  
             InitializeComponent();
@@ -26,8 +27,7 @@ namespace DemoCSDL.UserControls
             lblWGia.Text = sp.Gia.ToString();
             lblWMa.Text = sp.MaSP;
             lblWTinhtrang.Text = sp.TinhTrang;
-            string image = sp.HinhAnh;
-            picImageSP.Image = Image.FromFile(image);       
+            picImageSP.Image = ThaoTacAnh.LayAnh(sp.HinhAnh);       
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -37,17 +37,29 @@ namespace DemoCSDL.UserControls
                 MessageBox.Show("Vui lòng chọn số lượng khách đã Order");
                 HienThiManHinh(sp.MaLoaiSP);
             }
-            else{
-                spo.MaSP = sp.MaSP;
-                spo.MaLoaiSP = sp.MaLoaiSP;
-                spo.TenSP = sp.TenSP;
-                spo.TinhTrang = sp.TinhTrang;
-                spo.Gia = sp.Gia;
-                spo.HinhAnh = sp.HinhAnh;
-                spo.SoLuongOrder = Convert.ToInt32(NUpdownSL.Value);
-                SanPhamDAO.listOrder.Add(spo);
-                HienThiManHinh(spo.MaLoaiSP);
-            }                             
+            else
+            {
+                // Kiểm tra số lượng nguyên liệu có đủ không
+                bool isEnough = spDAO.CheckNguyenLieu(sp.MaSP, Convert.ToInt32(NUpdownSL.Value));
+
+                if (isEnough)
+                {
+                    // Nếu đủ, thêm sản phẩm vào danh sách đơn hàng
+                    spo.MaSP = sp.MaSP;
+                    spo.MaLoaiSP = sp.MaLoaiSP;
+                    spo.TenSP = sp.TenSP;
+                    spo.TinhTrang = sp.TinhTrang;
+                    spo.Gia = sp.Gia;
+                    spo.HinhAnh = sp.HinhAnh;
+                    spo.SoLuongOrder = Convert.ToInt32(NUpdownSL.Value);
+                    SanPhamDAO.listOrder.Add(spo);
+                    HienThiManHinh(spo.MaLoaiSP);
+                }
+                else
+                {
+                    MessageBox.Show("Không đủ nguyên liệu để thực hiện đơn hàng.");
+                }
+            }
         }
 
         public void HienThiManHinh(string MaLoaiSP)

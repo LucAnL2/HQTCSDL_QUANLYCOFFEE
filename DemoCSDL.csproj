@@ -111,6 +111,12 @@
     <Compile Include="Forms\FManager.Designer.cs">
       <DependentUpon>FManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FRegister.Designer.cs">
+      <DependentUpon>FRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FWorker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,12 @@
     <Compile Include="ManagerChildForms\FMAddProduct.Designer.cs">
       <DependentUpon>FMAddProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerChildForms\FMBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerChildForms\FMBill.Designer.cs">
+      <DependentUpon>FMBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerChildForms\FMDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +146,12 @@
     </Compile>
     <Compile Include="ManagerChildForms\FMinformation.Designer.cs">
       <DependentUpon>FMinformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerChildForms\FMPersonnelManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerChildForms\FMPersonnelManagement.Designer.cs">
+      <DependentUpon>FMPersonnelManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerChildForms\FMShift.cs">
       <SubType>Form</SubType>
@@ -233,17 +251,26 @@
     <EmbeddedResource Include="Forms\FManager.resx">
       <DependentUpon>FManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FRegister.resx">
+      <DependentUpon>FRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FWorker.resx">
       <DependentUpon>FWorker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerChildForms\FMAddProduct.resx">
       <DependentUpon>FMAddProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManagerChildForms\FMBill.resx">
+      <DependentUpon>FMBill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagerChildForms\FMDashboard.resx">
       <DependentUpon>FMDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerChildForms\FMinformation.resx">
       <DependentUpon>FMinformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerChildForms\FMPersonnelManagement.resx">
+      <DependentUpon>FMPersonnelManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerChildForms\FMShift.resx">
       <DependentUpon>FMShift.cs</DependentUpon>
@@ -380,6 +407,7 @@
     <None Include="Resources\minus.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\list.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

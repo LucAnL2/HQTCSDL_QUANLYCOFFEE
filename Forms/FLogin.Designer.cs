@@ -44,6 +44,7 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.unametb = new Guna.UI2.WinForms.Guna2TextBox();
             this.passtb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnDangKy = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -182,7 +183,7 @@
             this.unametb.BorderRadius = 10;
             this.unametb.BorderThickness = 3;
             this.unametb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.unametb.DefaultText = "";
+            this.unametb.DefaultText = "AN1";
             this.unametb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.unametb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.unametb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -209,7 +210,7 @@
             this.passtb.BorderRadius = 10;
             this.passtb.BorderThickness = 3;
             this.passtb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.passtb.DefaultText = "";
+            this.passtb.DefaultText = "12345";
             this.passtb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.passtb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.passtb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -231,12 +232,26 @@
             this.passtb.Size = new System.Drawing.Size(293, 39);
             this.passtb.TabIndex = 2;
             // 
+            // btnDangKy
+            // 
+            this.btnDangKy.BorderRadius = 10;
+            this.btnDangKy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.btnDangKy.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKy.ForeColor = System.Drawing.Color.White;
+            this.btnDangKy.Location = new System.Drawing.Point(732, 333);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.Size = new System.Drawing.Size(130, 40);
+            this.btnDangKy.TabIndex = 8;
+            this.btnDangKy.Text = "Register";
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
+            // 
             // FLogin
             // 
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 475);
+            this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblForgotPassword);
@@ -276,6 +291,7 @@
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl3;
         private Guna.UI2.WinForms.Guna2CircleButton btnClose;
+        private Guna.UI2.WinForms.Guna2Button btnDangKy;
     }
 }
 
