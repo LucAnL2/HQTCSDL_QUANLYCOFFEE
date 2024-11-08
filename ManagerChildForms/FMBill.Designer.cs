@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gvDSHoaDon = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbNhanVien = new System.Windows.Forms.ComboBox();
             this.dateTimeBegin = new System.Windows.Forms.DateTimePicker();
             this.dateTimeEnd = new System.Windows.Forms.DateTimePicker();
@@ -43,27 +48,16 @@
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.btnChitietHD = new Guna.UI2.WinForms.Guna2Button();
             this.btnTimkiem = new Guna.UI2.WinForms.Guna2Button();
-            this.gvChiTietHD = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gvDSHoaDon = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.gvChiTietHD = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvDSHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvChiTietHD)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // gvDSHoaDon
-            // 
-            this.gvDSHoaDon.BackgroundColor = System.Drawing.Color.White;
-            this.gvDSHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvDSHoaDon.Location = new System.Drawing.Point(2, 375);
-            this.gvDSHoaDon.Name = "gvDSHoaDon";
-            this.gvDSHoaDon.RowHeadersWidth = 51;
-            this.gvDSHoaDon.RowTemplate.Height = 24;
-            this.gvDSHoaDon.Size = new System.Drawing.Size(669, 353);
-            this.gvDSHoaDon.TabIndex = 0;
-            this.gvDSHoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvDSHoaDon_CellClick);
             // 
             // cmbNhanVien
             // 
@@ -220,17 +214,6 @@
             this.btnTimkiem.Text = "Tìm kiếm";
             this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
             // 
-            // gvChiTietHD
-            // 
-            this.gvChiTietHD.BackgroundColor = System.Drawing.Color.White;
-            this.gvChiTietHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvChiTietHD.Location = new System.Drawing.Point(677, 375);
-            this.gvChiTietHD.Name = "gvChiTietHD";
-            this.gvChiTietHD.RowHeadersWidth = 51;
-            this.gvChiTietHD.RowTemplate.Height = 24;
-            this.gvChiTietHD.Size = new System.Drawing.Size(564, 353);
-            this.gvChiTietHD.TabIndex = 16;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -280,17 +263,131 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm hóa đơn";
             // 
+            // gvDSHoaDon
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gvDSHoaDon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Tan;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvDSHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.gvDSHoaDon.ColumnHeadersHeight = 40;
+            this.gvDSHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvDSHoaDon.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gvDSHoaDon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gvDSHoaDon.Location = new System.Drawing.Point(3, 367);
+            this.gvDSHoaDon.Name = "gvDSHoaDon";
+            this.gvDSHoaDon.ReadOnly = true;
+            this.gvDSHoaDon.RowHeadersVisible = false;
+            this.gvDSHoaDon.RowHeadersWidth = 51;
+            this.gvDSHoaDon.RowTemplate.Height = 50;
+            this.gvDSHoaDon.Size = new System.Drawing.Size(668, 361);
+            this.gvDSHoaDon.TabIndex = 18;
+            this.gvDSHoaDon.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.gvDSHoaDon.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.gvDSHoaDon.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.gvDSHoaDon.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.gvDSHoaDon.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.gvDSHoaDon.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.gvDSHoaDon.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gvDSHoaDon.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gvDSHoaDon.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.gvDSHoaDon.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvDSHoaDon.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.gvDSHoaDon.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.gvDSHoaDon.ThemeStyle.HeaderStyle.Height = 40;
+            this.gvDSHoaDon.ThemeStyle.ReadOnly = true;
+            this.gvDSHoaDon.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.gvDSHoaDon.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gvDSHoaDon.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvDSHoaDon.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gvDSHoaDon.ThemeStyle.RowsStyle.Height = 50;
+            this.gvDSHoaDon.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gvDSHoaDon.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gvDSHoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvDSHoaDon_CellClick_1);
+            // 
+            // gvChiTietHD
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gvChiTietHD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Tan;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvChiTietHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.gvChiTietHD.ColumnHeadersHeight = 40;
+            this.gvChiTietHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvChiTietHD.DefaultCellStyle = dataGridViewCellStyle6;
+            this.gvChiTietHD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gvChiTietHD.Location = new System.Drawing.Point(677, 367);
+            this.gvChiTietHD.Name = "gvChiTietHD";
+            this.gvChiTietHD.ReadOnly = true;
+            this.gvChiTietHD.RowHeadersVisible = false;
+            this.gvChiTietHD.RowHeadersWidth = 51;
+            this.gvChiTietHD.RowTemplate.Height = 50;
+            this.gvChiTietHD.Size = new System.Drawing.Size(564, 361);
+            this.gvChiTietHD.TabIndex = 22;
+            this.gvChiTietHD.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.gvChiTietHD.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.gvChiTietHD.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.gvChiTietHD.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.gvChiTietHD.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.gvChiTietHD.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.gvChiTietHD.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gvChiTietHD.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gvChiTietHD.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.gvChiTietHD.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvChiTietHD.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.gvChiTietHD.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.gvChiTietHD.ThemeStyle.HeaderStyle.Height = 40;
+            this.gvChiTietHD.ThemeStyle.ReadOnly = true;
+            this.gvChiTietHD.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.gvChiTietHD.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gvChiTietHD.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvChiTietHD.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gvChiTietHD.ThemeStyle.RowsStyle.Height = 50;
+            this.gvChiTietHD.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gvChiTietHD.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
             // FMBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
             this.ClientSize = new System.Drawing.Size(1244, 730);
+            this.Controls.Add(this.gvChiTietHD);
+            this.Controls.Add(this.gvDSHoaDon);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.gvChiTietHD);
             this.Controls.Add(this.btnChitietHD);
             this.Controls.Add(this.txtMaHD);
             this.Controls.Add(this.label6);
@@ -298,24 +395,21 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSoNgay);
             this.Controls.Add(this.btnXoaHD);
-            this.Controls.Add(this.gvDSHoaDon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FMBill";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FMBill";
             this.Load += new System.EventHandler(this.FMBill_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gvDSHoaDon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvChiTietHD)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvDSHoaDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvChiTietHD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView gvDSHoaDon;
         private System.Windows.Forms.ComboBox cmbNhanVien;
         private System.Windows.Forms.DateTimePicker dateTimeBegin;
         private System.Windows.Forms.DateTimePicker dateTimeEnd;
@@ -330,10 +424,11 @@
         private System.Windows.Forms.TextBox txtMaHD;
         private Guna.UI2.WinForms.Guna2Button btnChitietHD;
         private Guna.UI2.WinForms.Guna2Button btnTimkiem;
-        private System.Windows.Forms.DataGridView gvChiTietHD;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private Guna.UI2.WinForms.Guna2DataGridView gvDSHoaDon;
+        private Guna.UI2.WinForms.Guna2DataGridView gvChiTietHD;
     }
 }

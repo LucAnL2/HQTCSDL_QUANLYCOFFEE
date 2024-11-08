@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FWContainProduct));
             this.panelRight = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnTaoMa = new Guna.UI2.WinForms.Guna2Button();
             this.lblMaHD = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtNote = new Guna.UI2.WinForms.Guna2TextBox();
@@ -55,7 +56,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
-            this.btnTaoMa = new Guna.UI2.WinForms.Guna2Button();
             this.panelRight.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
@@ -82,6 +82,24 @@
             this.panelRight.Name = "panelRight";
             this.panelRight.Size = new System.Drawing.Size(296, 741);
             this.panelRight.TabIndex = 2;
+            // 
+            // btnTaoMa
+            // 
+            this.btnTaoMa.BorderRadius = 5;
+            this.btnTaoMa.BorderThickness = 1;
+            this.btnTaoMa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTaoMa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTaoMa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTaoMa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTaoMa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
+            this.btnTaoMa.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaoMa.ForeColor = System.Drawing.Color.Black;
+            this.btnTaoMa.Location = new System.Drawing.Point(178, 116);
+            this.btnTaoMa.Name = "btnTaoMa";
+            this.btnTaoMa.Size = new System.Drawing.Size(88, 27);
+            this.btnTaoMa.TabIndex = 34;
+            this.btnTaoMa.Text = "Create";
+            this.btnTaoMa.Click += new System.EventHandler(this.btnTaoMa_Click);
             // 
             // lblMaHD
             // 
@@ -369,7 +387,7 @@
             this.label21.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(531, 33);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(102, 38);
+            this.label21.Size = new System.Drawing.Size(100, 37);
             this.label21.TabIndex = 8;
             this.label21.Text = "Total:";
             // 
@@ -412,24 +430,6 @@
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "     Back";
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // btnTaoMa
-            // 
-            this.btnTaoMa.BorderRadius = 5;
-            this.btnTaoMa.BorderThickness = 1;
-            this.btnTaoMa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTaoMa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTaoMa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTaoMa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTaoMa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
-            this.btnTaoMa.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaoMa.ForeColor = System.Drawing.Color.Black;
-            this.btnTaoMa.Location = new System.Drawing.Point(178, 116);
-            this.btnTaoMa.Name = "btnTaoMa";
-            this.btnTaoMa.Size = new System.Drawing.Size(88, 27);
-            this.btnTaoMa.TabIndex = 34;
-            this.btnTaoMa.Text = "Create";
-            this.btnTaoMa.Click += new System.EventHandler(this.btnTaoMa_Click);
             // 
             // FWContainProduct
             // 

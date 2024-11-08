@@ -51,6 +51,9 @@ namespace DemoCSDL.ManagerChildForms
                 spDAO.ThemSanPham(sp);
                 LoadProducts();
                 MessageBox.Show("Thêm sản phẩm thành công");
+                FMProcessing form = new FMProcessing(sp);
+                form.Show();
+
             }
             catch (Exception ex)
             {
@@ -68,22 +71,6 @@ namespace DemoCSDL.ManagerChildForms
             picProduct.Image = ThaoTacAnh.ThemMotAnh(ref fileName);
         }
 
-        private void gvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            if (e.RowIndex < 0) return;
-
-            try
-            {
-                txtMaSP.ReadOnly = true;
-                var row = gvProduct.Rows[e.RowIndex];
-                LoadProductToInputs(row);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
         private void LoadProductToInputs(DataGridViewRow row)
         {
             txtMaSP.Text = row.Cells[0].Value.ToString();
@@ -158,6 +145,22 @@ namespace DemoCSDL.ManagerChildForms
             {
                 string searchString = txtSearch.Text;
                 gvProduct.DataSource = spDAO.LayDSSanPhamBangChuoi(searchString);
+            }
+        }
+
+        private void gvProduct_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            try
+            {
+                txtMaSP.ReadOnly = true;
+                var row = gvProduct.Rows[e.RowIndex];
+                LoadProductToInputs(row);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

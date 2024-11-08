@@ -55,21 +55,26 @@ namespace DemoCSDL.ManagerChildForms
 
         private void gvDSHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+           
+        }
+
+        private void btnChitietHD_Click(object sender, EventArgs e)
+        {
+            gvChiTietHD.DataSource = ctd.QLChiTietHD(txtMaHD.Text); 
+        }
+
+        private void gvDSHoaDon_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
             try
             {
                 if (e.RowIndex >= 0)
                 {
                     DataGridViewRow row = gvDSHoaDon.Rows[e.RowIndex];
 
-                    txtMaHD.Text = row.Cells[0].Value.ToString();                 
+                    txtMaHD.Text = row.Cells[0].Value.ToString();
                 }
             }
             catch { }
         }
-
-        private void btnChitietHD_Click(object sender, EventArgs e)
-        {
-            gvChiTietHD.DataSource = ctd.QLChiTietHD(txtMaHD.Text); 
-        }  
     }
 }

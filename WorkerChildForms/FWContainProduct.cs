@@ -144,5 +144,7 @@ namespace DemoCSDL.WorkerChildForms
             HoaDonDAO.MaHD = ctDAO.TaoMaHD();
             lblMaHD.Text = HoaDonDAO.MaHD;
         }
+
+       
     }
 }

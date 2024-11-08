@@ -153,6 +153,12 @@
     <Compile Include="ManagerChildForms\FMPersonnelManagement.Designer.cs">
       <DependentUpon>FMPersonnelManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerChildForms\FMProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerChildForms\FMProcessing.Designer.cs">
+      <DependentUpon>FMProcessing.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerChildForms\FMShift.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,12 @@
     <Compile Include="ShortTermVariables\ShortTermVariables.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="ThaoTacAnh.cs" />
+    <Compile Include="UserControls\MIngredient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MIngredient.Designer.cs">
+      <DependentUpon>MIngredient.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\MStaffInfoInDash.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -272,6 +284,9 @@
     <EmbeddedResource Include="ManagerChildForms\FMPersonnelManagement.resx">
       <DependentUpon>FMPersonnelManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManagerChildForms\FMProcessing.resx">
+      <DependentUpon>FMProcessing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagerChildForms\FMShift.resx">
       <DependentUpon>FMShift.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,6 +297,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MIngredient.resx">
+      <DependentUpon>MIngredient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MStaffInfoInDash.resx">
       <DependentUpon>MStaffInfoInDash.cs</DependentUpon>
@@ -408,6 +426,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\list.png" />
+    <None Include="Resources\ingredients.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
