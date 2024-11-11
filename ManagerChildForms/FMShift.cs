@@ -28,13 +28,7 @@ namespace DemoCSDL.ManagerChildForms
 
         public FMShift()
         {
-            InitializeComponent();
-            danhSachCa = clvDAO.LayDanhSachMaCa();
-            danhSachMaCaNVDaDuocPhanCongCV = nvDAO.LayDanhSachMaMVDaDuocPhanCongCV();
-            danhSachNhanVien = nvDAO.LayDanhSachMaMVCuaTatCaNV();
-            danhSachTatCaMaCa = clvDAO.LayDanhSachTatCaMaCa();
-            resetTabPhanCong();
-            resetControls();
+            InitializeComponent();          
         }
 
         //Thêm ca làm việc mới
@@ -193,6 +187,17 @@ namespace DemoCSDL.ManagerChildForms
         private void cbbMaca_SelectedIndexChanged(object sender, EventArgs e)
         {
             gvStaffRegisterShift.DataSource = clvDAO.HienThiTheoBoLoc(cbbMaca.Text);
+        }
+
+        private void FMShift_Load(object sender, EventArgs e)
+        {
+            danhSachCa = clvDAO.LayDanhSachMaCa();
+            danhSachMaCaNVDaDuocPhanCongCV = nvDAO.LayDanhSachMaMVDaDuocPhanCongCV();
+            danhSachNhanVien = nvDAO.LayDanhSachMaMVCuaTatCaNV();
+            danhSachTatCaMaCa = clvDAO.LayDanhSachTatCaMaCa();
+            resetTabPhanCong();
+            resetControls();
+            dtpStartDay.Value = DateTime.Now;
         }
     }
 }

@@ -13,6 +13,13 @@ namespace DemoCSDL.Models
         private decimal gia;
         private int soLuong;
 
+        public NguyenLieu(string tenNL, decimal gia, int soLuong)
+        {
+            this.tenNL = tenNL;
+            this.gia = gia;
+            this.soLuong = soLuong;
+        }
+
         public NguyenLieu(string maNL, string tenNL, decimal gia, int soLuong)
         {
             this.maNL = maNL;

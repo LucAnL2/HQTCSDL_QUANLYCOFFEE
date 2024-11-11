@@ -32,18 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FWorker));
             this.btnMenu = new Guna.UI2.WinForms.Guna2Button();
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            this.btnUser = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCa = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThongTin = new Guna.UI2.WinForms.Guna2Button();
             panelFill = new System.Windows.Forms.Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panelTop = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSideBar = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.btnShift = new Guna.UI2.WinForms.Guna2Button();
             this.panelLeft.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
@@ -63,9 +62,9 @@
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
-            this.panelLeft.Controls.Add(this.btnShift);
-            this.panelLeft.Controls.Add(this.btnLogout);
-            this.panelLeft.Controls.Add(this.btnUser);
+            this.panelLeft.Controls.Add(this.btnCa);
+            this.panelLeft.Controls.Add(this.btnDangXuat);
+            this.panelLeft.Controls.Add(this.btnThongTin);
             this.panelLeft.Controls.Add(this.btnMenu);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 59);
@@ -74,29 +73,41 @@
             this.panelLeft.TabIndex = 5;
             this.panelLeft.Visible = false;
             // 
-            // btnLogout
+            // btnCa
             // 
-            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.btnLogout.Location = new System.Drawing.Point(0, 675);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(250, 63);
-            this.btnLogout.TabIndex = 3;
-            this.btnLogout.Text = "Log out";
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnCa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.btnCa.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.btnCa.Location = new System.Drawing.Point(0, 138);
+            this.btnCa.Name = "btnCa";
+            this.btnCa.Size = new System.Drawing.Size(250, 63);
+            this.btnCa.TabIndex = 4;
+            this.btnCa.Text = "Ca Làm Việc";
+            this.btnCa.Click += new System.EventHandler(this.btnCa_Click);
             // 
-            // btnUser
+            // btnDangXuat
             // 
-            this.btnUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
-            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.btnUser.Location = new System.Drawing.Point(0, 69);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(250, 63);
-            this.btnUser.TabIndex = 3;
-            this.btnUser.Text = "User";
-            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+            this.btnDangXuat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 675);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(250, 63);
+            this.btnDangXuat.TabIndex = 3;
+            this.btnDangXuat.Text = "Đăng Xuất";
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
+            // btnThongTin
+            // 
+            this.btnThongTin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.btnThongTin.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongTin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.btnThongTin.Location = new System.Drawing.Point(0, 69);
+            this.btnThongTin.Name = "btnThongTin";
+            this.btnThongTin.Size = new System.Drawing.Size(250, 63);
+            this.btnThongTin.TabIndex = 3;
+            this.btnThongTin.Text = "Thông Tin";
+            this.btnThongTin.Click += new System.EventHandler(this.btnThongTin_Click);
             // 
             // panelFill
             // 
@@ -123,7 +134,6 @@
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
             this.panelTop.Controls.Add(this.guna2Panel1);
             this.panelTop.Controls.Add(this.btnSideBar);
-            this.panelTop.Controls.Add(this.btnClose);
             this.panelTop.Controls.Add(this.guna2TextBox1);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
@@ -152,20 +162,6 @@
             this.btnSideBar.Size = new System.Drawing.Size(48, 47);
             this.btnSideBar.TabIndex = 8;
             this.btnSideBar.Click += new System.EventHandler(this.btnSideBar_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.FillColor = System.Drawing.Color.Transparent;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.btnClose.Location = new System.Drawing.Point(1437, 10);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnClose.Size = new System.Drawing.Size(40, 40);
-            this.btnClose.TabIndex = 7;
-            this.btnClose.Text = "X";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // guna2TextBox1
             // 
@@ -199,18 +195,6 @@
             this.guna2DragControl3.TargetControl = panelFill;
             this.guna2DragControl3.UseTransparentDrag = true;
             // 
-            // btnShift
-            // 
-            this.btnShift.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
-            this.btnShift.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShift.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.btnShift.Location = new System.Drawing.Point(0, 138);
-            this.btnShift.Name = "btnShift";
-            this.btnShift.Size = new System.Drawing.Size(250, 63);
-            this.btnShift.TabIndex = 4;
-            this.btnShift.Text = "Shift";
-            this.btnShift.Click += new System.EventHandler(this.btnShift_Click);
-            // 
             // FWorker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -239,12 +223,11 @@
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl3;
         private System.Windows.Forms.Panel panelTop;
         private Guna.UI2.WinForms.Guna2CircleButton btnSideBar;
-        private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button btnUser;
-        private Guna.UI2.WinForms.Guna2Button btnLogout;
-        private Guna.UI2.WinForms.Guna2Button btnShift;
+        private Guna.UI2.WinForms.Guna2Button btnThongTin;
+        private Guna.UI2.WinForms.Guna2Button btnDangXuat;
+        private Guna.UI2.WinForms.Guna2Button btnCa;
         public static System.Windows.Forms.Panel panelFill;
     }
 }

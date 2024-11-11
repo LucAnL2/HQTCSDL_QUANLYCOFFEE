@@ -22,7 +22,7 @@ namespace DemoCSDL.DAO
             {
                 string query = "Select MaSP as [Mã SP], MaLoaiSP as [Mã loại SP], " +
                 "TenSP as [Tên SP], TinhTrang as [Tình trạng], Gia as [Giá bán], " +
-                "HinhAnh as [Hình ảnh], TenLoaiSP as [Tên loại SP] from ChiTietSanPham";
+                "HinhAnh as [Hình ảnh], TenLoaiSP as [Tên loại SP] from VIEW_ChiTietSanPham";
 
                 DataTable dtData = dbConnection.Load(query);
                 return dtData;
@@ -41,7 +41,7 @@ namespace DemoCSDL.DAO
             };
             try
             {
-                dbConnection.ExecuteNonQuery("XoaSanPham", parameters, CommandType.StoredProcedure);
+                dbConnection.ExecuteNonQuery("PROC_XoaSanPham", parameters, CommandType.StoredProcedure);
             }
             catch
             {
@@ -61,7 +61,7 @@ namespace DemoCSDL.DAO
             };
             try
             {
-                dbConnection.ExecuteNonQuery("CapNhatSanPham", parameters, CommandType.StoredProcedure);
+                dbConnection.ExecuteNonQuery("PROC_CapNhatSanPham", parameters, CommandType.StoredProcedure);
             }
             catch
             {
@@ -81,7 +81,7 @@ namespace DemoCSDL.DAO
             };
             try
             {
-                dbConnection.ExecuteNonQuery("ThemSanPham", parameters, CommandType.StoredProcedure);
+                dbConnection.ExecuteNonQuery("PROC_ThemSanPham", parameters, CommandType.StoredProcedure);
             }
             catch
             {
@@ -102,7 +102,7 @@ namespace DemoCSDL.DAO
             try
             {
                 // Gọi stored procedure và nhận kết quả từ ExecuteScalar
-                object result = dbConnection.ExecuteScalar("CheckNguyenLieu", parameters, CommandType.StoredProcedure);
+                object result = dbConnection.ExecuteScalar("PROC_CheckNguyenLieu", parameters, CommandType.StoredProcedure);
 
                 // Kiểm tra kết quả
                 if (result != null)
@@ -119,7 +119,7 @@ namespace DemoCSDL.DAO
         }
         public DataTable LayDSSanPhamBangChuoi(string str)
         {
-            string sql = "SELECT * FROM TimKiemSP(@searchString)";
+            string sql = "SELECT * FROM FUNC_TimKiemSP(@searchString)";
             // Tạo tham số cho hàm
             SqlParameter[] parameters = new SqlParameter[]
             {
@@ -136,7 +136,7 @@ namespace DemoCSDL.DAO
             List<SanPham> listSP = new List<SanPham>();
 
             // Thay đổi câu lệnh SQL để sử dụng tham số
-            string sql = "EXEC HienThiSP @MaLoaiSP";
+            string sql = "EXEC PROC_HienThiSP @MaLoaiSP";
 
             // Tạo tham số
             SqlParameter[] parameters = new SqlParameter[]

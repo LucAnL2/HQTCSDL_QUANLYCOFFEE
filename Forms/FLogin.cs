@@ -25,72 +25,70 @@ namespace DemoCSDL
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (unametb.Text == "")
+            try
             {
-                MessageBox.Show("Please enter information");
+                if (string.IsNullOrEmpty(txtUname.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập tài khoản");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(txtPass.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập mật khẩu");
+                    return;
+                }
+
+                NhanVienDAO nhanVienDAO = new NhanVienDAO();
+                DataTable duLieu = nhanVienDAO.HienThiThongTin(txtUname.Text);
+
+                if (txtPass.Text != duLieu.Rows[0]["MatKhau"].ToString())
+                {
+                    MessageBox.Show("Sai mật khẩu, vui lòng thử lại.");
+                    return;
+                }
+
+                ShortTermVariables.BienDungChung.taiKhoanND = duLieu.Rows[0]["TaiKhoan"].ToString();
+                ShortTermVariables.BienDungChung.maNVND = duLieu.Rows[0]["MaNV"].ToString();
+                DataTable bangVaiTro = nhanVienDAO.LayVaiTro(ShortTermVariables.BienDungChung.maNVND);
+
+                string maVaiTro = bangVaiTro.Rows[0]["MaCV"].ToString();
+                MoFormPhuHop(maVaiTro);
             }
-            else
+            catch (Exception ex)
             {
-                ShortTermVariables.ShortTermVariables.unameEmp = unametb.Text;
-                DataTable dt = new DataTable();
-                NhanVienDAO dao = new NhanVienDAO();
-                dt = dao.DisplayInfo(unametb.Text);
-                if(dt.Rows.Count > 0)
-                {
-                    DataRow dr = dt.Rows[0];
-                    label1.Text = dr["MatKhau"].ToString();
-                    if (passtb.Text == dr["MatKhau"].ToString())
-                    {
-                        ShortTermVariables.ShortTermVariables.idEmp = dr["MaNV"].ToString();
-                        DataTable dt1 = new DataTable();
-                        dt1=dao.getrole(ShortTermVariables.ShortTermVariables.idEmp);
-                        if(dt1.Rows.Count > 0)
-                        {
-                            DataRow dr1 = dt1.NewRow();
-                            if (dr1["MaCV"].ToString()=="CV1")
-                            {
-                                this.Hide();
-                                FLoading fLoading = new FLoading();
-                                fLoading.ShowDialog();
-                                FWorker fworker = new FWorker();
-                                fworker.ShowDialog();
-                                this.Close();
-                            }
-                            else
-                            {
-                                //this.Hide();
-                                //FLoading fLoading = new FLoading();
-                                //fLoading.ShowDialog();
-                                FManager fManager = new FManager();
-                                fManager.ShowDialog();
-                                this.Close();
-                            }
-                        }
-                    }
-                    else
-                    {
-                       MessageBox.Show("Wrong Password please try again");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Wrong information please try again");
-                }
-            }                  
+                MessageBox.Show("Đã có lỗi: " + ex.Message);
+            }
+
         }
-        private void lblForgotPassword_Click(object sender, EventArgs e)
+        private void MoFormPhuHop(string maVaiTro)
         {
             this.Hide();
-            FForgotPassword fForgotPassword = new FForgotPassword();
-            fForgotPassword.ShowDialog();
-            this.Close();       
+            using (FLoading formLoading = new FLoading())
+            {
+                formLoading.ShowDialog();
+            }
+            if (maVaiTro == "CV1")
+            {
+                using (FWorker formCongNhan = new FWorker())
+                {
+                    formCongNhan.ShowDialog();
+                }
+            }
+            else if (maVaiTro == "CV2")
+            {
+                using (FManager formQuanLy = new FManager())
+                {
+                    formQuanLy.ShowDialog();
+                }
+            }
+            this.Close();
         }
-
         private void btnDangKy_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FRegister fRegister = new FRegister();
-            fRegister.ShowDialog();
+            FRegister fDangKy = new FRegister();
+            fDangKy.ShowDialog();
             this.Close();
         }
     }

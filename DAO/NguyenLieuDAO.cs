@@ -16,17 +16,18 @@ namespace DemoCSDL.DAO
         DBConnection dbConnection = new DBConnection();
         public DataTable LayNguyenLieu()
         {
+
             try
             {
-                DBConnection dbConnection = new DBConnection();
-                DataTable dtData = dbConnection.Load("Select * from NguyenLieu");
-                return dtData;
+                DataTable dtNguyenLieu = dbConnection.Load("PROC_LayNguyenLieu", null);
+                return dtNguyenLieu;
             }
-            catch
+            catch 
             {
                 throw;
             }
         }
+
 
         public void ThemNguyenLieu(NguyenLieu nl)
         {
@@ -38,7 +39,7 @@ namespace DemoCSDL.DAO
             };
             try
             {
-                dbConnection.ExecuteNonQuery("ThemNguyenLieu", parameters, CommandType.StoredProcedure);
+                dbConnection.ExecuteNonQuery("PROC_ThemNguyenLieu", parameters, CommandType.StoredProcedure);
             }
             catch
             {
@@ -57,7 +58,7 @@ namespace DemoCSDL.DAO
 
             try
             {
-                dbConnection.ExecuteNonQuery("SuaNguyenLieu", parameters, CommandType.StoredProcedure);
+                dbConnection.ExecuteNonQuery("PROC_SuaNguyenLieu", parameters, CommandType.StoredProcedure);
             }
             catch
             {
@@ -73,7 +74,7 @@ namespace DemoCSDL.DAO
 
             try
             {
-                dbConnection.ExecuteNonQuery("XoaNguyenLieu", parameters, CommandType.StoredProcedure);
+                dbConnection.ExecuteNonQuery("PROC_XoaNguyenLieu", parameters, CommandType.StoredProcedure);
             }
             catch (Exception ex)
             {

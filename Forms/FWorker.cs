@@ -27,14 +27,6 @@ namespace DemoCSDL.Forms
         {
             Active.OpenChildForm(new WorkerChildForms.FWMenu(), ref Active.activeForm, panelFill);
         }
-        private void btnUser_Click(object sender, EventArgs e)
-        {
-            Active.OpenChildForm(new WorkerChildForms.FWinformation(), ref Active.activeForm, panelFill);
-        }
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            Active.OpenChildForm(new WorkerChildForms.FWContainProduct(), ref Active.activeForm, panelFill);
-        }
         private void btnSideBar_Click(object sender, EventArgs e)
         {
             if (panelLeft.Visible == false)
@@ -50,15 +42,24 @@ namespace DemoCSDL.Forms
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        } 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
-        private void btnShift_Click(object sender, EventArgs e)
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FLogin fLogin = new FLogin();
+            fLogin.ShowDialog();
+            this.Close();
+        }
+
+        private void btnCa_Click(object sender, EventArgs e)
         {
             Active.OpenChildForm(new WorkerChildForms.FWShift(), ref Active.activeForm, panelFill);
+        }
+
+        private void btnThongTin_Click(object sender, EventArgs e)
+        {
+            Active.OpenChildForm(new WorkerChildForms.FWinformation(), ref Active.activeForm, panelFill);
         }
     }
 }

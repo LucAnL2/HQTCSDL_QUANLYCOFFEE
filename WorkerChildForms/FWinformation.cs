@@ -21,26 +21,6 @@ namespace DemoCSDL.WorkerChildForms
         {
             InitializeComponent();
         }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            // Hành động cho nút ảnh
-        }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-            // Chuyển sang chế độ chỉnh sửa thông tin
-            flag = 2;
-            ConfigureFieldsForInfoEdit();
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-            // Chuyển sang chế độ đổi mật khẩu
-            flag = 1;
-            ConfigureFieldsForPasswordChange();
-        }
-
         private void FWinformation_Load(object sender, EventArgs e)
         {
             LoadEmployeeInfo();
@@ -48,9 +28,9 @@ namespace DemoCSDL.WorkerChildForms
 
         private void LoadEmployeeInfo()
         {
-            string username = ShortTermVariables.ShortTermVariables.unameEmp;
+            string username = ShortTermVariables.BienDungChung.taiKhoanND;
             NhanVienDAO dao = new NhanVienDAO();
-            DataTable dt = dao.DisplayInfo(username);
+            DataTable dt = dao.HienThiThongTin(username);
 
             if (dt.Rows.Count > 0)
             {
@@ -117,26 +97,35 @@ namespace DemoCSDL.WorkerChildForms
                 }
 
                 NhanVienDAO dao = new NhanVienDAO();
-                dao.EditInfo(id, uname, name, age, sex, addr, phone, pass);
+                dao.ChinhSuaThongTin(id, uname, name, age, sex, addr, phone, pass);
 
                 // Cập nhật trạng thái sau khi lưu
                 SetFieldsReadOnly(true);
                 savebtn.Visible = false;
-                LoadEmployeeInfo();
-            }
-            catch (SqlException sqlEx)
-            {
-                // Xử lý các lỗi từ cơ sở dữ liệu
-                MessageBox.Show(sqlEx.Message);
+                MessageBox.Show("Lưu thành công!");
+                FWinformation_Load(sender, e);
             }
             catch (Exception ex)
             {
-                // Xử lý các lỗi khác
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Đã có lỗi " + ex.Message);
             }
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
+        private void btnDoiMK_Click(object sender, EventArgs e)
+        {
+            // Chuyển sang chế độ đổi mật khẩu
+            flag = 1;
+            ConfigureFieldsForPasswordChange();
+        }
+
+        private void btnChinhSua_Click(object sender, EventArgs e)
+        {
+            // Chuyển sang chế độ chỉnh sửa thông tin
+            flag = 2;
+            ConfigureFieldsForInfoEdit();
+        }
+
+        private void btnRutTien_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Rút tiền thành công!");
         }

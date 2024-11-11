@@ -42,16 +42,16 @@ namespace DemoCSDL.WorkerChildForms
             gvStaffRegisterShift.DataSource = clvDAO.HienThiTheoBoLoc(MaNV);
         }
 
-        private void btnViewSalary_Click(object sender, EventArgs e)
-        {
-            DangKy dk = new DangKy(MaNV);
-            MessageBox.Show(dkDAO.TinhLuong(dk).ToString());
-        }
-
-        private void btnTakeSalary_Click(object sender, EventArgs e)
+        private void btnRutLuong_Click(object sender, EventArgs e)
         {
             dkDAO.RutLuong();
             MessageBox.Show("Rút lương thành công");
+        }
+
+        private void btnHienLuong_Click(object sender, EventArgs e)
+        {
+            DangKy dk = new DangKy(MaNV);
+            MessageBox.Show(dkDAO.TinhLuong(dk).ToString());
         }
     }
 }

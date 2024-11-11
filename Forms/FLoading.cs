@@ -28,8 +28,6 @@ namespace DemoCSDL.Forms
             {
                 timeLoading.Stop();
                 this.Hide();
-                FWorker fWorker = new FWorker();
-                fWorker.ShowDialog();
                 this.Close();
             }
             LoadingBar.Value += 1;

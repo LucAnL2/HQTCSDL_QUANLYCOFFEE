@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnDTAll = new Guna.UI2.WinForms.Guna2Button();
@@ -43,8 +43,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.totallb = new System.Windows.Forms.Label();
-            this.lblRevenue = new System.Windows.Forms.Label();
+            this.lblTongLoiNhuan = new System.Windows.Forms.Label();
+            this.lblDoanhThu = new System.Windows.Forms.Label();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnPhatLuong = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
@@ -94,7 +94,7 @@
             this.btnDTAll.Name = "btnDTAll";
             this.btnDTAll.Size = new System.Drawing.Size(180, 45);
             this.btnDTAll.TabIndex = 3;
-            this.btnDTAll.Text = "ALL";
+            this.btnDTAll.Text = "Tổng";
             this.btnDTAll.Click += new System.EventHandler(this.btnDTAll_Click);
             // 
             // btnDTThang
@@ -108,11 +108,11 @@
             this.btnDTThang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
             this.btnDTThang.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDTThang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
-            this.btnDTThang.Location = new System.Drawing.Point(41, 151);
+            this.btnDTThang.Location = new System.Drawing.Point(41, 156);
             this.btnDTThang.Name = "btnDTThang";
             this.btnDTThang.Size = new System.Drawing.Size(180, 45);
             this.btnDTThang.TabIndex = 3;
-            this.btnDTThang.Text = "1 month ago";
+            this.btnDTThang.Text = "1 Tháng Trước";
             this.btnDTThang.Click += new System.EventHandler(this.btnDTThang_Click);
             // 
             // btnDTNgay
@@ -130,7 +130,7 @@
             this.btnDTNgay.Name = "btnDTNgay";
             this.btnDTNgay.Size = new System.Drawing.Size(180, 45);
             this.btnDTNgay.TabIndex = 3;
-            this.btnDTNgay.Text = "Today";
+            this.btnDTNgay.Text = "Hôm Nay";
             this.btnDTNgay.Click += new System.EventHandler(this.btnDTNgay_Click);
             // 
             // chart1
@@ -138,25 +138,25 @@
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
-            chartArea1.AxisX.IsMarginVisible = false;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea6.AxisX.IsMarginVisible = false;
+            chartArea6.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            chartArea6.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea6.AxisY.LineColor = System.Drawing.Color.Transparent;
+            chartArea6.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            chartArea6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
             this.chart1.Location = new System.Drawing.Point(288, 3);
             this.chart1.Name = "chart1";
-            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
-            series1.BorderWidth = 3;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series6.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            series6.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            series6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
+            series6.BorderWidth = 3;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            series6.Name = "Series1";
+            this.chart1.Series.Add(series6);
             this.chart1.Size = new System.Drawing.Size(959, 343);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -168,9 +168,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 36);
+            this.label1.Size = new System.Drawing.Size(250, 36);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Dashboard";
+            this.label1.Text = "Trang tổng quan";
             // 
             // pnlNhanVien
             // 
@@ -202,11 +202,11 @@
             this.lblSoNV.BackColor = System.Drawing.Color.Transparent;
             this.lblSoNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSoNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.lblSoNV.Location = new System.Drawing.Point(139, 47);
+            this.lblSoNV.Location = new System.Drawing.Point(104, 33);
             this.lblSoNV.Name = "lblSoNV";
-            this.lblSoNV.Size = new System.Drawing.Size(41, 29);
+            this.lblSoNV.Size = new System.Drawing.Size(27, 29);
             this.lblSoNV.TabIndex = 4;
-            this.lblSoNV.Text = "23";
+            this.lblSoNV.Text = "0";
             // 
             // label2
             // 
@@ -215,9 +215,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
             this.label2.Location = new System.Drawing.Point(105, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 22);
+            this.label2.Size = new System.Drawing.Size(103, 22);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Total staff";
+            this.label2.Text = "Nhân Viên";
             // 
             // guna2PictureBox1
             // 
@@ -236,8 +236,8 @@
             // 
             this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.guna2Panel3.BorderThickness = 3;
-            this.guna2Panel3.Controls.Add(this.totallb);
-            this.guna2Panel3.Controls.Add(this.lblRevenue);
+            this.guna2Panel3.Controls.Add(this.lblTongLoiNhuan);
+            this.guna2Panel3.Controls.Add(this.lblDoanhThu);
             this.guna2Panel3.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
             this.guna2Panel3.Location = new System.Drawing.Point(53, 194);
@@ -245,28 +245,28 @@
             this.guna2Panel3.Size = new System.Drawing.Size(274, 87);
             this.guna2Panel3.TabIndex = 3;
             // 
-            // totallb
+            // lblTongLoiNhuan
             // 
-            this.totallb.AutoSize = true;
-            this.totallb.BackColor = System.Drawing.Color.Transparent;
-            this.totallb.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totallb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.totallb.Location = new System.Drawing.Point(123, 47);
-            this.totallb.Name = "totallb";
-            this.totallb.Size = new System.Drawing.Size(83, 29);
-            this.totallb.TabIndex = 4;
-            this.totallb.Text = "$2370";
+            this.lblTongLoiNhuan.AutoSize = true;
+            this.lblTongLoiNhuan.BackColor = System.Drawing.Color.Transparent;
+            this.lblTongLoiNhuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTongLoiNhuan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.lblTongLoiNhuan.Location = new System.Drawing.Point(104, 37);
+            this.lblTongLoiNhuan.Name = "lblTongLoiNhuan";
+            this.lblTongLoiNhuan.Size = new System.Drawing.Size(41, 29);
+            this.lblTongLoiNhuan.TabIndex = 4;
+            this.lblTongLoiNhuan.Text = "$0";
             // 
-            // lblRevenue
+            // lblDoanhThu
             // 
-            this.lblRevenue.AutoSize = true;
-            this.lblRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRevenue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.lblRevenue.Location = new System.Drawing.Point(105, 11);
-            this.lblRevenue.Name = "lblRevenue";
-            this.lblRevenue.Size = new System.Drawing.Size(110, 22);
-            this.lblRevenue.TabIndex = 4;
-            this.lblRevenue.Text = "Total Profit";
+            this.lblDoanhThu.AutoSize = true;
+            this.lblDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoanhThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.lblDoanhThu.Location = new System.Drawing.Point(105, 11);
+            this.lblDoanhThu.Name = "lblDoanhThu";
+            this.lblDoanhThu.Size = new System.Drawing.Size(109, 22);
+            this.lblDoanhThu.TabIndex = 4;
+            this.lblDoanhThu.Text = "Doanh Thu";
             // 
             // guna2PictureBox2
             // 
@@ -296,7 +296,7 @@
             this.btnPhatLuong.Name = "btnPhatLuong";
             this.btnPhatLuong.Size = new System.Drawing.Size(180, 45);
             this.btnPhatLuong.TabIndex = 5;
-            this.btnPhatLuong.Text = "Calculate";
+            this.btnPhatLuong.Text = "Phát Lương";
             this.btnPhatLuong.Click += new System.EventHandler(this.btnPhatLuong_Click);
             // 
             // FMDashboard
@@ -344,8 +344,8 @@
         private System.Windows.Forms.Label lblSoNV;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private System.Windows.Forms.Label totallb;
-        private System.Windows.Forms.Label lblRevenue;
+        private System.Windows.Forms.Label lblTongLoiNhuan;
+        private System.Windows.Forms.Label lblDoanhThu;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2Button btnPhatLuong;
     }

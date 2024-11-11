@@ -16,7 +16,7 @@ namespace DemoCSDL.DAO
         {
             List<PhuongThucTT> listpt = new List<PhuongThucTT>();
 
-            string sql = "EXEC DSPhuongThucTT";
+            string sql = "EXEC PROC_DSPhuongThucTT";
             DataTable dt = dbConnection.Load(sql);
 
             foreach (DataRow dr in dt.Rows)

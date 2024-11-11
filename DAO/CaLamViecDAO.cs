@@ -48,7 +48,7 @@ namespace DemoCSDL.DAO
             };
             try
             {
-                connect.ExecuteNonQuery("ThemCaLamViec", parameters, CommandType.StoredProcedure);
+                connect.ExecuteNonQuery("PROC_ThemCaLamViec", parameters, CommandType.StoredProcedure);
             }
             catch
             {
@@ -67,7 +67,7 @@ namespace DemoCSDL.DAO
             };
             try
             {
-                connect.ExecuteNonQuery("SuaCaLamViec", parameters, CommandType.StoredProcedure);
+                connect.ExecuteNonQuery("PROC_SuaCaLamViec", parameters, CommandType.StoredProcedure);
             }
             catch
             {
@@ -83,7 +83,7 @@ namespace DemoCSDL.DAO
             };
             try
             {
-                connect.ExecuteNonQuery("XoaCaLamViec", parameters, CommandType.StoredProcedure);
+                connect.ExecuteNonQuery("PROC_XoaCaLamViec", parameters, CommandType.StoredProcedure);
             }
             catch
             {
@@ -93,7 +93,7 @@ namespace DemoCSDL.DAO
 
         public List<CaLamViec> LayDanhSachMaCa()
         {
-            string storeProcedure = "LayDanhSachMaCaDaCoNguoiLam";
+            string storeProcedure = "PROC_LayDanhSachMaCaDaCoNguoiLam";
             SqlParameter[] parameters = null;
             return connect.GetObjects<CaLamViec>(storeProcedure,
                 parameters,
@@ -107,7 +107,7 @@ namespace DemoCSDL.DAO
 
         public List<CaLamViec> LayDanhSachTatCaMaCa()
         {
-            string storeProcedure = "LayDanhTatCaMaCa";
+            string storeProcedure = "PROC_LayDanhTatCaMaCa";
             SqlParameter[] parameters = null;
             return connect.GetObjects<CaLamViec>(storeProcedure,
                 parameters,

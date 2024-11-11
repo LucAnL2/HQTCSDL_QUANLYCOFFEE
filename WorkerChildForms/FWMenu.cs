@@ -1,4 +1,5 @@
-﻿using DemoCSDL.ActiveInForms;
+﻿
+using DemoCSDL.ActiveInForms;
 using DemoCSDL.DAO;
 using DemoCSDL.Forms;
 using DemoCSDL.Models;
@@ -51,16 +52,16 @@ namespace DemoCSDL.WorkerChildForms
         private void FWMenu_Load(object sender, EventArgs e)
         {
             datetimeHoadon.Value = DateTime.Now;
-            LoadOrderProducts();
-            LoadPaymentMethods();
-            UpdateInvoiceButtonState();
+            LoadSanPhamDat();
+            LoadPTTT();
+            CapNhatNutDoanhThu();
         }
-        private void UpdateInvoiceButtonState()
+        private void CapNhatNutDoanhThu()
         {
             btnTaoMa.Enabled = string.IsNullOrEmpty(HoaDonDAO.MaHD);
             lblMaHD.Text = HoaDonDAO.MaHD ?? string.Empty;
         }
-        private void LoadPaymentMethods()
+        private void LoadPTTT()
         {
             var listPttt = ptttDAO.LayDSPhuongThuc();
             cbbPTTT.DataSource = listPttt;
@@ -68,7 +69,7 @@ namespace DemoCSDL.WorkerChildForms
             cbbPTTT.ValueMember = "MaPTTT";
         }
 
-        private void LoadOrderProducts()
+        private void LoadSanPhamDat()
         {
             if (SanPhamDAO.listOrder != null)
             {
@@ -79,11 +80,47 @@ namespace DemoCSDL.WorkerChildForms
                 }
             }
         }
-        private void btnInvoice_Click(object sender, EventArgs e)
+        private void TaoChiTietHoaDon()
+        {
+            foreach (SanPhamOrder order in SanPhamDAO.listOrder)
+            {
+                ChiTiet ct = new ChiTiet(lblMaHD.Text, order.MaSP, order.SoLuongOrder, order.Gia);
+                ctDAO.ThemChiTietHD(ct);
+            }
+        }
+      
+        private void btnTaoMa_Click(object sender, EventArgs e)
+        {
+            HoaDonDAO.MaHD = ctDAO.TaoMaHD();
+            lblMaHD.Text = HoaDonDAO.MaHD;
+        }
+
+        private void btnHoanTat_Click(object sender, EventArgs e)
+        {
+            decimal discount = Convert.ToDecimal(txtDiscount.Text);
+            decimal subtotal = Convert.ToDecimal(lblTongTien.Text);
+            decimal total = subtotal - discount;
+            lblTotal.Text = total.ToString();
+
+            try
+            {
+                string maPTTT = cbbPTTT.SelectedValue.ToString();
+                string maNV = ShortTermVariables.BienDungChung.maNVND;
+                HoaDon hd = new HoaDon(lblMaHD.Text, maNV, datetimeHoadon.Value, maPTTT, txtNote.Text, Convert.ToInt32(lblTotal.Text));
+                hdDAO.ThemHoaDon(hd);
+                MessageBox.Show("Thêm hóa đơn thành công");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
         {
             try
             {
-                CreateInvoiceDetails();
+                TaoChiTietHoaDon();
                 var listChiTiet = ctDAO.LoadCTHD(lblMaHD.Text);
                 var listHoaDon = hdDAO.LoadHD(lblMaHD.Text);
 
@@ -98,45 +135,11 @@ namespace DemoCSDL.WorkerChildForms
                 MessageBox.Show(ex.Message);
             }
         }
-        private void CreateInvoiceDetails()
-        {
-            foreach (SanPhamOrder order in SanPhamDAO.listOrder)
-            {
-                ChiTiet ct = new ChiTiet(lblMaHD.Text, order.MaSP, order.SoLuongOrder, order.Gia);
-                ctDAO.ThemChiTietHD(ct);
-            }
-        }
-        private void btnTotal_Click(object sender, EventArgs e)
+
+        private void btnTong_Click(object sender, EventArgs e)
         {
             decimal tongOrder = hdDAO.TinhTienOrder(SanPhamDAO.listOrder);
             lblTongTien.Text = tongOrder.ToString();
-        }
-      
-        private void btnTaoMa_Click(object sender, EventArgs e)
-        {
-            HoaDonDAO.MaHD = ctDAO.TaoMaHD();
-            lblMaHD.Text = HoaDonDAO.MaHD;
-        }
-
-        private void btnFinish_Click(object sender, EventArgs e)
-        {
-            decimal discount = Convert.ToDecimal(txtDiscount.Text);
-            decimal subtotal = Convert.ToDecimal(lblTongTien.Text);
-            decimal total = subtotal - discount;
-            lblTotal.Text = total.ToString();
-
-            try
-            {
-                string maPTTT = cbbPTTT.SelectedValue.ToString();
-                string maNV = ShortTermVariables.ShortTermVariables.idEmp;
-                HoaDon hd = new HoaDon(lblMaHD.Text, maNV, datetimeHoadon.Value, maPTTT, txtNote.Text, Convert.ToInt32(lblTotal.Text));
-                hdDAO.ThemHoaDon(hd);
-                MessageBox.Show("Thêm hóa đơn thành công");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
     }
 }

@@ -35,15 +35,15 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.btnPM = new Guna.UI2.WinForms.Guna2Button();
             this.btnMBill = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnShift = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddProduct = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.panelFill = new System.Windows.Forms.Panel();
-            this.btnPM = new Guna.UI2.WinForms.Guna2Button();
             this.panelTop.SuspendLayout();
             this.panelLeft.SuspendLayout();
             this.SuspendLayout();
@@ -131,7 +131,7 @@
             this.panelLeft.Controls.Add(this.guna2Button1);
             this.panelLeft.Controls.Add(this.btnShift);
             this.panelLeft.Controls.Add(this.btnAddProduct);
-            this.panelLeft.Controls.Add(this.btnLogout);
+            this.panelLeft.Controls.Add(this.btnDangXuat);
             this.panelLeft.Controls.Add(this.btnUser);
             this.panelLeft.Controls.Add(this.btnDashboard);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
@@ -140,6 +140,18 @@
             this.panelLeft.Size = new System.Drawing.Size(250, 741);
             this.panelLeft.TabIndex = 6;
             this.panelLeft.Visible = false;
+            // 
+            // btnPM
+            // 
+            this.btnPM.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.btnPM.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.btnPM.Location = new System.Drawing.Point(0, 408);
+            this.btnPM.Name = "btnPM";
+            this.btnPM.Size = new System.Drawing.Size(250, 63);
+            this.btnPM.TabIndex = 7;
+            this.btnPM.Text = "Quản Lý Nhân Sự";
+            this.btnPM.Click += new System.EventHandler(this.btnPM_Click);
             // 
             // btnMBill
             // 
@@ -150,7 +162,7 @@
             this.btnMBill.Name = "btnMBill";
             this.btnMBill.Size = new System.Drawing.Size(250, 63);
             this.btnMBill.TabIndex = 6;
-            this.btnMBill.Text = "Bill Management";
+            this.btnMBill.Text = "Quản Lý Hóa Đơn";
             this.btnMBill.Click += new System.EventHandler(this.btnMBill_Click);
             // 
             // guna2Button1
@@ -162,7 +174,7 @@
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(250, 63);
             this.guna2Button1.TabIndex = 5;
-            this.guna2Button1.Text = "Storage";
+            this.guna2Button1.Text = "Quản Lý Kho";
             this.guna2Button1.Click += new System.EventHandler(this.btnStorage_Click);
             // 
             // btnShift
@@ -174,7 +186,7 @@
             this.btnShift.Name = "btnShift";
             this.btnShift.Size = new System.Drawing.Size(250, 63);
             this.btnShift.TabIndex = 4;
-            this.btnShift.Text = "Add Shift";
+            this.btnShift.Text = "Thêm Ca Làm";
             this.btnShift.Click += new System.EventHandler(this.btnShift_Click);
             // 
             // btnAddProduct
@@ -186,19 +198,20 @@
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(250, 63);
             this.btnAddProduct.TabIndex = 4;
-            this.btnAddProduct.Text = "Add Product";
+            this.btnAddProduct.Text = "Thêm Sản Phẩm";
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
-            // btnLogout
+            // btnDangXuat
             // 
-            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.btnLogout.Location = new System.Drawing.Point(0, 675);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(250, 63);
-            this.btnLogout.TabIndex = 3;
-            this.btnLogout.Text = "Log out";
+            this.btnDangXuat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 675);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(250, 63);
+            this.btnDangXuat.TabIndex = 3;
+            this.btnDangXuat.Text = "Đăng Xuất";
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // btnUser
             // 
@@ -209,7 +222,7 @@
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(250, 63);
             this.btnUser.TabIndex = 3;
-            this.btnUser.Text = "User";
+            this.btnUser.Text = "Chỉnh Sửa Thông Tin";
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // btnDashboard
@@ -221,7 +234,7 @@
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(250, 63);
             this.btnDashboard.TabIndex = 3;
-            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.Text = "Trang Tổng Quan";
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // panelFill
@@ -231,18 +244,6 @@
             this.panelFill.Name = "panelFill";
             this.panelFill.Size = new System.Drawing.Size(1250, 741);
             this.panelFill.TabIndex = 7;
-            // 
-            // btnPM
-            // 
-            this.btnPM.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
-            this.btnPM.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.btnPM.Location = new System.Drawing.Point(0, 408);
-            this.btnPM.Name = "btnPM";
-            this.btnPM.Size = new System.Drawing.Size(250, 63);
-            this.btnPM.TabIndex = 7;
-            this.btnPM.Text = "Personnal Management";
-            this.btnPM.Click += new System.EventHandler(this.btnPM_Click);
             // 
             // FManager
             // 
@@ -272,7 +273,7 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Panel panelLeft;
-        private Guna.UI2.WinForms.Guna2Button btnLogout;
+        private Guna.UI2.WinForms.Guna2Button btnDangXuat;
         private Guna.UI2.WinForms.Guna2Button btnUser;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         public System.Windows.Forms.Panel panelFill;

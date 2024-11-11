@@ -28,7 +28,6 @@ D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\bin\Debug\DemoCSDL.pdb
 D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\bin\Debug\Guna.UI2.dll
 D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.csproj.AssemblyReference.cache
 D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.FLogin.resources
-D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.Forms.FForgotPassword.resources
 D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.Forms.FLoading.resources
 D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.Forms.FManager.resources
 D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.Forms.FWorker.resources

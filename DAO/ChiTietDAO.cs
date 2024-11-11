@@ -21,7 +21,7 @@ namespace DemoCSDL.DAO
             try
             {
                 // Gọi hàm GenerateMaHD để lấy mã HD mới
-                string query = "SELECT dbo.TaoMaHD()"; // Câu lệnh gọi hàm
+                string query = "SELECT dbo.FUNC_TaoMaHD()"; // Câu lệnh gọi hàm
                 object result = db.ExecuteScalar(query, null, CommandType.Text); // Gọi phương thức ExecuteScalar
 
                 // Kiểm tra kết quả và chuyển đổi thành string
@@ -38,7 +38,7 @@ namespace DemoCSDL.DAO
         }
         public DataTable QLChiTietHD(string maHD)
         {
-            string sql = "EXEC QLChiTietHD @MaHD";
+            string sql = "EXEC PROC_QLChiTietHD @MaHD";
 
             SqlParameter[] parameter = new SqlParameter[]
             {
@@ -60,7 +60,7 @@ namespace DemoCSDL.DAO
             };
             try
             {
-                db.ExecuteNonQuery("ThemChiTietHD", parameters, CommandType.StoredProcedure);
+                db.ExecuteNonQuery("PROC_ThemChiTietHD", parameters, CommandType.StoredProcedure);
             }
             catch
             {
@@ -72,7 +72,7 @@ namespace DemoCSDL.DAO
         {
             List<ChiTiet> listCT = new List<ChiTiet>();
 
-            string sql = "EXEC LayCTHoaDon @MaHD";
+            string sql = "EXEC PROC_LayCTHoaDon @MaHD";
 
             SqlParameter[] parameters = new SqlParameter[]
             {

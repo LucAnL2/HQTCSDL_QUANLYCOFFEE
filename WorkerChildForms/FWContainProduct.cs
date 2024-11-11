@@ -36,18 +36,18 @@ namespace DemoCSDL.WorkerChildForms
         private void FWContainProduct_Load(object sender, EventArgs e)
         {
             datetimeHoadon.Value = DateTime.Now;
-            LoadProducts();
-            LoadOrderProducts();
-            LoadPaymentMethods();
-            UpdateInvoiceButtonState();
+            LoadSanPham();
+            LoadDonHang();
+            LoadPTTT();
+            CapNhatNutHoaDon();
         }
-        private void UpdateInvoiceButtonState()
+        private void CapNhatNutHoaDon()
         {
             btnTaoMa.Enabled = string.IsNullOrEmpty(HoaDonDAO.MaHD);
             lblMaHD.Text = HoaDonDAO.MaHD ?? string.Empty;
         }
 
-        private void LoadProducts()
+        private void LoadSanPham()
         {
             List<SanPham> products = spDAO.DSSanPham(maLoaiSP);
             foreach (SanPham product in products)
@@ -56,7 +56,7 @@ namespace DemoCSDL.WorkerChildForms
                 fLPanelSP.Controls.Add(productControl);
             }
         }
-        private void LoadOrderProducts()
+        private void LoadDonHang()
         {
             if (SanPhamDAO.listOrder != null)
             {
@@ -67,7 +67,7 @@ namespace DemoCSDL.WorkerChildForms
                 }
             }
         }
-        private void LoadPaymentMethods()
+        private void LoadPTTT()
         {
             var paymentMethods = ptttDAO.LayDSPhuongThuc();
             cbbPTTT.DataSource = paymentMethods;
@@ -78,14 +78,14 @@ namespace DemoCSDL.WorkerChildForms
         {
             Active.OpenChildForm(new WorkerChildForms.FWMenu(), ref Active.activeForm, FWorker.panelFill);
         }
-     
-        private void btnTotal_Click_1(object sender, EventArgs e)
+
+        private void btnTaoMa_Click(object sender, EventArgs e)
         {
-            decimal tongOrder = hdDAO.TinhTienOrder(SanPhamDAO.listOrder);
-            lblTongTien.Text = tongOrder.ToString();    
+            HoaDonDAO.MaHD = ctDAO.TaoMaHD();
+            lblMaHD.Text = HoaDonDAO.MaHD;
         }
-    
-        private void btnFinish_Click_1(object sender, EventArgs e)
+
+        private void btnHoanTat_Click(object sender, EventArgs e)
         {
             try
             {
@@ -95,7 +95,7 @@ namespace DemoCSDL.WorkerChildForms
                 lblTotal.Text = total.ToString();
 
                 string maPTTT = cbbPTTT.SelectedValue.ToString();
-                string maNV = ShortTermVariables.ShortTermVariables.idEmp;
+                string maNV = ShortTermVariables.BienDungChung.maNVND;
                 var hd = new HoaDon(lblMaHD.Text, maNV, datetimeHoadon.Value, maPTTT, txtNote.Text, Convert.ToInt32(lblTotal.Text));
                 hdDAO.ThemHoaDon(hd);
 
@@ -113,7 +113,7 @@ namespace DemoCSDL.WorkerChildForms
             }
         }
 
-        private void btnInvoice_Click(object sender, EventArgs e)
+        private void btnHoaDon_Click(object sender, EventArgs e)
         {
             try
             {
@@ -139,10 +139,10 @@ namespace DemoCSDL.WorkerChildForms
             }
         }
 
-        private void btnTaoMa_Click(object sender, EventArgs e)
+        private void btnTong_Click(object sender, EventArgs e)
         {
-            HoaDonDAO.MaHD = ctDAO.TaoMaHD();
-            lblMaHD.Text = HoaDonDAO.MaHD;
+            decimal tongOrder = hdDAO.TinhTienOrder(SanPhamDAO.listOrder);
+            lblTongTien.Text = tongOrder.ToString();
         }
     }
 }

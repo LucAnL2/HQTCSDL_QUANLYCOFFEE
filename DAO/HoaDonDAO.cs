@@ -41,7 +41,7 @@ namespace DemoCSDL.DAO
             };
             try
             {
-                db.ExecuteNonQuery("XoaHoaDonCu", parameters, CommandType.StoredProcedure);
+                db.ExecuteNonQuery("PROC_XoaHoaDonCu", parameters, CommandType.StoredProcedure);
             }
             catch
             {
@@ -52,7 +52,7 @@ namespace DemoCSDL.DAO
         public DataTable QuanLyHD(string maNV, DateTime ngayBD, DateTime ngayKT)
         {
 
-            string sql = "EXEC HienThiHoaDonTheoDK @MaNV, @NgayBD, @NgayKT";
+            string sql = "EXEC PROC_HienThiHoaDonTheoDK @MaNV, @NgayBD, @NgayKT";
 
             SqlParameter[] parameters = new SqlParameter[]
             {
@@ -63,7 +63,6 @@ namespace DemoCSDL.DAO
             DataTable dt = db.Load(sql, parameters);
 
             return dt;
-
         }
 
         public void ThemHoaDon(HoaDon hd)
@@ -79,7 +78,7 @@ namespace DemoCSDL.DAO
             };
             try
             {
-                db.ExecuteNonQuery("ThemHoaDon", parameters, CommandType.StoredProcedure);
+                db.ExecuteNonQuery("PROC_ThemHoaDon", parameters, CommandType.StoredProcedure);
             }
             catch
             {
@@ -91,7 +90,7 @@ namespace DemoCSDL.DAO
         {
             List<HoaDon> listCT = new List<HoaDon>();
 
-            string sql = "EXEC LayHoaDon @MaHD";
+            string sql = "EXEC PROC_LayHoaDon @MaHD";
 
             SqlParameter[] parameters = new SqlParameter[]
             {

@@ -22,7 +22,7 @@ namespace DemoCSDL.DAO
             };
             try
             {
-                connect.ExecuteNonQuery("ThemDangKi", parameters, CommandType.StoredProcedure);
+                connect.ExecuteNonQuery("PROC_ThemDangKi", parameters, CommandType.StoredProcedure);
             }
             catch
             {
@@ -37,7 +37,7 @@ namespace DemoCSDL.DAO
             };
             try
             {
-                connect.ExecuteNonQuery("RutLuong", parameters, CommandType.StoredProcedure);
+                connect.ExecuteNonQuery("PROC_RutLuong", parameters, CommandType.StoredProcedure);
             }
             catch
             {
@@ -54,7 +54,7 @@ namespace DemoCSDL.DAO
             };
             try
             {
-                luong = connect.ExecuteScalarDecimal("SELECT dbo.TinhLuong(@MaNV)", parameters, CommandType.Text);
+                luong = connect.ExecuteScalarDecimal("SELECT dbo.FUNC_TinhLuong(@MaNV)", parameters, CommandType.Text);
             }
             catch
             {

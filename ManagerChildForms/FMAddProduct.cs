@@ -29,17 +29,17 @@ namespace DemoCSDL.ManagerChildForms
         private void FMAddProduct_Load(object sender, EventArgs e)
         {
             txtMaSP.ReadOnly = false;
-            LoadProductCategories();
-            LoadProducts();
+            LoadLoaiSP();
+            LoadSP();
         }
-        private void LoadProductCategories()
+        private void LoadLoaiSP()
         {
-            listLSP = loaiSPDAO.LayDSProduct();
+            listLSP = loaiSPDAO.LayDSSanPham();
             cbbMaLoaiSP.DataSource = listLSP;
             cbbMaLoaiSP.DisplayMember = "TenLoaiSP";
             cbbMaLoaiSP.ValueMember = "MaLoaiSP";
         }
-        private void LoadProducts()
+        private void LoadSP()
         {
             gvProduct.DataSource = spDAO.LaySanPham();
         }
@@ -47,17 +47,17 @@ namespace DemoCSDL.ManagerChildForms
         {
             try
             {
-                var sp = CreateProductFromInputs();
+                var sp = TaoSPTuInput();
                 spDAO.ThemSanPham(sp);
-                LoadProducts();
+                LoadSP();
                 MessageBox.Show("Thêm sản phẩm thành công");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Đã có lỗi " + ex.Message);
             }
         }
-        private SanPham CreateProductFromInputs()
+        private SanPham TaoSPTuInput()
         {
             string maLoaiSP = cbbMaLoaiSP.SelectedValue.ToString();
             return new SanPham(txtMaSP.Text, maLoaiSP, txtTenSP.Text, "Còn hàng", decimal.Parse(txtGia.Text), fileName);
@@ -77,23 +77,23 @@ namespace DemoCSDL.ManagerChildForms
             {
                 txtMaSP.ReadOnly = true;
                 var row = gvProduct.Rows[e.RowIndex];
-                LoadProductToInputs(row);
+                LoadSanPhamVaoForm(row);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-        private void LoadProductToInputs(DataGridViewRow row)
+        private void LoadSanPhamVaoForm(DataGridViewRow row)
         {
             txtMaSP.Text = row.Cells[0].Value.ToString();
             string maLoaiSP = row.Cells[1].Value.ToString();
 
             // Gán tên loại sản phẩm vào ComboBox
-            var selectedItem = listLSP.FirstOrDefault(lsp => lsp.MaLoaiSP == maLoaiSP);
-            if (selectedItem != null)
+            var itemDuocChon = listLSP.FirstOrDefault(lsp => lsp.MaLoaiSP == maLoaiSP);
+            if (itemDuocChon != null)
             {
-                cbbMaLoaiSP.SelectedValue = selectedItem.MaLoaiSP;
+                cbbMaLoaiSP.SelectedValue = itemDuocChon.MaLoaiSP;
             }
 
             txtTenSP.Text = row.Cells[2].Value.ToString();
@@ -108,8 +108,8 @@ namespace DemoCSDL.ManagerChildForms
                 txtMaSP.ReadOnly = false;
                 var sp = new SanPham(txtMaSP.Text);
                 spDAO.XoaSanPham(sp);
-                LoadProducts();
-                ClearInputs();
+                LoadSP();
+                XoaThongTin();
                 MessageBox.Show("Xóa sản phẩm thành công");
             }
             catch (Exception ex)
@@ -123,10 +123,10 @@ namespace DemoCSDL.ManagerChildForms
             try
             {
                 txtMaSP.ReadOnly = false;
-                var sp = CreateProductFromInputs();
+                var sp = TaoSPTuInput();
                 spDAO.CapNhatSanPham(sp);
-                LoadProducts();
-                ClearInputs();
+                LoadSP();
+                XoaThongTin();
                 MessageBox.Show("Sửa sản phẩm thành công");
             }
             catch (Exception ex)
@@ -134,7 +134,7 @@ namespace DemoCSDL.ManagerChildForms
                 MessageBox.Show(ex.Message);
             }
         }
-        private void ClearInputs()
+        private void XoaThongTin()
         {
             txtMaSP.Clear();
             txtTenSP.Clear();
@@ -145,14 +145,14 @@ namespace DemoCSDL.ManagerChildForms
 
         private void btnLammoi_Click(object sender, EventArgs e)
         {
-            ClearInputs();
+            XoaThongTin();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtSearch.Text))
             {
-                LoadProducts();
+                LoadSP();
             }
             else
             {

@@ -87,12 +87,6 @@
     <Compile Include="DAO\PhuongThucTTDAO.cs" />
     <Compile Include="DAO\SanPhamDAO.cs" />
     <Compile Include="DAO\ThucHienDAO.cs" />
-    <Compile Include="Forms\FForgotPassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FForgotPassword.Designer.cs">
-      <DependentUpon>FForgotPassword.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FLoading.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,7 +180,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ShortTermVariables\ShortTermVariables.cs" />
+    <Compile Include="ShortTermVariables\BienDungChung.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="ThaoTacAnh.cs" />
     <Compile Include="UserControls\MStaffInfoInDash.cs">
@@ -239,9 +233,6 @@
       <DependentUpon>FWThanhToan.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <EmbeddedResource Include="Forms\FForgotPassword.resx">
-      <DependentUpon>FForgotPassword.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FLoading.resx">
       <DependentUpon>FLoading.cs</DependentUpon>
     </EmbeddedResource>

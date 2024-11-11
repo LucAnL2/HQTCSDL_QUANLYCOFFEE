@@ -12,10 +12,10 @@ namespace DemoCSDL.DAO
     public class LoaiSPDAO
     {
         DBConnection db = new DBConnection();
-        public List<LoaiSP> LayDSProduct()
+        public List<LoaiSP> LayDSSanPham()
         {
             List<LoaiSP> list = new List<LoaiSP>();
-            string sql = "EXEC DSLoaiSanPham";
+            string sql = "EXEC PROC_DSLoaiSanPham";
             DataTable dt = db.Load(sql);
 
             foreach (DataRow dr in dt.Rows)
@@ -27,7 +27,6 @@ namespace DemoCSDL.DAO
                 list.Add(lsp);
             }
             return list;
-
         }
     }
 }

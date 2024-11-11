@@ -101,7 +101,6 @@ namespace DemoCSDL.ManagerChildForms
             try
             {
                 NguyenLieu lh = new NguyenLieu(
-                    txtMaNguyenLieu.Text,
                     txtTenNguyenLieu.Text,
                     Convert.ToInt32(txtGia.Text),
                     0

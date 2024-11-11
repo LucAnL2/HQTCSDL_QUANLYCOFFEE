@@ -17,7 +17,7 @@ namespace DemoCSDL.DAO
 
         public List<NhanVien> LayDSNhanVien()
         {
-            string sql = "EXEC LayDanhSachNV";
+            string sql = "EXEC PROC_LayDanhSachNV";
 
             List<NhanVien> listNV = new List<NhanVien>();
 
@@ -49,7 +49,7 @@ namespace DemoCSDL.DAO
         }
         public List<NhanVien> LayDanhSachMaMVDaDuocPhanCongCV()
         {
-            string storeProcedure = "LayDanhSachMaNVDaDuocPhanCa";
+            string storeProcedure = "PROC_LayDanhSachMaNVDaDuocPhanCa";
             SqlParameter[] parameters = null;
             return connect.GetObjects<NhanVien>(storeProcedure,
                 parameters,
@@ -62,7 +62,7 @@ namespace DemoCSDL.DAO
 
         public List<NhanVien> LayDanhSachMaMVCuaTatCaNV()
         {
-            string storeProcedure = "LayDanhTatCaMaNV";
+            string storeProcedure = "PROC_LayDanhTatCaMaNV";
             SqlParameter[] parameters = null;
             return connect.GetObjects<NhanVien>(storeProcedure,
                 parameters,
@@ -73,7 +73,7 @@ namespace DemoCSDL.DAO
             );
         }
 
-        public void EditInfo(string id, string uname, string name, int age, string sex, string address, string phone, string pass)
+        public void ChinhSuaThongTin(string id, string uname, string name, int age, string sex, string address, string phone, string pass)
         {
             connect = new DBConnection();
 
@@ -90,29 +90,25 @@ namespace DemoCSDL.DAO
                 sqlcmd.Parameters.AddWithValue("@Phone", phone);
                 sqlcmd.Parameters.AddWithValue("@Password", pass);
                 sqlcmd.CommandType = CommandType.StoredProcedure;
-                sqlcmd.CommandText = "CapNhatTTND";
+                sqlcmd.CommandText = "PROC_CapNhatTTND";
                 sqlcmd.Connection = connect.sqlCon;
-                int rowsAffected = sqlcmd.ExecuteNonQuery();
 
-                if (rowsAffected > 0)
+                int soDongBiAnhHuong = sqlcmd.ExecuteNonQuery();
+                if (soDongBiAnhHuong <= 0)
                 {
-                    MessageBox.Show("Cập nhật thông tin người dùng thành công!");
-                }
-                else
-                {
-                    MessageBox.Show("Không tìm thấy người dùng với ID đã cho.");
+                    throw new Exception("Vui lòng thử lại.");
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("Error" + ex.Message);
+                throw;
             }
             finally
             {
                 connect.CloseConnection();
             }
         }
-        public DataTable DisplayInfo(string username)
+        public DataTable HienThiThongTin(string username)
         {
             connect = new DBConnection();
 
@@ -120,15 +116,15 @@ namespace DemoCSDL.DAO
             try
             {
                 connect.OpenConnection();
-                SqlCommand sqlcmd = new SqlCommand("LayTTND", connect.sqlCon);
+                SqlCommand sqlcmd = new SqlCommand("PROC_LayTTND", connect.sqlCon);
                 sqlcmd.CommandType = CommandType.StoredProcedure;
                 sqlcmd.Parameters.AddWithValue("@username", username);
                 SqlDataAdapter da = new SqlDataAdapter(sqlcmd);
                 da.Fill(dt);
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show("Error" + ex.Message);
+                throw;
             }
             finally
             {
@@ -136,7 +132,7 @@ namespace DemoCSDL.DAO
             }
             return dt;
         }
-        public DataTable getrole(string idemp)
+        public DataTable LayVaiTro(string idemp)
         {
             connect = new DBConnection();
 
@@ -144,35 +140,9 @@ namespace DemoCSDL.DAO
             try
             {
                 connect.OpenConnection();
-                SqlCommand sqlcmd = new SqlCommand("LayVaiTro", connect.sqlCon);
+                SqlCommand sqlcmd = new SqlCommand("PROC_LayVaiTro", connect.sqlCon);
                 sqlcmd.CommandType = CommandType.StoredProcedure;
                 sqlcmd.Parameters.AddWithValue("@idemp", idemp);
-                SqlDataAdapter da = new SqlDataAdapter(sqlcmd);
-                da.Fill(dt);
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error" + ex.Message);
-            }
-            finally
-            {
-                connect.CloseConnection();
-            }
-            return dt;
-        }
-
-        public DataTable ThongTinNV()
-        {
-            string query = "Select * From ViewThucHien";
-            connect = new DBConnection();
-            DataTable dt = new DataTable();
-
-            try
-            {
-                connect.OpenConnection();
-                SqlCommand sqlcmd = new SqlCommand(query, connect.sqlCon);
-
                 SqlDataAdapter da = new SqlDataAdapter(sqlcmd);
                 da.Fill(dt);
             }
@@ -236,22 +206,22 @@ namespace DemoCSDL.DAO
             }
             return res;
         }
-        public decimal GetRevenuePerDay(DateTime datet)
+        public decimal LayDoanhThuNgay(DateTime datetime)
         {
             connect = new DBConnection();
-            connect.OpenConnection();
             decimal res = 0;
             try
             {
-                string sqlQuery = "SELECT dbo.TongTienHoaDonTheoNgay(@Ngay) AS TongTheoNgay";
+                connect.OpenConnection();
+                string sqlQuery = "SELECT dbo.FUNC_TongTienHoaDonTheoNgay(@Ngay) AS TongTheoNgay";
                 SqlCommand sqlcmd = new SqlCommand(sqlQuery, connect.sqlCon);
-                sqlcmd.Parameters.AddWithValue("@Ngay", datet);
+                sqlcmd.Parameters.AddWithValue("@Ngay", datetime);
                 object result = sqlcmd.ExecuteScalar();
                 res = (result != DBNull.Value) ? Convert.ToDecimal(result) : 0;
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show("Error " + ex.Message);
+                throw;
             }
             finally
             {
@@ -259,14 +229,14 @@ namespace DemoCSDL.DAO
             }
             return res;
         }
-        public decimal GetTotalProfit()
+        public decimal LayTongLoiNhuan()
         {
             connect = new DBConnection();
-            connect.OpenConnection();
             decimal res = 0;
             try
             {
-                string sqlQuery = "SELECT dbo.LayTongLoiNhuan() AS TongLN";
+                connect.OpenConnection();
+                string sqlQuery = "SELECT dbo.FUNC_LayTongLoiNhuan()";
                 SqlCommand sqlcmd = new SqlCommand(sqlQuery, connect.sqlCon);
                 object result = sqlcmd.ExecuteScalar();
                 res = (result != DBNull.Value) ? Convert.ToDecimal(result) : 0;
@@ -283,23 +253,23 @@ namespace DemoCSDL.DAO
 
         }
 
-        public DataTable GetProfitFromLastMonth(string date)
+        public DataTable LayLoiNhuanThangTruoc(string date)
         {
             connect = new DBConnection();
-
+                
             DataTable dt = new DataTable();
             try
             {
                 connect.OpenConnection();
-                SqlCommand sqlcmd = new SqlCommand("LayLoiNhuanThangTruoc", connect.sqlCon);
+                SqlCommand sqlcmd = new SqlCommand("PROC_LayLoiNhuanThangTruoc", connect.sqlCon);
                 sqlcmd.CommandType = CommandType.StoredProcedure;
                 sqlcmd.Parameters.AddWithValue("@date", date);
                 SqlDataAdapter da = new SqlDataAdapter(sqlcmd);
                 da.Fill(dt);
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show("Error " + ex.Message);
+                throw;
             }
             finally
             {
@@ -308,7 +278,7 @@ namespace DemoCSDL.DAO
             return dt;
         }
 
-        public void AddProfitInfo(string daTe)
+        public void ThemThongTinLoiNhuan(string daTe)
         {
             connect = new DBConnection();
 
@@ -317,80 +287,76 @@ namespace DemoCSDL.DAO
                 connect.OpenConnection();
                 SqlCommand sqlcmd = new SqlCommand();
                 sqlcmd.CommandType = CommandType.StoredProcedure;
-                sqlcmd.CommandText = "ThemLoiNhuan";
+                sqlcmd.CommandText = "PROC_ThemLoiNhuan";
                 sqlcmd.Connection = connect.sqlCon;
                 sqlcmd.Parameters.AddWithValue("@date", daTe);
-                int rowsAffected = sqlcmd.ExecuteNonQuery();
 
-                if (rowsAffected > 0)
+                int soDongBiAnhHuong = sqlcmd.ExecuteNonQuery();
+                if (soDongBiAnhHuong <= 0)
                 {
-                    MessageBox.Show("Save Successfully!");
-                }
-                else
-                {
-                    MessageBox.Show("Error ! Please Try Again");
+                    throw new Exception("Vui lòng thử lại.");
                 }
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show("Error" + ex.Message);
+                throw;
             }
             finally
             {
                 connect.CloseConnection();
             }
         }
-        public string GenerateMaNV()
+        public string TaoMaNV()
         {
             connect = new DBConnection();
-            connect.OpenConnection();
-            string res = "";
+            string ketQua = "";
+
             try
             {
-                string sqlQuery = "SELECT dbo.TaoMaNV() AS TaoMaNV";
+                connect.OpenConnection();
+                string sqlQuery = "SELECT dbo.FUNC_TaoMaNV()";
                 SqlCommand sqlcmd = new SqlCommand(sqlQuery, connect.sqlCon);
-                object result = sqlcmd.ExecuteScalar();
-                res = result.ToString();
+                object ketQuaTruyVan = sqlcmd.ExecuteScalar();
+                ketQua = ketQuaTruyVan.ToString();
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("Error" + ex.Message);
+                throw;
             }
             finally
             {
                 connect.CloseConnection();
             }
-            return res;
+
+            return ketQua;
         }
-        public void AddNewStaff(NhanVien nv)
+        public void ThemNhanVien(NhanVien nv)
         {
             connect = new DBConnection();
 
             try
             {
                 connect.OpenConnection();
-                SqlCommand sqlcmd = new SqlCommand();
-                sqlcmd.CommandType = CommandType.StoredProcedure;
-                sqlcmd.CommandText = "ThemNVIEN";
-                sqlcmd.Connection = connect.sqlCon;
-                sqlcmd.Parameters.AddWithValue("@manv", nv.MaNV);
-                sqlcmd.Parameters.AddWithValue("@hten", nv.HTen);
-                sqlcmd.Parameters.AddWithValue("@uname", nv.TaiKhoan);
-                sqlcmd.Parameters.AddWithValue("@pass", nv.MatKhau);
-                int rowsAffected = sqlcmd.ExecuteNonQuery();
+                using (SqlCommand sqlcmd = new SqlCommand())
+                {
+                    sqlcmd.CommandType = CommandType.StoredProcedure;
+                    sqlcmd.CommandText = "PROC_ThemNVIEN";
+                    sqlcmd.Connection = connect.sqlCon;
+                    sqlcmd.Parameters.AddWithValue("@manv", nv.MaNV);
+                    sqlcmd.Parameters.AddWithValue("@hten", nv.HTen);
+                    sqlcmd.Parameters.AddWithValue("@uname", nv.TaiKhoan);
+                    sqlcmd.Parameters.AddWithValue("@pass", nv.MatKhau);
 
-                if (rowsAffected > 0)
-                {
-                    MessageBox.Show("Register Successfully!");
-                }
-                else
-                {
-                    MessageBox.Show("Error ! Please Try Again");
+                    int soDongBiAnhHuong = sqlcmd.ExecuteNonQuery();
+                    if (soDongBiAnhHuong <= 0)
+                    {
+                        throw new Exception("Vui lòng thử lại.");
+                    }
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("Error" + ex.Message);
+                throw;
             }
             finally
             {
@@ -399,16 +365,42 @@ namespace DemoCSDL.DAO
         }
         public void PhatLuong()
         {
-            SqlParameter[] parameters = new SqlParameter[]
-            {
-            };
+            SqlParameter[] parameters = new SqlParameter[] { };
             try
             {
-                connect.ExecuteNonQuery("PhatLuong", parameters, CommandType.StoredProcedure);
+                connect.ExecuteNonQuery("PROC_PhatLuong", parameters, CommandType.StoredProcedure);
             }
             catch
             {
                 throw;
+            }
+        }
+        public void XoaNV(string manv)
+        {
+            connect = new DBConnection();
+
+            try
+            {
+                connect.OpenConnection();
+                SqlCommand sqlcmd = new SqlCommand();
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                sqlcmd.CommandText = "PROC_XoaNV";
+                sqlcmd.Connection = connect.sqlCon;
+                sqlcmd.Parameters.AddWithValue("@Manv", manv);
+
+                int soDongBiAnhHuong = sqlcmd.ExecuteNonQuery();
+                if (soDongBiAnhHuong <= 0)
+                {
+                    throw new Exception("Vui lòng thử lại.");
+                }
+            }
+            catch 
+            {
+                throw;
+            }
+            finally
+            {
+                connect.CloseConnection();
             }
         }
     }

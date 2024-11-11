@@ -14,81 +14,96 @@ namespace DemoCSDL.ManagerChildForms
 {
     public partial class FMDashboard : Form
     {
-        private NhanVienDAO dao;
+        private NhanVienDAO nvDAO;
         public FMDashboard()
         {
             InitializeComponent();
-            dao = new NhanVienDAO();
+            nvDAO = new NhanVienDAO();
         }
 
         private void FMDashboard_Load(object sender, EventArgs e)
         {
-            PopulateItems();
-            UpdateTotalProfit();
-        }
-        private void PopulateItems()
-        {
-            pnlNhanVien.Controls.Clear();
-            DataTable dt = dao.ThongTinNV();
-
-            foreach (DataRow dr in dt.Rows)
+            try
             {
-                var mStaff = new MStaffInfoInDash
-                {
-                    Nameuc = dr["HTen"].ToString(),
-                    Iduc = dr["MaNV"].ToString()
-                };
-                pnlNhanVien.Controls.Add(mStaff);
+                CapNhatTongLoiNhuan();
             }
-            lblSoNV.Text = dt.Rows.Count.ToString();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải thông tin: " + ex.Message);
+            }
         }
-        private void UpdateTotalProfit()
+        private void CapNhatTongLoiNhuan()
         {
-            decimal totalProfit = dao.GetTotalProfit();
-            totallb.Text = totalProfit.ToString();
+            try
+            {
+                decimal tongLoiNhuan = nvDAO.LayTongLoiNhuan();
+                lblTongLoiNhuan.Text = tongLoiNhuan.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật tổng lợi nhuận: " + ex.Message);
+            }
         }
         private void btnDTNgay_Click(object sender, EventArgs e)
         {
-            UpdateRevenueForToday();
+            CapNhatDoanhThuNgay();           
         }
-        private void UpdateRevenueForToday()
+        private void CapNhatDoanhThuNgay()
         {
-            decimal todayRevenue = dao.GetRevenuePerDay(DateTime.Today);
-            totallb.Text = todayRevenue.ToString();
-            lblRevenue.Text = "Total Revenue";
+            try
+            {
+                decimal doanhThuNgay = nvDAO.LayDoanhThuNgay(DateTime.Today);
+                lblTongLoiNhuan.Text = doanhThuNgay.ToString();
+                lblDoanhThu.Text = "Total Revenue";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật doanh thu ngày: " + ex.Message);
+            }
         }
 
         private void btnDTThang_Click(object sender, EventArgs e)
         {
-            int currentMonth = DateTime.Now.Month - 1;
-            int currentYear = DateTime.Now.Year;
-            string combinedString = $"{currentYear}-{currentMonth}";
-            DataTable dt = dao.GetProfitFromLastMonth(combinedString);
-            if (dt.Rows.Count > 0)
+            try
             {
-                totallb.Text = dt.Rows[0]["LoiNhuan"].ToString();
+                int thangHienTai = DateTime.Now.Month - 1;
+                int namHienTai = DateTime.Now.Year;
+                string chuoiThangNam = $"{namHienTai}-{thangHienTai}";
+                DataTable dt = nvDAO.LayLoiNhuanThangTruoc(chuoiThangNam);
+                if (dt.Rows.Count > 0)
+                {
+                    lblTongLoiNhuan.Text = dt.Rows[0]["LoiNhuan"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu lợi nhuận cho tháng trước.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật doanh thu tháng: " + ex.Message);
             }
         }
 
         private void btnDTAll_Click(object sender, EventArgs e)
         {
-            UpdateTotalProfit();
+            CapNhatTongLoiNhuan();
         }
 
         private void btnPhatLuong_Click(object sender, EventArgs e)
         {
             try
             {
-                dao.PhatLuong();
-                int currentMonth = DateTime.Now.Month;
-                int currentYear = DateTime.Now.Year;
-                string combinedString = $"{currentYear}-{currentMonth}";
-                dao.AddProfitInfo(combinedString);
+                nvDAO.PhatLuong();
+                int thangHienTai = DateTime.Now.Month;
+                int namHienTai = DateTime.Now.Year;
+                string chuoiThangNam = $"{namHienTai}-{thangHienTai}";
+                nvDAO.ThemThongTinLoiNhuan(chuoiThangNam);
                 FMDashboard_Load(sender, e);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Có lỗi xảy ra: {ex.Message}");
+                MessageBox.Show("Đã có lỗi: " + ex.Message);
             }
         }
     }

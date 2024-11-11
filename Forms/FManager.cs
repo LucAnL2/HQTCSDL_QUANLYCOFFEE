@@ -21,7 +21,6 @@ namespace DemoCSDL.Forms
         {
             Active.OpenChildForm(new ManagerChildForms.FMDashboard(), ref Active.activeForm, panelFill);
         }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             FLogin fLogin = new FLogin();
@@ -29,7 +28,6 @@ namespace DemoCSDL.Forms
             this.Hide();
             this.Close();
         }
-
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             Active.OpenChildForm(new ManagerChildForms.FMDashboard(), ref Active.activeForm, panelFill);
@@ -53,7 +51,6 @@ namespace DemoCSDL.Forms
                 panelLeft.Visible = false;
             }
         }
-
         private void btnShift_Click(object sender, EventArgs e)
         {
             Active.OpenChildForm(new ManagerChildForms.FMShift(), ref Active.activeForm, panelFill);
@@ -63,15 +60,21 @@ namespace DemoCSDL.Forms
         {
             Active.OpenChildForm(new ManagerChildForms.FMBill(), ref Active.activeForm, panelFill);
         }
-
         private void btnUser_Click(object sender, EventArgs e)
         {
             Active.OpenChildForm(new ManagerChildForms.FMinformation(), ref Active.activeForm, panelFill);
         }
-
         private void btnPM_Click(object sender, EventArgs e)
         {
             Active.OpenChildForm(new ManagerChildForms.FMPersonnelManagement(), ref Active.activeForm, panelFill);
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FLogin fLogin = new FLogin();
+            fLogin.ShowDialog();
+            this.Close();
         }
     }
 }

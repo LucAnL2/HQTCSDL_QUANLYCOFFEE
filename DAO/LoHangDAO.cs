@@ -26,7 +26,7 @@ namespace DemoCSDL.DAO
             };
             try
             {
-                dbConnection.ExecuteNonQuery("ThemLoHang", parameters, CommandType.StoredProcedure);
+                dbConnection.ExecuteNonQuery("PROC_ThemLoHang", parameters, CommandType.StoredProcedure);
             }
             catch
             {
@@ -37,7 +37,7 @@ namespace DemoCSDL.DAO
         {
             try
             {
-                DataTable dtData = dbConnection.Load("Select * from LoHang");
+                DataTable dtData = dbConnection.Load("PROC_LayLoHang", null);
                 return dtData;
             }
             catch

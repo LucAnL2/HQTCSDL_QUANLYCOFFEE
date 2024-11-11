@@ -27,12 +27,21 @@ namespace DemoCSDL.Forms
             this.Close();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnDangKy_Click(object sender, EventArgs e)
         {
-            NhanVienDAO dao = new NhanVienDAO();
-            string manv = dao.GenerateMaNV();
-            NhanVien nhanVien = new NhanVien(manv,fnametb.Text,unametb.Text,passtb.Text);
-            dao.AddNewStaff(nhanVien);
+            try
+            {
+                NhanVienDAO nhanVienDAO = new NhanVienDAO();
+                string maNV = nhanVienDAO.TaoMaNV();
+                NhanVien nhanVien = new NhanVien(maNV, txtHTen.Text, txtTaiKhoan.Text, txtMatKhau.Text);
+
+                nhanVienDAO.ThemNhanVien(nhanVien);
+                MessageBox.Show("Đăng ký thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đăng ký thất bại: " + ex.Message);
+            }
         }
     }
 }

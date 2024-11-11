@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FWContainProduct));
             this.panelRight = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnTaoMa = new Guna.UI2.WinForms.Guna2Button();
             this.lblMaHD = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtNote = new Guna.UI2.WinForms.Guna2TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.cbbPTTT = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.btnTotal = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTong = new Guna.UI2.WinForms.Guna2Button();
             this.datetimeHoadon = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -46,16 +47,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox9 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnFinish = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHoanTat = new Guna.UI2.WinForms.Guna2Button();
             this.txtDiscount = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.btnInvoice = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHoaDon = new Guna.UI2.WinForms.Guna2Button();
             this.lblTongTien = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
-            this.btnTaoMa = new Guna.UI2.WinForms.Guna2Button();
             this.panelRight.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
@@ -71,7 +71,7 @@
             this.panelRight.Controls.Add(this.label14);
             this.panelRight.Controls.Add(this.cbbPTTT);
             this.panelRight.Controls.Add(this.label13);
-            this.panelRight.Controls.Add(this.btnTotal);
+            this.panelRight.Controls.Add(this.btnTong);
             this.panelRight.Controls.Add(this.datetimeHoadon);
             this.panelRight.Controls.Add(this.label20);
             this.panelRight.Controls.Add(this.label19);
@@ -82,6 +82,24 @@
             this.panelRight.Name = "panelRight";
             this.panelRight.Size = new System.Drawing.Size(296, 741);
             this.panelRight.TabIndex = 2;
+            // 
+            // btnTaoMa
+            // 
+            this.btnTaoMa.BorderRadius = 5;
+            this.btnTaoMa.BorderThickness = 1;
+            this.btnTaoMa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTaoMa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTaoMa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTaoMa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTaoMa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
+            this.btnTaoMa.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaoMa.ForeColor = System.Drawing.Color.Black;
+            this.btnTaoMa.Location = new System.Drawing.Point(178, 116);
+            this.btnTaoMa.Name = "btnTaoMa";
+            this.btnTaoMa.Size = new System.Drawing.Size(88, 27);
+            this.btnTaoMa.TabIndex = 34;
+            this.btnTaoMa.Text = "Tạo";
+            this.btnTaoMa.Click += new System.EventHandler(this.btnTaoMa_Click);
             // 
             // lblMaHD
             // 
@@ -104,7 +122,7 @@
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(143, 27);
             this.guna2HtmlLabel1.TabIndex = 19;
-            this.guna2HtmlLabel1.Text = "Invoice code:";
+            this.guna2HtmlLabel1.Text = "Mã hóa đơn";
             // 
             // txtNote
             // 
@@ -133,9 +151,9 @@
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(17, 620);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(54, 20);
+            this.label14.Size = new System.Drawing.Size(74, 20);
             this.label14.TabIndex = 17;
-            this.label14.Text = "Note:";
+            this.label14.Text = "Ghi chú";
             // 
             // cbbPTTT
             // 
@@ -152,27 +170,27 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(17, 567);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(154, 20);
+            this.label13.Size = new System.Drawing.Size(146, 20);
             this.label13.TabIndex = 15;
-            this.label13.Text = "Payment method:";
+            this.label13.Text = "Phương Thức TT";
             // 
-            // btnTotal
+            // btnTong
             // 
-            this.btnTotal.BorderRadius = 5;
-            this.btnTotal.BorderThickness = 1;
-            this.btnTotal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTotal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTotal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTotal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTotal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
-            this.btnTotal.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.btnTotal.Location = new System.Drawing.Point(178, 164);
-            this.btnTotal.Name = "btnTotal";
-            this.btnTotal.Size = new System.Drawing.Size(87, 33);
-            this.btnTotal.TabIndex = 9;
-            this.btnTotal.Text = "Total";
-            this.btnTotal.Click += new System.EventHandler(this.btnTotal_Click_1);
+            this.btnTong.BorderRadius = 5;
+            this.btnTong.BorderThickness = 1;
+            this.btnTong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTong.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTong.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
+            this.btnTong.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.btnTong.Location = new System.Drawing.Point(178, 164);
+            this.btnTong.Name = "btnTong";
+            this.btnTong.Size = new System.Drawing.Size(87, 33);
+            this.btnTong.TabIndex = 9;
+            this.btnTong.Text = "Tổng";
+            this.btnTong.Click += new System.EventHandler(this.btnTong_Click);
             // 
             // datetimeHoadon
             // 
@@ -196,9 +214,9 @@
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label20.Location = new System.Drawing.Point(12, 172);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(103, 25);
+            this.label20.Size = new System.Drawing.Size(104, 25);
             this.label20.TabIndex = 12;
-            this.label20.Text = "Summary";
+            this.label20.Text = "Tổng hợp";
             // 
             // label19
             // 
@@ -207,9 +225,9 @@
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label19.Location = new System.Drawing.Point(12, 143);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(145, 29);
+            this.label19.Size = new System.Drawing.Size(167, 29);
             this.label19.TabIndex = 13;
-            this.label19.Text = "Your Order";
+            this.label19.Text = "Đơn của bạn";
             // 
             // FLPanelOrder
             // 
@@ -258,9 +276,9 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.label5.Location = new System.Drawing.Point(361, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(227, 29);
+            this.label5.Size = new System.Drawing.Size(400, 29);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Choose your best";
+            this.label5.Text = "Lựa Chọn Thức Uống Yêu Thích";
             // 
             // guna2Panel6
             // 
@@ -268,10 +286,10 @@
             this.guna2Panel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(155)))), ((int)(((byte)(128)))));
             this.guna2Panel6.BorderThickness = 3;
             this.guna2Panel6.Controls.Add(this.guna2PictureBox9);
-            this.guna2Panel6.Controls.Add(this.btnFinish);
+            this.guna2Panel6.Controls.Add(this.btnHoanTat);
             this.guna2Panel6.Controls.Add(this.txtDiscount);
             this.guna2Panel6.Controls.Add(this.lblTotal);
-            this.guna2Panel6.Controls.Add(this.btnInvoice);
+            this.guna2Panel6.Controls.Add(this.btnHoaDon);
             this.guna2Panel6.Controls.Add(this.lblTongTien);
             this.guna2Panel6.Controls.Add(this.label21);
             this.guna2Panel6.Controls.Add(this.label22);
@@ -293,23 +311,23 @@
             this.guna2PictureBox9.TabIndex = 16;
             this.guna2PictureBox9.TabStop = false;
             // 
-            // btnFinish
+            // btnHoanTat
             // 
-            this.btnFinish.BorderRadius = 5;
-            this.btnFinish.BorderThickness = 1;
-            this.btnFinish.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnFinish.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnFinish.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnFinish.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnFinish.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
-            this.btnFinish.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinish.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.btnFinish.Location = new System.Drawing.Point(797, 17);
-            this.btnFinish.Name = "btnFinish";
-            this.btnFinish.Size = new System.Drawing.Size(118, 33);
-            this.btnFinish.TabIndex = 15;
-            this.btnFinish.Text = "Finish";
-            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click_1);
+            this.btnHoanTat.BorderRadius = 5;
+            this.btnHoanTat.BorderThickness = 1;
+            this.btnHoanTat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHoanTat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHoanTat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHoanTat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHoanTat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
+            this.btnHoanTat.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHoanTat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.btnHoanTat.Location = new System.Drawing.Point(775, 17);
+            this.btnHoanTat.Name = "btnHoanTat";
+            this.btnHoanTat.Size = new System.Drawing.Size(140, 33);
+            this.btnHoanTat.TabIndex = 15;
+            this.btnHoanTat.Text = "Hoàn Tất";
+            this.btnHoanTat.Click += new System.EventHandler(this.btnHoanTat_Click);
             // 
             // txtDiscount
             // 
@@ -326,29 +344,29 @@
             this.lblTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
             this.lblTotal.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.lblTotal.Location = new System.Drawing.Point(639, 43);
+            this.lblTotal.Location = new System.Drawing.Point(689, 43);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(24, 25);
             this.lblTotal.TabIndex = 11;
             this.lblTotal.Text = "0";
             // 
-            // btnInvoice
+            // btnHoaDon
             // 
-            this.btnInvoice.BorderRadius = 5;
-            this.btnInvoice.BorderThickness = 1;
-            this.btnInvoice.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnInvoice.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnInvoice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnInvoice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnInvoice.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
-            this.btnInvoice.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInvoice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.btnInvoice.Location = new System.Drawing.Point(800, 63);
-            this.btnInvoice.Name = "btnInvoice";
-            this.btnInvoice.Size = new System.Drawing.Size(115, 33);
-            this.btnInvoice.TabIndex = 13;
-            this.btnInvoice.Text = "Invoice";
-            this.btnInvoice.Click += new System.EventHandler(this.btnInvoice_Click);
+            this.btnHoaDon.BorderRadius = 5;
+            this.btnHoaDon.BorderThickness = 1;
+            this.btnHoaDon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHoaDon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHoaDon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHoaDon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHoaDon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
+            this.btnHoaDon.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHoaDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.btnHoaDon.Location = new System.Drawing.Point(778, 63);
+            this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.Size = new System.Drawing.Size(137, 33);
+            this.btnHoaDon.TabIndex = 13;
+            this.btnHoaDon.Text = "Hóa Đơn";
+            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
             // 
             // lblTongTien
             // 
@@ -369,9 +387,9 @@
             this.label21.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(531, 33);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(102, 38);
+            this.label21.Size = new System.Drawing.Size(152, 37);
             this.label21.TabIndex = 8;
-            this.label21.Text = "Total:";
+            this.label21.Text = "Tổng tiền";
             // 
             // label22
             // 
@@ -380,9 +398,9 @@
             this.label22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(277, 63);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(90, 23);
+            this.label22.Size = new System.Drawing.Size(86, 23);
             this.label22.TabIndex = 9;
-            this.label22.Text = "Discount:";
+            this.label22.Text = "Giảm giá";
             // 
             // label23
             // 
@@ -391,9 +409,9 @@
             this.label23.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(276, 15);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(110, 25);
+            this.label23.Size = new System.Drawing.Size(64, 25);
             this.label23.TabIndex = 10;
-            this.label23.Text = "Sub total:";
+            this.label23.Text = "Tổng";
             // 
             // btnBack
             // 
@@ -412,24 +430,6 @@
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "     Back";
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // btnTaoMa
-            // 
-            this.btnTaoMa.BorderRadius = 5;
-            this.btnTaoMa.BorderThickness = 1;
-            this.btnTaoMa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTaoMa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTaoMa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTaoMa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTaoMa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
-            this.btnTaoMa.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaoMa.ForeColor = System.Drawing.Color.Black;
-            this.btnTaoMa.Location = new System.Drawing.Point(178, 116);
-            this.btnTaoMa.Name = "btnTaoMa";
-            this.btnTaoMa.Size = new System.Drawing.Size(88, 27);
-            this.btnTaoMa.TabIndex = 34;
-            this.btnTaoMa.Text = "Create";
-            this.btnTaoMa.Click += new System.EventHandler(this.btnTaoMa_Click);
             // 
             // FWContainProduct
             // 
@@ -475,12 +475,12 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblMaHD;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2Button btnTotal;
+        private Guna.UI2.WinForms.Guna2Button btnTong;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox9;
-        private Guna.UI2.WinForms.Guna2Button btnFinish;
+        private Guna.UI2.WinForms.Guna2Button btnHoanTat;
         private System.Windows.Forms.TextBox txtDiscount;
         private System.Windows.Forms.Label lblTotal;
-        private Guna.UI2.WinForms.Guna2Button btnInvoice;
+        private Guna.UI2.WinForms.Guna2Button btnHoaDon;
         private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;

@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FLogin));
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2CustomCheckBox1 = new Guna.UI2.WinForms.Guna2CustomCheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblForgotPassword = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -42,8 +39,8 @@
             this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.unametb = new Guna.UI2.WinForms.Guna2TextBox();
-            this.passtb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnDangKy = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -61,43 +58,6 @@
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // guna2CustomCheckBox1
-            // 
-            this.guna2CustomCheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CustomCheckBox1.CheckedState.BorderRadius = 2;
-            this.guna2CustomCheckBox1.CheckedState.BorderThickness = 0;
-            this.guna2CustomCheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.guna2CustomCheckBox1.Location = new System.Drawing.Point(772, 291);
-            this.guna2CustomCheckBox1.Name = "guna2CustomCheckBox1";
-            this.guna2CustomCheckBox1.Size = new System.Drawing.Size(20, 20);
-            this.guna2CustomCheckBox1.TabIndex = 4;
-            this.guna2CustomCheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.guna2CustomCheckBox1.UncheckedState.BorderRadius = 2;
-            this.guna2CustomCheckBox1.UncheckedState.BorderThickness = 1;
-            this.guna2CustomCheckBox1.UncheckedState.FillColor = System.Drawing.Color.White;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.label1.Location = new System.Drawing.Point(798, 293);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 16);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Remember Me";
-            // 
-            // lblForgotPassword
-            // 
-            this.lblForgotPassword.AutoSize = true;
-            this.lblForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForgotPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.lblForgotPassword.Location = new System.Drawing.Point(695, 437);
-            this.lblForgotPassword.Name = "lblForgotPassword";
-            this.lblForgotPassword.Size = new System.Drawing.Size(114, 16);
-            this.lblForgotPassword.TabIndex = 5;
-            this.lblForgotPassword.Text = "Forgot Passord";
-            this.lblForgotPassword.Click += new System.EventHandler(this.lblForgotPassword_Click);
             // 
             // label3
             // 
@@ -177,60 +137,60 @@
             this.btnClose.Text = "X";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // unametb
+            // txtUname
             // 
-            this.unametb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.unametb.BorderRadius = 10;
-            this.unametb.BorderThickness = 3;
-            this.unametb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.unametb.DefaultText = "AN1";
-            this.unametb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.unametb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.unametb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.unametb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.unametb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.unametb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.unametb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.unametb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.unametb.IconLeft = global::DemoCSDL.Properties.Resources.iuser;
-            this.unametb.IconLeftOffset = new System.Drawing.Point(1, 0);
-            this.unametb.Location = new System.Drawing.Point(569, 186);
-            this.unametb.Margin = new System.Windows.Forms.Padding(4);
-            this.unametb.Name = "unametb";
-            this.unametb.PasswordChar = '\0';
-            this.unametb.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.unametb.PlaceholderText = "Username";
-            this.unametb.SelectedText = "";
-            this.unametb.Size = new System.Drawing.Size(293, 39);
-            this.unametb.TabIndex = 2;
+            this.txtUname.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.txtUname.BorderRadius = 10;
+            this.txtUname.BorderThickness = 3;
+            this.txtUname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUname.DefaultText = "AN1";
+            this.txtUname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.txtUname.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.txtUname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.txtUname.IconLeft = global::DemoCSDL.Properties.Resources.iuser;
+            this.txtUname.IconLeftOffset = new System.Drawing.Point(1, 0);
+            this.txtUname.Location = new System.Drawing.Point(569, 186);
+            this.txtUname.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUname.Name = "txtUname";
+            this.txtUname.PasswordChar = '\0';
+            this.txtUname.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.txtUname.PlaceholderText = "Username";
+            this.txtUname.SelectedText = "";
+            this.txtUname.Size = new System.Drawing.Size(293, 39);
+            this.txtUname.TabIndex = 2;
             // 
-            // passtb
+            // txtPass
             // 
-            this.passtb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.passtb.BorderRadius = 10;
-            this.passtb.BorderThickness = 3;
-            this.passtb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.passtb.DefaultText = "12345";
-            this.passtb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.passtb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.passtb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.passtb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.passtb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.passtb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.passtb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.passtb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.passtb.IconLeft = global::DemoCSDL.Properties.Resources.ipassword;
-            this.passtb.IconLeftOffset = new System.Drawing.Point(1, 0);
-            this.passtb.IconRightOffset = new System.Drawing.Point(1, 0);
-            this.passtb.Location = new System.Drawing.Point(569, 246);
-            this.passtb.Margin = new System.Windows.Forms.Padding(4);
-            this.passtb.Name = "passtb";
-            this.passtb.PasswordChar = '\0';
-            this.passtb.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.passtb.PlaceholderText = "Password";
-            this.passtb.SelectedText = "";
-            this.passtb.Size = new System.Drawing.Size(293, 39);
-            this.passtb.TabIndex = 2;
+            this.txtPass.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.txtPass.BorderRadius = 10;
+            this.txtPass.BorderThickness = 3;
+            this.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPass.DefaultText = "12345";
+            this.txtPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.txtPass.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.txtPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.txtPass.IconLeft = global::DemoCSDL.Properties.Resources.ipassword;
+            this.txtPass.IconLeftOffset = new System.Drawing.Point(1, 0);
+            this.txtPass.IconRightOffset = new System.Drawing.Point(1, 0);
+            this.txtPass.Location = new System.Drawing.Point(569, 246);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '\0';
+            this.txtPass.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.txtPass.PlaceholderText = "Password";
+            this.txtPass.SelectedText = "";
+            this.txtPass.Size = new System.Drawing.Size(293, 39);
+            this.txtPass.TabIndex = 2;
             // 
             // btnDangKy
             // 
@@ -254,12 +214,9 @@
             this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblForgotPassword);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2CustomCheckBox1);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.unametb);
-            this.Controls.Add(this.passtb);
+            this.Controls.Add(this.txtUname);
+            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -279,12 +236,9 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2TextBox passtb;
-        private Guna.UI2.WinForms.Guna2TextBox unametb;
+        private Guna.UI2.WinForms.Guna2TextBox txtPass;
+        private Guna.UI2.WinForms.Guna2TextBox txtUname;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
-        private Guna.UI2.WinForms.Guna2CustomCheckBox guna2CustomCheckBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblForgotPassword;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;

@@ -13,92 +13,70 @@ namespace DemoCSDL.ManagerChildForms
 {
     public partial class FMinformation : Form
     {
+        NhanVienDAO nvDAO = new NhanVienDAO();
         public FMinformation()
         {
             InitializeComponent();
         }
         public int flag;
 
-        private void ConfigureFieldsForPasswordChange()
+        private void CapNhatTruongDoiMK()
         {
-            savebtn.Visible = true;
-            SetFieldsReadOnly(true);
-            passtb.ReadOnly = false;
-            passtb.Enabled = true;
+            btnLuu.Visible = true;
+            GanTruongReadOnly(true);
+            txtMatKhau.ReadOnly = false;
+            txtMatKhau.Enabled = true;
         }
 
-        private void ConfigureFieldsForInfoEdit()
+        private void CapNhatTruongChinhSua()
         {
-            savebtn.Visible = true;
-            SetFieldsReadOnly(false);
-            passtb.ReadOnly = true;
-            passtb.Enabled = false;
+            btnLuu.Visible = true;
+            GanTruongReadOnly(false);
+            txtMatKhau.ReadOnly = true;
+            txtMatKhau.Enabled = false;
         }
 
-        private void SetFieldsReadOnly(bool isReadOnly)
+        private void GanTruongReadOnly(bool isReadOnly)
         {
-            nametb.ReadOnly = isReadOnly;
-            agetb.ReadOnly = isReadOnly;
-            sextb.ReadOnly = isReadOnly;
-            unametb.ReadOnly = isReadOnly;
-            phonetb.ReadOnly = isReadOnly;
-            addresstb.ReadOnly = isReadOnly;
-        }
-
-        private void Savebtn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                var dao = new NhanVienDAO();
-                string id = idtb.Text;
-                string name = nametb.Text;
-                string uname = unametb.Text;
-                string sex = sextb.Text;
-                string addr = addresstb.Text;
-                string phone = phonetb.Text;
-                string pass = passtb.Text;
-                int age = int.Parse(agetb.Text);
-
-                dao.EditInfo(id, uname, name, age, sex, addr, phone, pass);
-                SetFieldsReadOnly(true);
-                savebtn.Visible = false;
-                FMinformation_Load(sender, e);
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("Vui lòng nhập đúng định dạng cho tuổi.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            txtHTen.ReadOnly = isReadOnly;
+            txtTuoi.ReadOnly = isReadOnly;
+            txtGioiTinh.ReadOnly = isReadOnly;
+            txtTaiKhoan.ReadOnly = isReadOnly;
+            txtSDT.ReadOnly = isReadOnly;
+            txtDiaChi.ReadOnly = isReadOnly;
         }
 
         private void FMinformation_Load(object sender, EventArgs e)
         {
-            LoadStaffInfo();
+            CapNhatTTNV();
         }
-        private void LoadStaffInfo()
+        private void CapNhatTTNV()
         {
-            var dao = new NhanVienDAO();
-            string username = ShortTermVariables.ShortTermVariables.unameEmp;
-            DataTable userInfo = dao.DisplayInfo(username);
+            try
+            {
+                string taiKhoan = ShortTermVariables.BienDungChung.taiKhoanND;
+                DataTable thongTinND = nvDAO.HienThiThongTin(taiKhoan);
 
-            if (userInfo.Rows.Count > 0)
-            {
-                DataRow dr = userInfo.Rows[0];
-                nametb.Text = dr["HTen"].ToString();
-                unametb.Text = dr["TaiKhoan"].ToString();
-                idtb.Text = dr["MaNV"].ToString();
-                agetb.Text = dr["Tuoi"].ToString();
-                sextb.Text = dr["GTinh"].ToString();
-                phonetb.Text = dr["SDT"].ToString();
-                passtb.Text = dr["MatKhau"].ToString();
-                addresstb.Text = dr["DChi"].ToString();
+                if (thongTinND.Rows.Count > 0)
+                {
+                    DataRow dr = thongTinND.Rows[0];
+                    txtHTen.Text = dr["HTen"].ToString();
+                    txtTaiKhoan.Text = dr["TaiKhoan"].ToString();
+                    txtID.Text = dr["MaNV"].ToString();
+                    txtTuoi.Text = dr["Tuoi"].ToString();
+                    txtGioiTinh.Text = dr["GTinh"].ToString();
+                    txtSDT.Text = dr["SDT"].ToString();
+                    txtMatKhau.Text = dr["MatKhau"].ToString();
+                    txtDiaChi.Text = dr["DChi"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu để hiển thị!");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Không có dữ liệu để hiển thị!");
+                MessageBox.Show("Đã có lỗi " + ex.Message);
             }
         }
 
@@ -106,14 +84,39 @@ namespace DemoCSDL.ManagerChildForms
         {
             // Chuyển sang chế độ đổi mật khẩu
             flag = 1;
-            ConfigureFieldsForPasswordChange();
+            CapNhatTruongDoiMK();
         }
 
         private void btnSuaTT_Click(object sender, EventArgs e)
         {
             // Chuyển sang chế độ chỉnh sửa thông tin cá nhân
             flag = 2;
-            ConfigureFieldsForInfoEdit();
+            CapNhatTruongChinhSua();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string id = txtID.Text;
+                string name = txtHTen.Text;
+                string uname = txtTaiKhoan.Text;
+                string sex = txtGioiTinh.Text;
+                string addr = txtDiaChi.Text;
+                string phone = txtSDT.Text;
+                string pass = txtMatKhau.Text;
+                int age = int.Parse(txtTuoi.Text);
+
+                nvDAO.ChinhSuaThongTin(id, uname, name, age, sex, addr, phone, pass);
+                GanTruongReadOnly(true);
+                btnLuu.Visible = false;
+                MessageBox.Show("Lưu thành công!");
+                FMinformation_Load(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã có lỗi " + ex.Message);
+            }
         }
     } 
 }
