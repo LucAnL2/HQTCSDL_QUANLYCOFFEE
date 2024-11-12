@@ -172,5 +172,7 @@ namespace DemoCSDL.ManagerChildForms
                 MessageBox.Show("Có lỗi xảy ra: " + ex.Message);
             }
         }
+
+        
     }
 }

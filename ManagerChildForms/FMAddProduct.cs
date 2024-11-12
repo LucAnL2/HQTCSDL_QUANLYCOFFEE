@@ -28,7 +28,6 @@ namespace DemoCSDL.ManagerChildForms
         }
         private void FMAddProduct_Load(object sender, EventArgs e)
         {
-            txtMaSP.ReadOnly = false;
             LoadLoaiSP();
             LoadSP();
         }
@@ -51,12 +50,13 @@ namespace DemoCSDL.ManagerChildForms
                 spDAO.ThemSanPham(sp);
                 LoadSP();
                 MessageBox.Show("Thêm sản phẩm thành công");
-                FMProcessing form = new FMProcessing(sp);
+                FMNProcessing form = new FMNProcessing(sp);
                 form.Show();
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Đã có lỗi " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
         private SanPham TaoSPTuInput()
@@ -161,6 +161,11 @@ namespace DemoCSDL.ManagerChildForms
                 string searchString = txtSearch.Text;
                 gvProduct.DataSource = spDAO.LayDSSanPhamBangChuoi(searchString);
             }
+        }
+
+        private void btnTaoMa_Click(object sender, EventArgs e)
+        {
+            txtMaSP.Text = spDAO.TaoMaSP();
         }
     }
 }

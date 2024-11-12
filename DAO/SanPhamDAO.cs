@@ -161,5 +161,27 @@ namespace DemoCSDL.DAO
             }
             return listSP;
         }
+
+        public string TaoMaSP()
+        {
+            string maSP = null;
+            try
+            {
+                // Gọi hàm GenerateMaHD để lấy mã HD mới
+                string query = "SELECT dbo.FUNC_TaoMaSP()"; // Câu lệnh gọi hàm
+                object result = dbConnection.ExecuteScalar(query, null, CommandType.Text); // Gọi phương thức ExecuteScalar
+
+                // Kiểm tra kết quả và chuyển đổi thành string
+                if (result != null)
+                {
+                    maSP = result.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return maSP; // Trả về mã HD mới
+        }
     }
 }

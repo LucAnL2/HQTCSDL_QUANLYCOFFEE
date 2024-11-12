@@ -34,6 +34,48 @@ namespace DemoCSDL.DAO
 
         }
 
+        public void SuaCheBien(CheBien ct, out bool kiemTra)
+        {
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@MaSP", ct.MaSP),
+                new SqlParameter("@MaNL", ct.MaNL),
+                new SqlParameter("@SLCanDung", ct.SLCanDung),
+                new SqlParameter("@KiemTra", SqlDbType.Bit) { Direction = ParameterDirection.Output }  // Thêm tham số OUTPUT
+            };
+
+            try
+            {
+                // Thực thi thủ tục và nhận giá trị OUTPUT
+                dbConnection.ExecuteNonQuery("PROC_SuaCheBien", parameters, CommandType.StoredProcedure);
+
+                // Lấy giá trị của @KiemTra sau khi thực thi thủ tục
+                kiemTra = (bool)parameters.FirstOrDefault(p => p.ParameterName == "@KiemTra").Value;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public void XoaCheBien(CheBien ct)
+        {
+           SqlParameter[] parameters = new SqlParameter[]
+           {
+                new SqlParameter("@MaSP", ct.MaSP),
+                new SqlParameter("@MaNL", ct.MaNL),
+           };
+            try
+            {
+                dbConnection.ExecuteNonQuery("PROC_XoaCheBien", parameters, CommandType.StoredProcedure);
+            }
+            catch
+            {
+                throw;
+            }
+
+        }
+
         public DataTable LayCheBien()
         {
             DataTable result = new DataTable();

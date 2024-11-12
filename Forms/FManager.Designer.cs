@@ -43,7 +43,7 @@
             this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
-            this.panelFill = new System.Windows.Forms.Panel();
+            panelFill = new System.Windows.Forms.Panel();
             this.btnCheBien = new Guna.UI2.WinForms.Guna2Button();
             this.panelTop.SuspendLayout();
             this.panelLeft.SuspendLayout();
@@ -241,11 +241,11 @@
             // 
             // panelFill
             // 
-            this.panelFill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFill.Location = new System.Drawing.Point(250, 59);
-            this.panelFill.Name = "panelFill";
-            this.panelFill.Size = new System.Drawing.Size(1250, 741);
-            this.panelFill.TabIndex = 7;
+            panelFill.Dock = System.Windows.Forms.DockStyle.Fill;
+            panelFill.Location = new System.Drawing.Point(250, 59);
+            panelFill.Name = "panelFill";
+            panelFill.Size = new System.Drawing.Size(1250, 741);
+            panelFill.TabIndex = 7;
             // 
             // btnCheBien
             // 
@@ -264,7 +264,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1500, 800);
-            this.Controls.Add(this.panelFill);
+            this.Controls.Add(panelFill);
             this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -290,7 +290,7 @@
         private Guna.UI2.WinForms.Guna2Button btnDangXuat;
         private Guna.UI2.WinForms.Guna2Button btnUser;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
-        public System.Windows.Forms.Panel panelFill;
+        public static System.Windows.Forms.Panel panelFill;
         private Guna.UI2.WinForms.Guna2Button btnAddProduct;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button btnShift;

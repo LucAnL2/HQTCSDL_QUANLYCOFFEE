@@ -35,9 +35,20 @@ namespace DemoCSDL.Models
             this.tenNL = tenNL;
             this.gia = gia;
             this.soLuong = soLuong;
-            this.TamThoi = tamThoi;
-            this.SoLuongCB = soLuongCB;
+            this.tamThoi = tamThoi;
+            this.soLuongCB = soLuongCB;
         }
+
+        public NguyenLieu(string maNL, string tenNL, int soLuong, bool tamThoi, int soLuongCB)
+        {
+            this.maNL = maNL;
+            this.tenNL = tenNL;
+            this.soLuong = soLuong;
+            this.tamThoi = tamThoi;
+            this.soLuongCB = soLuongCB;
+        }
+
+
         public string MaNL { get => maNL; set => maNL = value; }
         public string TenNL { get => tenNL; set => tenNL = value; }
         public decimal Gia { get => gia; set => gia = value; }
