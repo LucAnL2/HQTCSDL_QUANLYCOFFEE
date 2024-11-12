@@ -27,7 +27,28 @@ namespace DemoCSDL.DAO
                 throw;
             }
         }
+        bool tamThoi;
+        int soLuongCB;
+        public List<NguyenLieu> LayNguyenLieuSP()
+        {
+            List<NguyenLieu> listNL = new List<NguyenLieu>();
+            DataTable dt = LayNguyenLieu();
+            tamThoi = false;
+            soLuongCB = 0;
+            foreach (DataRow dr in dt.Rows)
+            {
+                NguyenLieu nl = new NguyenLieu(
+                    dr["MaNL"].ToString(),
+                    dr["TenNL"].ToString(),
+                    Convert.ToDecimal(dr["Gia"]),
+                    Convert.ToInt32(dr["SoLuong"]),
+                    tamThoi, soLuongCB
+                );
 
+                listNL.Add(nl);
+            }
+            return listNL;
+        }
 
         public void ThemNguyenLieu(NguyenLieu nl)
         {

@@ -51,6 +51,8 @@ namespace DemoCSDL.ManagerChildForms
                 spDAO.ThemSanPham(sp);
                 LoadSP();
                 MessageBox.Show("Thêm sản phẩm thành công");
+                FMProcessing form = new FMProcessing(sp);
+                form.Show();
             }
             catch (Exception ex)
             {

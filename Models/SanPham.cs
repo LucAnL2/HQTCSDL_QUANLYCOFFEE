@@ -9,8 +9,8 @@ namespace DemoCSDL.Models
     public class SanPham
     {
         private string maSP;
-        private string maLoaiSP;
         private string tenSP;
+        private string maLoaiSP;
         private string tinhTrang;
         private Decimal gia;
         private string hinhAnh;
@@ -20,6 +20,12 @@ namespace DemoCSDL.Models
         public SanPham(string maSP)
         {
             this.maSP = maSP;
+        }
+
+        public SanPham(string maSP, string tenSP)
+        {
+            this.maSP = maSP;
+            this.tenSP = tenSP;
         }
 
         public SanPham(string maSP, string maLoaiSP, string tenSP, string tinhTrang, decimal gia, string hinhAnh)

@@ -108,3 +108,6 @@ D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\bin\Debug\WorkerChildForms\FWThan
 D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.ManagerChildForms.FMPersonnelManagement.resources
 D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.Forms.FRegister.resources
 D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.ManagerChildForms.FMBill.resources
+D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.ManagerChildForms.FMProcessing.resources
+D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.UserControls.MIngredient.resources
+D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.ManagerChildForms.FMIngredients.resources

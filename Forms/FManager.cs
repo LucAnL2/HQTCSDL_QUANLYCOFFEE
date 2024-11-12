@@ -76,5 +76,10 @@ namespace DemoCSDL.Forms
             fLogin.ShowDialog();
             this.Close();
         }
+
+        private void btnCheBien_Click(object sender, EventArgs e)
+        {
+            Active.OpenChildForm(new ManagerChildForms.FMIngredients(), ref Active.activeForm, panelFill);
+        }
     }
 }

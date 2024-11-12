@@ -44,6 +44,7 @@
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.panelFill = new System.Windows.Forms.Panel();
+            this.btnCheBien = new Guna.UI2.WinForms.Guna2Button();
             this.panelTop.SuspendLayout();
             this.panelLeft.SuspendLayout();
             this.SuspendLayout();
@@ -126,6 +127,7 @@
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.panelLeft.Controls.Add(this.btnCheBien);
             this.panelLeft.Controls.Add(this.btnPM);
             this.panelLeft.Controls.Add(this.btnMBill);
             this.panelLeft.Controls.Add(this.guna2Button1);
@@ -245,6 +247,18 @@
             this.panelFill.Size = new System.Drawing.Size(1250, 741);
             this.panelFill.TabIndex = 7;
             // 
+            // btnCheBien
+            // 
+            this.btnCheBien.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.btnCheBien.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheBien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.btnCheBien.Location = new System.Drawing.Point(0, 477);
+            this.btnCheBien.Name = "btnCheBien";
+            this.btnCheBien.Size = new System.Drawing.Size(250, 63);
+            this.btnCheBien.TabIndex = 8;
+            this.btnCheBien.Text = "Quản Lý Nguyên Liệu";
+            this.btnCheBien.Click += new System.EventHandler(this.btnCheBien_Click);
+            // 
             // FManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -282,5 +296,6 @@
         private Guna.UI2.WinForms.Guna2Button btnShift;
         private Guna.UI2.WinForms.Guna2Button btnMBill;
         private Guna.UI2.WinForms.Guna2Button btnPM;
+        private Guna.UI2.WinForms.Guna2Button btnCheBien;
     }
 }
