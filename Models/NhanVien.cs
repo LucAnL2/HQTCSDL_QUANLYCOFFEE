@@ -17,17 +17,19 @@ namespace DemoCSDL.Models
         private string taiKhoan;
         private string matKhau;
         private string maCV;
+        private string eMail;
 
         public NhanVien()
         {
 
         }
-        public NhanVien(string manv, string hten, string taikhoan, string matkhau)
+        public NhanVien(string manv, string hten, string taikhoan, string matkhau, string email)
         {
             maNV = manv;
             hTen = hten;
             taiKhoan = taikhoan;
             matKhau = matkhau;
+            eMail = email;
         }
 
         public NhanVien(string maNV, string hTen)
@@ -45,5 +47,7 @@ namespace DemoCSDL.Models
         public string TaiKhoan { get => taiKhoan; set => taiKhoan = value; }
         public string MatKhau { get => matKhau; set => matKhau = value; }
         public string MaCV { get => maCV; set => maCV = value; }
+
+        public string EMail { get => eMail; set => eMail = value; }
     }
 }

@@ -73,7 +73,7 @@ namespace DemoCSDL.DAO
             );
         }
 
-        public void ChinhSuaThongTin(string id, string uname, string name, int age, string sex, string address, string phone, string pass)
+        public void ChinhSuaThongTin(string id, string uname, string name, int age, string sex, string address, string phone, string pass, string email)
         {
             connect = new DBConnection();
 
@@ -89,6 +89,7 @@ namespace DemoCSDL.DAO
                 sqlcmd.Parameters.AddWithValue("@Address", address);
                 sqlcmd.Parameters.AddWithValue("@Phone", phone);
                 sqlcmd.Parameters.AddWithValue("@Password", pass);
+                sqlcmd.Parameters.AddWithValue("@Email", email);
                 sqlcmd.CommandType = CommandType.StoredProcedure;
                 sqlcmd.CommandText = "PROC_CapNhatTTND";
                 sqlcmd.Connection = connect.sqlCon;
@@ -346,7 +347,7 @@ namespace DemoCSDL.DAO
                     sqlcmd.Parameters.AddWithValue("@hten", nv.HTen);
                     sqlcmd.Parameters.AddWithValue("@uname", nv.TaiKhoan);
                     sqlcmd.Parameters.AddWithValue("@pass", nv.MatKhau);
-
+                    sqlcmd.Parameters.AddWithValue("@email", nv.EMail);
                     int soDongBiAnhHuong = sqlcmd.ExecuteNonQuery();
                     if (soDongBiAnhHuong <= 0)
                     {
