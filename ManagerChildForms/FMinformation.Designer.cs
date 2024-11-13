@@ -48,6 +48,8 @@
             this.txtHTen = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSuaTT = new Guna.UI2.WinForms.Guna2Button();
             this.btnDoiMK = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -424,12 +426,52 @@
             this.btnDoiMK.Text = "Đổi Mật Khẩu";
             this.btnDoiMK.Click += new System.EventHandler(this.btnDoiMK_Click);
             // 
+            // guna2HtmlLabel9
+            // 
+            this.guna2HtmlLabel9.AutoSize = false;
+            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(344, 567);
+            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(222, 30);
+            this.guna2HtmlLabel9.TabIndex = 58;
+            this.guna2HtmlLabel9.Text = "Email";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.txtEmail.BorderThickness = 3;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.White;
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.txtEmail.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.Indigo;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.Indigo;
+            this.txtEmail.Location = new System.Drawing.Point(344, 613);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PasswordChar = '\0';
+            this.txtEmail.PlaceholderText = "";
+            this.txtEmail.ReadOnly = true;
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(298, 48);
+            this.txtEmail.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtEmail.TabIndex = 59;
+            // 
             // FMinformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
             this.ClientSize = new System.Drawing.Size(1250, 741);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.guna2HtmlLabel9);
             this.Controls.Add(this.guna2HtmlLabel8);
             this.Controls.Add(this.guna2HtmlLabel7);
             this.Controls.Add(this.guna2HtmlLabel6);
@@ -481,5 +523,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtHTen;
         private Guna.UI2.WinForms.Guna2Button btnSuaTT;
         private Guna.UI2.WinForms.Guna2Button btnDoiMK;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
     }
 }

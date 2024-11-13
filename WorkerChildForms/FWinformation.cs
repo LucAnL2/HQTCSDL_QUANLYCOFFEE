@@ -43,6 +43,7 @@ namespace DemoCSDL.WorkerChildForms
                 phonetb.Text = dr["SDT"].ToString();
                 passtb.Text = dr["MatKhau"].ToString();
                 addresstb.Text = dr["DChi"].ToString();
+                txtemail.Text = dr["Email"].ToString();
             }
             else
             {
@@ -74,6 +75,7 @@ namespace DemoCSDL.WorkerChildForms
             unametb.ReadOnly = isReadOnly;
             phonetb.ReadOnly = isReadOnly;
             addresstb.ReadOnly = isReadOnly;
+            txtemail.ReadOnly = isReadOnly;
         }
 
         private void savebtn_Click(object sender, EventArgs e)
@@ -87,6 +89,7 @@ namespace DemoCSDL.WorkerChildForms
                 string addr = addresstb.Text;
                 string phone = phonetb.Text;
                 string pass = passtb.Text;
+                string email = txtemail.Text;
                 int age;
 
                 // Kiểm tra định dạng tuổi
@@ -97,7 +100,7 @@ namespace DemoCSDL.WorkerChildForms
                 }
 
                 NhanVienDAO dao = new NhanVienDAO();
-                dao.ChinhSuaThongTin(id, uname, name, age, sex, addr, phone, pass);
+                dao.ChinhSuaThongTin(id, uname, name, age, sex, addr, phone, pass, email);
 
                 // Cập nhật trạng thái sau khi lưu
                 SetFieldsReadOnly(true);

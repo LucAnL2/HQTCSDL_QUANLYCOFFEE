@@ -15,6 +15,14 @@ namespace DemoCSDL.Models
         private bool tamThoi;
         private int soLuongCB;
 
+        public NguyenLieu(string maNL, string tenNL, int soLuong, bool tamThoi, int soLuongCB)
+        {
+            this.maNL = maNL;
+            this.tenNL = tenNL;
+            this.soLuong = soLuong;
+            this.tamThoi = tamThoi;
+            this.soLuongCB = soLuongCB;
+        }
         public NguyenLieu(string tenNL, decimal gia, int soLuong)
         {
             this.tenNL = tenNL;

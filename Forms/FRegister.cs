@@ -33,7 +33,7 @@ namespace DemoCSDL.Forms
             {
                 NhanVienDAO nhanVienDAO = new NhanVienDAO();
                 string maNV = nhanVienDAO.TaoMaNV();
-                NhanVien nhanVien = new NhanVien(maNV, txtHTen.Text, txtTaiKhoan.Text, txtMatKhau.Text);
+                NhanVien nhanVien = new NhanVien(maNV, txtHTen.Text, txtTaiKhoan.Text, txtMatKhau.Text, txtEmail.Text);
 
                 nhanVienDAO.ThemNhanVien(nhanVien);
                 MessageBox.Show("Đăng ký thành công!");

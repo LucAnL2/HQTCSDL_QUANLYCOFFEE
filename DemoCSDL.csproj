@@ -147,6 +147,12 @@
     <Compile Include="ManagerChildForms\FMIngredients.Designer.cs">
       <DependentUpon>FMIngredients.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerChildForms\FMNProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerChildForms\FMNProcessing.Designer.cs">
+      <DependentUpon>FMNProcessing.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerChildForms\FMPersonnelManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerChildForms\FMIngredients.resx">
       <DependentUpon>FMIngredients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerChildForms\FMNProcessing.resx">
+      <DependentUpon>FMNProcessing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerChildForms\FMPersonnelManagement.resx">
       <DependentUpon>FMPersonnelManagement.cs</DependentUpon>

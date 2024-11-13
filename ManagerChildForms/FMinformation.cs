@@ -44,6 +44,7 @@ namespace DemoCSDL.ManagerChildForms
             txtTaiKhoan.ReadOnly = isReadOnly;
             txtSDT.ReadOnly = isReadOnly;
             txtDiaChi.ReadOnly = isReadOnly;
+            txtEmail.ReadOnly = isReadOnly; 
         }
 
         private void FMinformation_Load(object sender, EventArgs e)
@@ -68,6 +69,7 @@ namespace DemoCSDL.ManagerChildForms
                     txtSDT.Text = dr["SDT"].ToString();
                     txtMatKhau.Text = dr["MatKhau"].ToString();
                     txtDiaChi.Text = dr["DChi"].ToString();
+                    txtEmail.Text = dr["Email"].ToString();
                 }
                 else
                 {
@@ -106,8 +108,9 @@ namespace DemoCSDL.ManagerChildForms
                 string phone = txtSDT.Text;
                 string pass = txtMatKhau.Text;
                 int age = int.Parse(txtTuoi.Text);
+                string email = txtEmail.Text;
 
-                nvDAO.ChinhSuaThongTin(id, uname, name, age, sex, addr, phone, pass);
+                nvDAO.ChinhSuaThongTin(id, uname, name, age, sex, addr, phone, pass, email);
                 GanTruongReadOnly(true);
                 btnLuu.Visible = false;
                 MessageBox.Show("Lưu thành công!");

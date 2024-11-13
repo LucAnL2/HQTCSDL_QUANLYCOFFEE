@@ -29,10 +29,15 @@ namespace DemoCSDL.DAO
         }
         bool tamThoi;
         int soLuongCB;
-        public List<NguyenLieu> LayNguyenLieuSP()
+        public List<NguyenLieu> LayNguyenLieuSP(string maSP)
         {
             List<NguyenLieu> listNL = new List<NguyenLieu>();
-            DataTable dt = LayNguyenLieu();
+            string sql = "PROC_LayNguyenLieuCheBien @MaSP";
+            SqlParameter[] parameters = new SqlParameter[]
+           {
+                    new SqlParameter("@MaSP", maSP)
+           };
+            DataTable dt = dbConnection.Load(sql, parameters);
             tamThoi = false;
             soLuongCB = 0;
             foreach (DataRow dr in dt.Rows)
@@ -49,7 +54,31 @@ namespace DemoCSDL.DAO
             }
             return listNL;
         }
+        public List<NguyenLieu> LayNguyenLieuDaCo(string maSP)
+        {
+            List<NguyenLieu> listNL = new List<NguyenLieu>();
+            string sql = "PROC_LayNguyenLieuCheBienDaCo @MaSP";
+            SqlParameter[] parameters = new SqlParameter[]
+           {
+                    new SqlParameter("@MaSP", maSP)
+           };
+            DataTable dt = dbConnection.Load(sql, parameters);
+            tamThoi = true;
+            soLuongCB = 0;
+            foreach (DataRow dr in dt.Rows)
+            {
+                NguyenLieu nl = new NguyenLieu(
+                    dr["MaNL"].ToString(),
+                    dr["TenNL"].ToString(),
+                    Convert.ToInt32(dr["SoLuong"]),
+                    tamThoi = true,
+                    Convert.ToInt32(dr["SLCanDung"])
+                );
 
+                listNL.Add(nl);
+            }
+            return listNL;
+        }
         public void ThemNguyenLieu(NguyenLieu nl)
         {
             SqlParameter[] parameters = new SqlParameter[]

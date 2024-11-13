@@ -21,11 +21,15 @@ namespace DemoCSDL.UserControls
             this.nl = nl;
             UCCheckboxTenNL.Text = nl.TenNL;
             UClblSluongNL.Text = nl.SoLuong.ToString();
+            UCNumericNL.Value = nl.SoLuongCB;
         }
 
         private void MIngredient_Load(object sender, EventArgs e)
         {
-
+            if (nl.TamThoi == true)
+            {
+                UCCheckboxTenNL.Checked = true;
+            }
         }
 
         private void UCCheckboxTenNL_CheckedChanged(object sender, EventArgs e)

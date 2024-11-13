@@ -1,4 +1,6 @@
-﻿using DemoCSDL.DAO;
+﻿using DemoCSDL.ActiveInForms;
+using DemoCSDL.DAO;
+using DemoCSDL.Forms;
 using DemoCSDL.Models;
 using DemoCSDL.UserControls;
 using System;
@@ -19,8 +21,8 @@ namespace DemoCSDL.ManagerChildForms
         NguyenLieuDAO nlDAO = new NguyenLieuDAO();
         SanPham sp;
         string maSp;
-        CheBienDAO ctDAO = new CheBienDAO();
-        List<NguyenLieu> listNL;
+        CheBienDAO cbDAO = new CheBienDAO();
+        List<NguyenLieu> listNL = new List<NguyenLieu>();
         public FMProcessing(SanPham sp)
         {
             InitializeComponent();
@@ -36,47 +38,63 @@ namespace DemoCSDL.ManagerChildForms
         }
         private void FMProcessing_Load(object sender, EventArgs e)
         {
-            LoadNguyeLieuSP();
+            LoadNguyenLieuSPDaCo();
         }
 
-        private void LoadNguyeLieuSP()
+        private void LoadNguyenLieuSPDaCo()
         {
-            listNL = nlDAO.LayNguyenLieuSP();
-            foreach (NguyenLieu nguyenlieu in listNL)
+            listNL = nlDAO.LayNguyenLieuDaCo(maSp);
+            foreach (NguyenLieu nl in listNL)
             {
-                MIngredient ucNL = new MIngredient(nguyenlieu) { Margin = new Padding(0, 0, 0, 1) };
+                MIngredient ucNL = new MIngredient(nl) { Margin = new Padding(0, 0, 0, 1) };
                 flowLPIngredient.Controls.Add(ucNL);
             }
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
+        private void btnThoatt_Click(object sender, EventArgs e)
         {
             this.Close();
+            Active.OpenChildForm(new ManagerChildForms.FMIngredients(), ref Active.activeForm, FManager.panelFill);
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void btnSua_Click(object sender, EventArgs e)
         {
-            try
+            foreach (NguyenLieu nl in listNL)
             {
-                string maNL;
-                int soLuongCB;
-                foreach (NguyenLieu nl in listNL)
-                {
-                    if (nl.TamThoi == true)
-                    {
-                        maNL = nl.MaNL;
-                        soLuongCB = nl.SoLuongCB;
-                        CheBien ct = new CheBien(maSp, maNL, soLuongCB);
-                        ctDAO.ThemCheBien(ct);
+                CheBien ct = new CheBien(maSp, nl.MaNL, nl.SoLuongCB);
+                bool kiemTra; 
 
+                try
+                {
+                    cbDAO.SuaCheBien(ct, out kiemTra);
+
+                    if (kiemTra)
+                    {
+                        MessageBox.Show("Sửa nguyên liệu của sản phẩm "+sp.TenSP+" thành công");
                     }
                 }
-                MessageBox.Show("Thêm nguyên liệu cho sản phẩm thành công");
+                catch (Exception ex)
+                {
+                    // Xử lý lỗi nếu có
+                    MessageBox.Show("Có lỗi khi sửa nguyên liệu: " + nl.MaNL + "\n" + ex.Message);
+                }
             }
-            catch (SqlException ex)
+
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            foreach (NguyenLieu nl in listNL)
             {
-                // Hiển thị thông báo lỗi từ trigger ra màn hình
-                MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (nl.TamThoi == false)
+                {
+                    CheBien ct = new CheBien(maSp, nl.MaNL, nl.SoLuongCB);
+                    cbDAO.XoaCheBien(ct);
+                    MessageBox.Show("Xóa nguyên liệu cuả sản phẩm "+sp.TenSP + " thành công");
+                    flowLPIngredient.Controls.Clear();
+                    LoadNguyenLieuSPDaCo();
+                }
             }
         }
     }

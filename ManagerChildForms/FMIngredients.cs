@@ -25,7 +25,7 @@ namespace DemoCSDL.ManagerChildForms
             gvCheBien.DataSource = cbDAO.LayCheBien();
         }
 
-        private void FMIngredients_Load(object sender, EventArgs e)
+        public void FMIngredients_Load(object sender, EventArgs e)
         {
             LoadCB();
             txtSearch.TextChanged += txtSearch_TextChanged;
@@ -77,6 +77,20 @@ namespace DemoCSDL.ManagerChildForms
         {
             txtMaSP.Text = row.Cells[0].Value.ToString();
             txtTenSP.Text = cbDAO.LayTenSP(row.Cells[0].Value.ToString());
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            SanPham sp = new SanPham(txtMaSP.Text, txtTenSP.Text);
+            FMNProcessing form = new FMNProcessing(sp);
+            form.Show();
+        }
+
+        private void btnXemNL_Click(object sender, EventArgs e)
+        {
+            SanPham sp = new SanPham(txtMaSP.Text, txtTenSP.Text);
+            FMProcessing form = new FMProcessing(sp);
+            form.Show();
         }
     }
 }

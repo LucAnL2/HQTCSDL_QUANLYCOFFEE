@@ -111,3 +111,4 @@ D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.ManagerChildFo
 D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.ManagerChildForms.FMProcessing.resources
 D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.UserControls.MIngredient.resources
 D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.ManagerChildForms.FMIngredients.resources
+D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.ManagerChildForms.FMNProcessing.resources
