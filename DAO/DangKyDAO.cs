@@ -30,10 +30,11 @@ namespace DemoCSDL.DAO
             }
         }
 
-        public void RutLuong()
+        public void RutLuong(string maNV)
         {
             SqlParameter[] parameters = new SqlParameter[]
             {
+                new SqlParameter("@MaNV", maNV)
             };
             try
             {

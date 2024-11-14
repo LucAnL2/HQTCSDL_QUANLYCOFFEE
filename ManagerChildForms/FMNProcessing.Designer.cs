@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
             this.lblTenSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.flowLPNguyenLieu = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.lblTenSPP = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.guna2ShadowForm2 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.SuspendLayout();
             // 
             // btnThoat
@@ -82,6 +85,7 @@
             // 
             // flowLPNguyenLieu
             // 
+            this.flowLPNguyenLieu.AutoScroll = true;
             this.flowLPNguyenLieu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLPNguyenLieu.Location = new System.Drawing.Point(12, 85);
             this.flowLPNguyenLieu.Name = "flowLPNguyenLieu";
@@ -111,6 +115,10 @@
             this.lblTenSPP.TabIndex = 16;
             this.lblTenSPP.Text = "Cà phê sữa";
             // 
+            // guna2ShadowForm2
+            // 
+            this.guna2ShadowForm2.TargetForm = this;
+            // 
             // FMNProcessing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -123,7 +131,7 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.flowLPNguyenLieu);
             this.Controls.Add(this.label5);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FMNProcessing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nguyên liệu chế biến";
@@ -141,5 +149,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLPNguyenLieu;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTenSPP;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm2;
     }
 }

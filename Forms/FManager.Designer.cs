@@ -35,6 +35,7 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.btnCheBien = new Guna.UI2.WinForms.Guna2Button();
             this.btnPM = new Guna.UI2.WinForms.Guna2Button();
             this.btnMBill = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -44,7 +45,6 @@
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             panelFill = new System.Windows.Forms.Panel();
-            this.btnCheBien = new Guna.UI2.WinForms.Guna2Button();
             this.panelTop.SuspendLayout();
             this.panelLeft.SuspendLayout();
             this.SuspendLayout();
@@ -143,6 +143,18 @@
             this.panelLeft.TabIndex = 6;
             this.panelLeft.Visible = false;
             // 
+            // btnCheBien
+            // 
+            this.btnCheBien.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.btnCheBien.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheBien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.btnCheBien.Location = new System.Drawing.Point(0, 477);
+            this.btnCheBien.Name = "btnCheBien";
+            this.btnCheBien.Size = new System.Drawing.Size(250, 63);
+            this.btnCheBien.TabIndex = 8;
+            this.btnCheBien.Text = "Quản Lý Nguyên Liệu";
+            this.btnCheBien.Click += new System.EventHandler(this.btnCheBien_Click);
+            // 
             // btnPM
             // 
             this.btnPM.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
@@ -188,7 +200,7 @@
             this.btnShift.Name = "btnShift";
             this.btnShift.Size = new System.Drawing.Size(250, 63);
             this.btnShift.TabIndex = 4;
-            this.btnShift.Text = "Thêm Ca Làm";
+            this.btnShift.Text = "Quản Lý Ca Làm";
             this.btnShift.Click += new System.EventHandler(this.btnShift_Click);
             // 
             // btnAddProduct
@@ -200,7 +212,7 @@
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(250, 63);
             this.btnAddProduct.TabIndex = 4;
-            this.btnAddProduct.Text = "Thêm Sản Phẩm";
+            this.btnAddProduct.Text = "Quản Lý Sản Phẩm";
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // btnDangXuat
@@ -247,18 +259,6 @@
             panelFill.Size = new System.Drawing.Size(1250, 741);
             panelFill.TabIndex = 7;
             // 
-            // btnCheBien
-            // 
-            this.btnCheBien.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
-            this.btnCheBien.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheBien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.btnCheBien.Location = new System.Drawing.Point(0, 477);
-            this.btnCheBien.Name = "btnCheBien";
-            this.btnCheBien.Size = new System.Drawing.Size(250, 63);
-            this.btnCheBien.TabIndex = 8;
-            this.btnCheBien.Text = "Quản Lý Nguyên Liệu";
-            this.btnCheBien.Click += new System.EventHandler(this.btnCheBien_Click);
-            // 
             // FManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -290,12 +290,12 @@
         private Guna.UI2.WinForms.Guna2Button btnDangXuat;
         private Guna.UI2.WinForms.Guna2Button btnUser;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
-        public static System.Windows.Forms.Panel panelFill;
         private Guna.UI2.WinForms.Guna2Button btnAddProduct;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button btnShift;
         private Guna.UI2.WinForms.Guna2Button btnMBill;
         private Guna.UI2.WinForms.Guna2Button btnPM;
         private Guna.UI2.WinForms.Guna2Button btnCheBien;
+        public static System.Windows.Forms.Panel panelFill;
     }
 }

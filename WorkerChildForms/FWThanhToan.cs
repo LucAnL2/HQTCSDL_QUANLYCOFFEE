@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
+using System.Runtime.CompilerServices;
 
 namespace DemoCSDL
 {
@@ -18,11 +19,13 @@ namespace DemoCSDL
         ChiTietDAO ctd = new ChiTietDAO();
         List<ChiTiet> listct = new List<ChiTiet>();
         List<HoaDon> listhd = new List<HoaDon>();
-        public FWThanhToan(List<ChiTiet> listct, List<HoaDon> listhd)
+        List<SanPhamOrder> listspod = new List<SanPhamOrder>();
+        public FWThanhToan(List<ChiTiet> listct, List<HoaDon> listhd, List<SanPhamOrder> listspod)
         {
             InitializeComponent();
             this.listct = listct;
             this.listhd = listhd;
+            this.listspod = listspod;
         }
         public FWThanhToan()
         {
@@ -32,11 +35,13 @@ namespace DemoCSDL
         private void FWThanhToan_Load(object sender, EventArgs e)
         {
             rvCTHoaDon.LocalReport.ReportPath = "RCTHoaDon.rdlc";
-            var source = new ReportDataSource("CTHoaDonDataSet", listct);
-            var source1 = new ReportDataSource("HoaDonDataSet", listhd);
+            var source = new ReportDataSource("CTHoaDonDataset", listct);
+            var source1 = new ReportDataSource("HoaDonDataset", listhd);
+            var source2 = new ReportDataSource("SanPhamDataset", listspod);
             rvCTHoaDon.LocalReport.DataSources.Clear();
             rvCTHoaDon.LocalReport.DataSources.Add(source);
             rvCTHoaDon.LocalReport.DataSources.Add(source1);
+            rvCTHoaDon.LocalReport.DataSources.Add(source2);
             this.rvCTHoaDon.RefreshReport();
         }
     }

@@ -39,12 +39,6 @@ namespace DemoCSDL.WorkerChildForms
             LoadSanPham();
             LoadDonHang();
             LoadPTTT();
-            CapNhatNutHoaDon();
-        }
-        private void CapNhatNutHoaDon()
-        {
-            btnTaoMa.Enabled = string.IsNullOrEmpty(HoaDonDAO.MaHD);
-            lblMaHD.Text = HoaDonDAO.MaHD ?? string.Empty;
         }
 
         private void LoadSanPham()
@@ -63,7 +57,7 @@ namespace DemoCSDL.WorkerChildForms
                 foreach (SanPhamOrder order in SanPhamDAO.listOrder)
                 {
                     WProductInOrder productOrderControl = new WProductInOrder(order) { Margin = new Padding() };
-                    FLPanelOrder.Controls.Add(productOrderControl);
+                    pnlSPDat.Controls.Add(productOrderControl);
                 }
             }
         }
@@ -104,7 +98,7 @@ namespace DemoCSDL.WorkerChildForms
                     ChiTiet ct = new ChiTiet(lblMaHD.Text, order.MaSP, order.SoLuongOrder, order.Gia);
                     ctDAO.ThemChiTietHD(ct);
                 }
-
+                btnHoanTat.Enabled = false;
                 MessageBox.Show("Thêm hóa đơn thành công");
             }
             catch (Exception ex)
@@ -117,20 +111,30 @@ namespace DemoCSDL.WorkerChildForms
         {
             try
             {
-                foreach (SanPhamOrder order in SanPhamDAO.listOrder)
-                {
-                    ChiTiet ct = new ChiTiet(lblMaHD.Text, order.MaSP, order.SoLuongOrder, order.Gia);
-                    ctDAO.ThemChiTietHD(ct);
-                }
-
                 var listChiTiet = ctDAO.LoadCTHD(lblMaHD.Text);
                 var listHoaDon = hdDAO.LoadHD(lblMaHD.Text);
-                var paymentForm = new FWThanhToan(listChiTiet, listHoaDon);
+                var listspod = new List<SanPhamOrder>();
+
+                foreach (var order in SanPhamDAO.listOrder)
+                {
+                    string maSP = order.MaSP;
+                    string tenSP = spDAO.LayTenSP(maSP);
+                 
+                    SanPhamOrder updatedOrder = new SanPhamOrder
+                    {
+                        MaSP = maSP,
+                        TenSP = tenSP
+                    };
+                    listspod.Add(updatedOrder);
+                }
+
+                var paymentForm = new FWThanhToan(listChiTiet, listHoaDon, listspod);
 
                 SanPhamDAO.listOrder.Clear();
                 HoaDonDAO.MaHD = null;
                 Active.OpenChildForm(new WorkerChildForms.FWMenu(), ref Active.activeForm, FWorker.panelFill);
 
+                btnHoanTat.Enabled = true;
                 paymentForm.Show();
             }
             catch (Exception ex)

@@ -112,3 +112,8 @@ D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.ManagerChildFo
 D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.UserControls.MIngredient.resources
 D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.ManagerChildForms.FMIngredients.resources
 D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\obj\Debug\DemoCSDL.ManagerChildForms.FMNProcessing.resources
+D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\bin\Debug\EntityFramework.dll
+D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\bin\Debug\EntityFramework.SqlServer.dll
+D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\bin\Debug\EntityFramework.xml
+D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\bin\Debug\EntityFramework.SqlServer.xml
+D:\Tai lieu hoc\PJHQLCSDL\HQTCSDL_QUANLYCOFFEE\bin\Debug\RCTHoaDon.rdlc

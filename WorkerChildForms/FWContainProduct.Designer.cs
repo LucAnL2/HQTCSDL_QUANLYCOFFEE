@@ -41,8 +41,7 @@
             this.datetimeHoadon = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.FLPanelOrder = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlSPDat = new System.Windows.Forms.FlowLayoutPanel();
             this.fLPanelSP = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
@@ -75,8 +74,7 @@
             this.panelRight.Controls.Add(this.datetimeHoadon);
             this.panelRight.Controls.Add(this.label20);
             this.panelRight.Controls.Add(this.label19);
-            this.panelRight.Controls.Add(this.FLPanelOrder);
-            this.panelRight.Controls.Add(this.guna2Button1);
+            this.panelRight.Controls.Add(this.pnlSPDat);
             this.panelRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelRight.Location = new System.Drawing.Point(954, 0);
             this.panelRight.Name = "panelRight";
@@ -94,7 +92,7 @@
             this.btnTaoMa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
             this.btnTaoMa.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaoMa.ForeColor = System.Drawing.Color.Black;
-            this.btnTaoMa.Location = new System.Drawing.Point(178, 116);
+            this.btnTaoMa.Location = new System.Drawing.Point(178, 81);
             this.btnTaoMa.Name = "btnTaoMa";
             this.btnTaoMa.Size = new System.Drawing.Size(88, 27);
             this.btnTaoMa.TabIndex = 34;
@@ -107,7 +105,7 @@
             this.lblMaHD.BackColor = System.Drawing.Color.Transparent;
             this.lblMaHD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblMaHD.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaHD.Location = new System.Drawing.Point(21, 116);
+            this.lblMaHD.Location = new System.Drawing.Point(21, 81);
             this.lblMaHD.Name = "lblMaHD";
             this.lblMaHD.Size = new System.Drawing.Size(143, 27);
             this.lblMaHD.TabIndex = 20;
@@ -118,7 +116,7 @@
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(21, 96);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(21, 61);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(143, 27);
             this.guna2HtmlLabel1.TabIndex = 19;
@@ -185,9 +183,9 @@
             this.btnTong.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
             this.btnTong.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.btnTong.Location = new System.Drawing.Point(178, 164);
+            this.btnTong.Location = new System.Drawing.Point(122, 164);
             this.btnTong.Name = "btnTong";
-            this.btnTong.Size = new System.Drawing.Size(87, 33);
+            this.btnTong.Size = new System.Drawing.Size(143, 33);
             this.btnTong.TabIndex = 9;
             this.btnTong.Text = "Tổng";
             this.btnTong.Click += new System.EventHandler(this.btnTong_Click);
@@ -212,7 +210,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label20.Location = new System.Drawing.Point(12, 172);
+            this.label20.Location = new System.Drawing.Point(12, 168);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(104, 25);
             this.label20.TabIndex = 12;
@@ -223,41 +221,20 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label19.Location = new System.Drawing.Point(12, 143);
+            this.label19.Location = new System.Drawing.Point(12, 120);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(167, 29);
             this.label19.TabIndex = 13;
             this.label19.Text = "Đơn của bạn";
             // 
-            // FLPanelOrder
+            // pnlSPDat
             // 
-            this.FLPanelOrder.AutoScroll = true;
-            this.FLPanelOrder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FLPanelOrder.Location = new System.Drawing.Point(17, 203);
-            this.FLPanelOrder.Name = "FLPanelOrder";
-            this.FLPanelOrder.Size = new System.Drawing.Size(255, 363);
-            this.FLPanelOrder.TabIndex = 11;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 8;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(188)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.guna2Button1.Image = global::DemoCSDL.Properties.Resources.user;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(50, 50);
-            this.guna2Button1.Location = new System.Drawing.Point(61, 48);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(189, 42);
-            this.guna2Button1.TabIndex = 10;
-            this.guna2Button1.Text = "Eric   >";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.TextOffset = new System.Drawing.Point(10, 0);
+            this.pnlSPDat.AutoScroll = true;
+            this.pnlSPDat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSPDat.Location = new System.Drawing.Point(17, 203);
+            this.pnlSPDat.Name = "pnlSPDat";
+            this.pnlSPDat.Size = new System.Drawing.Size(255, 363);
+            this.pnlSPDat.TabIndex = 11;
             // 
             // fLPanelSP
             // 
@@ -470,8 +447,7 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker datetimeHoadon;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.FlowLayoutPanel FLPanelOrder;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.FlowLayoutPanel pnlSPDat;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblMaHD;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;

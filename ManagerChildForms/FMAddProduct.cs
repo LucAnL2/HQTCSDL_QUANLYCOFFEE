@@ -47,11 +47,12 @@ namespace DemoCSDL.ManagerChildForms
         {
             try
             {
-                var sp = TaoSPTuInput();
+                string maSP = spDAO.LayMaSPMoi();
+                var sp = TaoSPTuInput(maSP);
                 spDAO.ThemSanPham(sp);
                 LoadSP();
                 MessageBox.Show("Thêm sản phẩm thành công");
-                FMProcessing form = new FMProcessing(sp);
+                FMNProcessing form = new FMNProcessing(sp);
                 form.Show();
             }
             catch (Exception ex)
@@ -59,10 +60,10 @@ namespace DemoCSDL.ManagerChildForms
                 MessageBox.Show("Đã có lỗi " + ex.Message);
             }
         }
-        private SanPham TaoSPTuInput()
+        private SanPham TaoSPTuInput(string maSP)
         {
             string maLoaiSP = cbbMaLoaiSP.SelectedValue.ToString();
-            return new SanPham(txtMaSP.Text, maLoaiSP, txtTenSP.Text, "Còn hàng", decimal.Parse(txtGia.Text), fileName);
+            return new SanPham(maSP, maLoaiSP, txtTenSP.Text, "Còn hàng", decimal.Parse(txtGia.Text), fileName);
         }
 
         private void btnChoose_Click(object sender, EventArgs e)
@@ -125,7 +126,7 @@ namespace DemoCSDL.ManagerChildForms
             try
             {
                 txtMaSP.ReadOnly = false;
-                var sp = TaoSPTuInput();
+                var sp = TaoSPTuInput(txtMaSP.Text);
                 spDAO.CapNhatSanPham(sp);
                 LoadSP();
                 XoaThongTin();
@@ -161,6 +162,11 @@ namespace DemoCSDL.ManagerChildForms
                 string searchString = txtSearch.Text;
                 gvProduct.DataSource = spDAO.LayDSSanPhamBangChuoi(searchString);
             }
+        }
+
+        private void btnTaoMa_Click(object sender, EventArgs e)
+        {
+            txtMaSP.Text = spDAO.LayMaSPMoi();
         }
     }
 }

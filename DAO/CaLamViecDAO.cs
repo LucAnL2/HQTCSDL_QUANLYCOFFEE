@@ -15,25 +15,25 @@ namespace DemoCSDL.DAO
         DBConnection connect = new DBConnection();
         public DataTable HienThiCaLam()
         {
-            string query = "select Maca as [Mã ca], NgayLam as [Ngày làm], GioBatDau as [Giờ bắt đầu], GioKetThuc as [Giờ kết thúc] from DSCaLamViec";
+            string query = "select Maca as [Mã ca], NgayLam as [Ngày làm], GioBatDau as [Giờ bắt đầu], GioKetThuc as [Giờ kết thúc] from VIEW_DSCaLamViec";
             return connect.Load(query);
         }
 
         public DataTable HienThiCaLamDaDK()
         {
-            string query = "select Maca as [Mã ca], NgayLam as [Ngày làm], GioBatDau as [Giờ bắt đầu], GioKetThuc as [Giờ kết thúc], MaNV as [Mã nhân viên], HTen as [Họ tên NV] from ThongTinNhanVienCaLamViec";
+            string query = "select Maca as [Mã ca], NgayLam as [Ngày làm], GioBatDau as [Giờ bắt đầu], GioKetThuc as [Giờ kết thúc], MaNV as [Mã nhân viên], HTen as [Họ tên NV] from VIEW_ThongTinNhanVienCaLamViec";
             return connect.Load(query);
         }
 
         public DataTable HienThiTheoBoLoc(string filter)
         {
-            string query = string.Format("select Maca as [Mã ca], NgayLam as [Ngày làm], GioBatDau as [Giờ bắt đầu], GioKetThuc as [Giờ kết thúc], MaNV as [Mã nhân viên], HTen as [Họ tên NV] from ThongTinNhanVienCaLamViec" + " where MaNV = N'{0}' or MaCa = N'{0}'", filter);
+            string query = string.Format("select Maca as [Mã ca], NgayLam as [Ngày làm], GioBatDau as [Giờ bắt đầu], GioKetThuc as [Giờ kết thúc], MaNV as [Mã nhân viên], HTen as [Họ tên NV] from VIEW_ThongTinNhanVienCaLamViec" + " where MaNV = N'{0}' or MaCa = N'{0}'", filter);
             return connect.Load(query);
         }
 
         public DataTable HienThiTheoMaNVVaMaCa(string MaNV, string MaCa)
         {
-            string query = string.Format("select Maca as [Mã ca], NgayLam as [Ngày làm], GioBatDau as [Giờ bắt đầu], GioKetThuc as [Giờ kết thúc], MaNV as [Mã nhân viên], HTen as [Họ tên NV] from ThongTinNhanVienCaLamViec" + " where MaNV = N'{0}' and MaCa = N'{1}'", MaNV, MaCa);
+            string query = string.Format("select Maca as [Mã ca], NgayLam as [Ngày làm], GioBatDau as [Giờ bắt đầu], GioKetThuc as [Giờ kết thúc], MaNV as [Mã nhân viên], HTen as [Họ tên NV] from VIEW_ThongTinNhanVienCaLamViec" + " where MaNV = N'{0}' and MaCa = N'{1}'", MaNV, MaCa);
             return connect.Load(query);
         }
 

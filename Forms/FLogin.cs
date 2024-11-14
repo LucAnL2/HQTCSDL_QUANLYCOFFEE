@@ -39,6 +39,9 @@ namespace DemoCSDL
                     return;
                 }
 
+                ShortTermVariables.BienDungChung.taiKhoanND = txtUname.Text;
+                ShortTermVariables.BienDungChung.matkhauND = txtPass.Text;
+
                 NhanVienDAO nhanVienDAO = new NhanVienDAO();
                 DataTable duLieu = nhanVienDAO.HienThiThongTin(txtUname.Text);
 
@@ -50,6 +53,7 @@ namespace DemoCSDL
 
                 ShortTermVariables.BienDungChung.taiKhoanND = duLieu.Rows[0]["TaiKhoan"].ToString();
                 ShortTermVariables.BienDungChung.maNVND = duLieu.Rows[0]["MaNV"].ToString();
+                ShortTermVariables.BienDungChung.matkhauND = duLieu.Rows[0]["MatKhau"].ToString();
                 DataTable bangVaiTro = nhanVienDAO.LayVaiTro(ShortTermVariables.BienDungChung.maNVND);
 
                 string maVaiTro = bangVaiTro.Rows[0]["MaCV"].ToString();

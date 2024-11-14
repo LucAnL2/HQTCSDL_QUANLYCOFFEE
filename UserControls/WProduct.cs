@@ -40,7 +40,7 @@ namespace DemoCSDL.UserControls
             else
             {
                 // Kiểm tra số lượng nguyên liệu có đủ không
-                bool isEnough = spDAO.CheckNguyenLieu(sp.MaSP, Convert.ToInt32(NUpdownSL.Value));
+                bool isEnough = spDAO.CheckNguyenLieu(sp.MaSP, TinhSoLuongSPOrder(SanPhamDAO.listOrder, sp.MaSP), Convert.ToInt32(NUpdownSL.Value));
 
                 if (isEnough)
                 {
@@ -58,8 +58,22 @@ namespace DemoCSDL.UserControls
                 else
                 {
                     MessageBox.Show("Không đủ nguyên liệu để thực hiện đơn hàng.");
+                }              
+            }
+        }
+        public static int TinhSoLuongSPOrder(List<SanPhamOrder> listOrder, string maSP)
+        {
+            int count = 0;
+
+            foreach (SanPhamOrder item in listOrder)
+            {
+                if (item.MaSP == maSP)
+                {
+                    count+=item.SoLuongOrder;
                 }
             }
+
+            return count;
         }
 
         public void HienThiManHinh(string MaLoaiSP)

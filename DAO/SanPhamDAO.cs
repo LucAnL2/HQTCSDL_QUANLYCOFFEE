@@ -72,7 +72,6 @@ namespace DemoCSDL.DAO
         {
             SqlParameter[] parameters = new SqlParameter[]
             {
-                    new SqlParameter("@MaSP", sp.MaSP),
                     new SqlParameter("@MaLoaiSP", sp.MaLoaiSP),
                     new SqlParameter("@TenSP", sp.TenSP),
                     new SqlParameter("@TinhTrang", sp.TinhTrang),
@@ -88,7 +87,7 @@ namespace DemoCSDL.DAO
                 throw;
             }
         }
-        public bool CheckNguyenLieu(string maSP, int soLuongOrder)
+        public bool CheckNguyenLieu(string maSP, int sLHienTai, int soLuongOrder)
         {
             bool isEnough = false; // Mặc định là không đủ
 
@@ -96,7 +95,8 @@ namespace DemoCSDL.DAO
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@MaSP", maSP),
-                new SqlParameter("@SoLuong", soLuongOrder)
+                new SqlParameter("@SoLuong", soLuongOrder),
+                new SqlParameter("@CurrentSoLuong", sLHienTai)
             };
 
             try
@@ -161,5 +161,41 @@ namespace DemoCSDL.DAO
             }
             return listSP;
         }
+        public string LayMaSPMoi()
+        {
+            try
+            {
+                string query = "SELECT dbo.FUNC_TaoMaSP()";
+
+                object result = dbConnection.ExecuteScalar(query, null, CommandType.Text);
+
+                return result != null ? result.ToString() : null;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        public string LayTenSP(string maSP)
+        {
+            try
+            {
+                string query = "SELECT dbo.FUNC_LayTenSP(@MaSP)";
+
+                SqlParameter[] parameters = new SqlParameter[]
+                {
+                    new SqlParameter("@MaSP", maSP)
+                };
+
+                object result = dbConnection.ExecuteScalar(query, parameters, CommandType.Text);
+
+                return result != null ? result.ToString() : string.Empty; 
+            }
+            catch 
+            {
+                throw;
+            }
+        }
+
     }
 }

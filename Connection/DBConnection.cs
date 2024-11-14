@@ -6,12 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DemoCSDL.ShortTermVariables;
 
 namespace DemoCSDL.Connection
 {
     public class DBConnection
     {
-        public string strCon = @"Data Source=LAPTOP-3RJ8EVL2\THIENDB;Initial Catalog=QLQCFF;User ID=sa;Password=@Daithien2004;Encrypt=False";
+        public string strCon = @"Data Source=LAPTOP-3RJ8EVL2\THIENDB;Initial Catalog=QLQCFF;User ID="+BienDungChung.taiKhoanND+";Password="+BienDungChung.matkhauND+";Encrypt=False";
         public SqlConnection sqlCon = null;
 
         public void OpenConnection()

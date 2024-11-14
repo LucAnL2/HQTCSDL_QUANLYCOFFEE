@@ -77,6 +77,7 @@
             // 
             // flowLPIngredient
             // 
+            this.flowLPIngredient.AutoScroll = true;
             this.flowLPIngredient.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLPIngredient.Location = new System.Drawing.Point(12, 79);
             this.flowLPIngredient.Name = "flowLPIngredient";
@@ -127,7 +128,7 @@
             this.Controls.Add(this.lblTenSP);
             this.Controls.Add(this.flowLPIngredient);
             this.Controls.Add(this.label5);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FMProcessing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nguyên liệu chế biến";

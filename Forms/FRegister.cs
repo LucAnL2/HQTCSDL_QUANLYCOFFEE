@@ -1,5 +1,6 @@
 ﻿using DemoCSDL.DAO;
 using DemoCSDL.Models;
+using DemoCSDL.ShortTermVariables;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,6 +32,8 @@ namespace DemoCSDL.Forms
         {
             try
             {
+                BienDungChung.taiKhoanND = "sa";
+                BienDungChung.matkhauND = "@Daithien2004";
                 NhanVienDAO nhanVienDAO = new NhanVienDAO();
                 string maNV = nhanVienDAO.TaoMaNV();
                 NhanVien nhanVien = new NhanVien(maNV, txtHTen.Text, txtTaiKhoan.Text, txtMatKhau.Text, txtEmail.Text);
