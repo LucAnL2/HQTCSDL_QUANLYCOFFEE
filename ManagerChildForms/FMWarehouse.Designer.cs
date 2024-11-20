@@ -62,7 +62,7 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtThemNhuyenLieu = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThemNhuyenLieu = new Guna.UI2.WinForms.Guna2Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txtTenNguyenLieu = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaNguyenLieu = new Guna.UI2.WinForms.Guna2TextBox();
@@ -465,7 +465,7 @@
             this.guna2CustomGradientPanel2.Controls.Add(this.guna2PictureBox1);
             this.guna2CustomGradientPanel2.Controls.Add(this.label3);
             this.guna2CustomGradientPanel2.Controls.Add(this.label8);
-            this.guna2CustomGradientPanel2.Controls.Add(this.txtThemNhuyenLieu);
+            this.guna2CustomGradientPanel2.Controls.Add(this.btnThemNhuyenLieu);
             this.guna2CustomGradientPanel2.Controls.Add(this.label10);
             this.guna2CustomGradientPanel2.Controls.Add(this.txtTenNguyenLieu);
             this.guna2CustomGradientPanel2.Controls.Add(this.txtMaNguyenLieu);
@@ -581,21 +581,21 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "Mã N.Liệu";
             // 
-            // txtThemNhuyenLieu
+            // btnThemNhuyenLieu
             // 
-            this.txtThemNhuyenLieu.BorderRadius = 5;
-            this.txtThemNhuyenLieu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.txtThemNhuyenLieu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.txtThemNhuyenLieu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.txtThemNhuyenLieu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.txtThemNhuyenLieu.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
-            this.txtThemNhuyenLieu.ForeColor = System.Drawing.Color.White;
-            this.txtThemNhuyenLieu.Location = new System.Drawing.Point(24, 278);
-            this.txtThemNhuyenLieu.Name = "txtThemNhuyenLieu";
-            this.txtThemNhuyenLieu.Size = new System.Drawing.Size(227, 45);
-            this.txtThemNhuyenLieu.TabIndex = 26;
-            this.txtThemNhuyenLieu.Text = "Thêm Nguyên Liệu";
-            this.txtThemNhuyenLieu.Click += new System.EventHandler(this.txtThemNhuyenLieu_Click);
+            this.btnThemNhuyenLieu.BorderRadius = 5;
+            this.btnThemNhuyenLieu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemNhuyenLieu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemNhuyenLieu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThemNhuyenLieu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThemNhuyenLieu.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnThemNhuyenLieu.ForeColor = System.Drawing.Color.White;
+            this.btnThemNhuyenLieu.Location = new System.Drawing.Point(24, 278);
+            this.btnThemNhuyenLieu.Name = "btnThemNhuyenLieu";
+            this.btnThemNhuyenLieu.Size = new System.Drawing.Size(227, 45);
+            this.btnThemNhuyenLieu.TabIndex = 26;
+            this.btnThemNhuyenLieu.Text = "Thêm Nguyên Liệu";
+            this.btnThemNhuyenLieu.Click += new System.EventHandler(this.btnThemNhuyenLieu_Click);
             // 
             // label10
             // 
@@ -829,7 +829,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2Button txtThemNhuyenLieu;
+        private Guna.UI2.WinForms.Guna2Button btnThemNhuyenLieu;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2TextBox txtTenNguyenLieu;
         private Guna.UI2.WinForms.Guna2TextBox txtMaNguyenLieu;

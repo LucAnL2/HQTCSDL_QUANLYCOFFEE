@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.nameuc = new System.Windows.Forms.Label();
-            this.iduc = new System.Windows.Forms.Label();
+            this.txtname = new System.Windows.Forms.Label();
+            this.txtid = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // nameuc
+            // txtname
             // 
-            this.nameuc.AutoSize = true;
-            this.nameuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.nameuc.Location = new System.Drawing.Point(110, 33);
-            this.nameuc.Name = "nameuc";
-            this.nameuc.Size = new System.Drawing.Size(110, 22);
-            this.nameuc.TabIndex = 6;
-            this.nameuc.Text = "Eric Archer";
+            this.txtname.AutoSize = true;
+            this.txtname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.txtname.Location = new System.Drawing.Point(110, 33);
+            this.txtname.Name = "txtname";
+            this.txtname.Size = new System.Drawing.Size(110, 22);
+            this.txtname.TabIndex = 6;
+            this.txtname.Text = "Eric Archer";
             // 
-            // iduc
+            // txtid
             // 
-            this.iduc.AutoSize = true;
-            this.iduc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iduc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.iduc.Location = new System.Drawing.Point(243, 33);
-            this.iduc.Name = "iduc";
-            this.iduc.Size = new System.Drawing.Size(107, 22);
-            this.iduc.TabIndex = 6;
-            this.iduc.Text = "ID: 238943";
+            this.txtid.AutoSize = true;
+            this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.txtid.Location = new System.Drawing.Point(243, 33);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(107, 22);
+            this.txtid.TabIndex = 6;
+            this.txtid.Text = "ID: 238943";
             // 
             // guna2PictureBox1
             // 
@@ -74,11 +74,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
-            this.Controls.Add(this.iduc);
-            this.Controls.Add(this.nameuc);
+            this.Controls.Add(this.txtid);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.guna2PictureBox1);
             this.Name = "MStaffInfoInDash";
-            this.Size = new System.Drawing.Size(362, 93);
+            this.Size = new System.Drawing.Size(477, 93);
+            this.Load += new System.EventHandler(this.MStaffInfoInDash_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -88,7 +89,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.Label nameuc;
-        private System.Windows.Forms.Label iduc;
+        private System.Windows.Forms.Label txtname;
+        private System.Windows.Forms.Label txtid;
     }
 }

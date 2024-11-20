@@ -99,7 +99,7 @@
         </TablixRowHierarchy>
         <DataSetName>CTHoaDonDataset</DataSetName>
         <Top>1.04667in</Top>
-        <Left>2.48833in</Left>
+        <Left>1.58833in</Left>
         <Height>0.5in</Height>
         <Width>0.63056in</Width>
         <Style>
@@ -204,8 +204,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>SanPhamDataset</DataSetName>
-        <Top>1.99667in</Top>
-        <Left>0.48833in</Left>
+        <Top>1.74667in</Top>
+        <Left>0.41333in</Left>
         <Height>0.5in</Height>
         <Width>1in</Width>
         <ZIndex>1</ZIndex>
@@ -546,8 +546,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>CTHoaDonDataset</DataSetName>
-        <Top>1.99667in</Top>
-        <Left>1.48833in</Left>
+        <Top>1.74667in</Top>
+        <Left>1.41333in</Left>
         <Height>0.5in</Height>
         <Width>3in</Width>
         <ZIndex>3</ZIndex>
@@ -845,8 +845,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>HoaDonDataset</DataSetName>
-        <Top>3.71333in</Top>
-        <Left>0.48833in</Left>
+        <Top>2.83in</Top>
+        <Left>0.41333in</Left>
         <Height>0.5in</Height>
         <Width>4in</Width>
         <ZIndex>4</ZIndex>
@@ -873,8 +873,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox57</rd:DefaultName>
-        <Top>0.16333in</Top>
-        <Left>0.83833in</Left>
+        <Top>0.26333in</Top>
+        <Left>1.41333in</Left>
         <Height>0.575in</Height>
         <Width>3.65in</Width>
         <ZIndex>5</ZIndex>
@@ -892,7 +892,7 @@
     <Height>4.84167in</Height>
     <Style />
   </Body>
-  <Width>5.12167in</Width>
+  <Width>6.43in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>

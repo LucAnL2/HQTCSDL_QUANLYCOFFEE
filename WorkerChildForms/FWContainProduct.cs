@@ -2,6 +2,7 @@
 using DemoCSDL.DAO;
 using DemoCSDL.Forms;
 using DemoCSDL.Models;
+using DemoCSDL.ShortTermVariables;
 using DemoCSDL.UserControls;
 using System;
 using System.Collections.Generic;
@@ -98,7 +99,6 @@ namespace DemoCSDL.WorkerChildForms
                     ChiTiet ct = new ChiTiet(lblMaHD.Text, order.MaSP, order.SoLuongOrder, order.Gia);
                     ctDAO.ThemChiTietHD(ct);
                 }
-                btnHoanTat.Enabled = false;
                 MessageBox.Show("Thêm hóa đơn thành công");
             }
             catch (Exception ex)
@@ -134,7 +134,6 @@ namespace DemoCSDL.WorkerChildForms
                 HoaDonDAO.MaHD = null;
                 Active.OpenChildForm(new WorkerChildForms.FWMenu(), ref Active.activeForm, FWorker.panelFill);
 
-                btnHoanTat.Enabled = true;
                 paymentForm.Show();
             }
             catch (Exception ex)

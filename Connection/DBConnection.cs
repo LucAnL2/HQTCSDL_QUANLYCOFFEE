@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DemoCSDL.Models;
 using DemoCSDL.ShortTermVariables;
 
 namespace DemoCSDL.Connection
@@ -18,7 +19,7 @@ namespace DemoCSDL.Connection
         public void OpenConnection()
         {
             try
-            {
+            {              
                 if (sqlCon == null)
                 {
                     sqlCon = new SqlConnection(strCon);
@@ -202,6 +203,61 @@ namespace DemoCSDL.Connection
             }
 
             return result;
+        }
+
+        public List<NhanVien> GetNhanVienList()
+        {
+            List<NhanVien> nhanVienList = new List<NhanVien>();
+
+            using (SqlConnection connection = new SqlConnection(strCon))
+            {
+                connection.Open();
+                string query = "SELECT HTen, MaNV, SDT, Tuoi FROM NhanVien";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string ten = reader.GetString(0);
+                        string maNV = reader.GetString(1);  // Cột MaNV
+                        string sdt = reader.IsDBNull(2) ? null : reader.GetString(1);  // Cột SDT, kiểm tra null
+
+
+                        NhanVien nhanVien = new NhanVien(ten, maNV, sdt, 13);
+                        nhanVienList.Add(nhanVien);
+                    }
+                }
+            }
+
+            return nhanVienList;
+        }
+
+        public List<NhanVien> GetDoanhThuList()
+        {
+            List<NhanVien> nhanVienList = new List<NhanVien>();
+
+            using (SqlConnection connection = new SqlConnection(strCon))
+            {
+                connection.Open();
+                string query = "SELECT ThangNam, LoiNhuan FROM TongLoiNhuan";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string ten = reader.GetString(0);  // Cột MaNV
+                        int tuoi = Convert.ToInt32(reader.GetDecimal(1));  // Cột SDT, kiểm tra null
+
+
+                        NhanVien nhanVien = new NhanVien(ten, tuoi);
+                        nhanVienList.Add(nhanVien);
+                    }
+                }
+            }
+
+            return nhanVienList;
         }
     }
 }

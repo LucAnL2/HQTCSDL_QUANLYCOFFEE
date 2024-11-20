@@ -3,8 +3,64 @@
   "WorkspaceRootPath": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/LAPTOP_3RJ8EVL2_THIENDB/QLQCFF/sa/SqlTable/dbo.SanPham.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/LAPTOP_3RJ8EVL2_THIENDB/QLQCFF/sa/SqlTable/dbo.HoaDon.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/LAPTOP_3RJ8EVL2_THIENDB/QLQCFF/sa/SqlTable/dbo.ChiTiet.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\tai lieu hoc\\pjhqlcsdl\\hqtcsdl_quanlycoffee\\workerchildforms\\fwcontainproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:workerchildforms\\fwcontainproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\tai lieu hoc\\pjhqlcsdl\\hqtcsdl_quanlycoffee\\workerchildforms\\fwcontainproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:workerchildforms\\fwcontainproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/LAPTOP_3RJ8EVL2_THIENDB/QLQCFF/sa/SqlTable/dbo.CheBien.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|d:\\tai lieu hoc\\pjhqlcsdl\\hqtcsdl_quanlycoffee\\usercontrols\\wproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:usercontrols\\wproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\usercontrols\\wproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:usercontrols\\wproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\usercontrols\\wproductinorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:usercontrols\\wproductinorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\connection\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:connection\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\managerchildforms\\fmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\usercontrols\\mstaffinfoindash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:usercontrols\\mstaffinfoindash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\usercontrols\\mstaffinfoindash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:usercontrols\\mstaffinfoindash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\managerchildforms\\fmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:managerchildforms\\fmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\models\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:models\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\rcthoadon.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{899CF8A9-8A4B-4480-B0D6-072FA1CAE147}|DemoCSDL.csproj|solutionrelative:rcthoadon.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,21 +70,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "DBConnection.cs",
               "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\Connection\\DBConnection.cs",
               "RelativeDocumentMoniker": "Connection\\DBConnection.cs",
               "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\Connection\\DBConnection.cs",
               "RelativeToolTip": "Connection\\DBConnection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAA3AAAA",
+              "ViewState": "AQIAAOMAAAAAAAAAAAAYwOgAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T15:53:07.051Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -37,6 +92,175 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "dbo.SanPham [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_3RJ8EVL2_THIENDB/QLQCFF/sa/SqlTable/dbo.SanPham.sql",
+              "ToolTip": "dbo.SanPham [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-20T04:18:40.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dbo.ChiTiet [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_3RJ8EVL2_THIENDB/QLQCFF/sa/SqlTable/dbo.ChiTiet.sql",
+              "ToolTip": "dbo.ChiTiet [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-20T04:23:18.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dbo.HoaDon [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_3RJ8EVL2_THIENDB/QLQCFF/sa/SqlTable/dbo.HoaDon.sql",
+              "ToolTip": "dbo.HoaDon [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-20T04:31:14.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FWContainProduct.cs [Design]",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\WorkerChildForms\\FWContainProduct.cs",
+              "RelativeDocumentMoniker": "WorkerChildForms\\FWContainProduct.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\WorkerChildForms\\FWContainProduct.cs [Design]",
+              "RelativeToolTip": "WorkerChildForms\\FWContainProduct.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T04:20:26.105Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FWContainProduct.cs",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\WorkerChildForms\\FWContainProduct.cs",
+              "RelativeDocumentMoniker": "WorkerChildForms\\FWContainProduct.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\WorkerChildForms\\FWContainProduct.cs",
+              "RelativeToolTip": "WorkerChildForms\\FWContainProduct.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAAAGEAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T04:20:27.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "dbo.CheBien [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_3RJ8EVL2_THIENDB/QLQCFF/sa/SqlTable/dbo.CheBien.sql",
+              "ToolTip": "dbo.CheBien [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-20T04:18:17.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WProduct.cs",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\UserControls\\WProduct.cs",
+              "RelativeDocumentMoniker": "UserControls\\WProduct.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\UserControls\\WProduct.cs",
+              "RelativeToolTip": "UserControls\\WProduct.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAADwvyUAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T06:04:19.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WProduct.cs [Design]",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\UserControls\\WProduct.cs",
+              "RelativeDocumentMoniker": "UserControls\\WProduct.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\UserControls\\WProduct.cs [Design]",
+              "RelativeToolTip": "UserControls\\WProduct.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T06:04:00.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WProductInOrder.cs [Design]",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\UserControls\\WProductInOrder.cs",
+              "RelativeDocumentMoniker": "UserControls\\WProductInOrder.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\UserControls\\WProductInOrder.cs [Design]",
+              "RelativeToolTip": "UserControls\\WProductInOrder.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T06:03:58.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FMDashboard.cs",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMDashboard.cs",
+              "RelativeDocumentMoniker": "ManagerChildForms\\FMDashboard.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMDashboard.cs",
+              "RelativeToolTip": "ManagerChildForms\\FMDashboard.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAuwBsAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T01:14:51.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MStaffInfoInDash.cs [Design]",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\UserControls\\MStaffInfoInDash.cs",
+              "RelativeDocumentMoniker": "UserControls\\MStaffInfoInDash.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\UserControls\\MStaffInfoInDash.cs [Design]",
+              "RelativeToolTip": "UserControls\\MStaffInfoInDash.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T01:57:18.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MStaffInfoInDash.cs",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\UserControls\\MStaffInfoInDash.cs",
+              "RelativeDocumentMoniker": "UserControls\\MStaffInfoInDash.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\UserControls\\MStaffInfoInDash.cs",
+              "RelativeToolTip": "UserControls\\MStaffInfoInDash.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T01:57:27.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FMDashboard.cs [Design]",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMDashboard.cs",
+              "RelativeDocumentMoniker": "ManagerChildForms\\FMDashboard.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\ManagerChildForms\\FMDashboard.cs [Design]",
+              "RelativeToolTip": "ManagerChildForms\\FMDashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T01:14:49.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "NhanVien.cs",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\Models\\NhanVien.cs",
+              "RelativeDocumentMoniker": "Models\\NhanVien.cs",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\Models\\NhanVien.cs",
+              "RelativeToolTip": "Models\\NhanVien.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAADwv0gAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T01:54:08.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RCTHoaDon.rdlc [Design]",
+              "DocumentMoniker": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\RCTHoaDon.rdlc",
+              "RelativeDocumentMoniker": "RCTHoaDon.rdlc",
+              "ToolTip": "D:\\Tai lieu hoc\\PJHQLCSDL\\HQTCSDL_QUANLYCOFFEE\\RCTHoaDon.rdlc [Design]",
+              "RelativeToolTip": "RCTHoaDon.rdlc [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
+              "WhenOpened": "2024-11-15T01:48:56.582Z"
             }
           ]
         },

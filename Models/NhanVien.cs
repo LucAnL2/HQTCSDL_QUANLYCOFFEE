@@ -57,5 +57,19 @@ namespace DemoCSDL.Models
         public string MaCV { get => maCV; set => maCV = value; }
 
         public string EMail { get => eMail; set => eMail = value; }
+
+        public NhanVien(string hten, string manv, string sdt, int tuoi)
+        {
+            this.HTen = hTen;
+            this.MaNV = manv;
+            this.SDT = sdt;
+            this.Tuoi = tuoi;
+        }
+
+        public NhanVien(string hten, int tuoi)
+        {
+            this.HTen = hten;
+            this.Tuoi = tuoi;
+        }
     }
 }

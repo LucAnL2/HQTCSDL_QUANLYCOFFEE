@@ -845,8 +845,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>HoaDonDataset</DataSetName>
-        <Top>4.03833in</Top>
-        <Left>0.48833in</Left>
+        <Top>2.83in</Top>
+        <Left>0.41333in</Left>
         <Height>0.5in</Height>
         <Width>4in</Width>
         <ZIndex>4</ZIndex>
@@ -874,7 +874,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox57</rd:DefaultName>
         <Top>0.26333in</Top>
-        <Left>0.41333in</Left>
+        <Left>1.41333in</Left>
         <Height>0.575in</Height>
         <Width>3.65in</Width>
         <ZIndex>5</ZIndex>
@@ -892,7 +892,7 @@
     <Height>4.84167in</Height>
     <Style />
   </Body>
-  <Width>4.61333in</Width>
+  <Width>6.43in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>

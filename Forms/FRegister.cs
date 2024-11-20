@@ -32,8 +32,7 @@ namespace DemoCSDL.Forms
         {
             try
             {
-                BienDungChung.taiKhoanND = "sa";
-                BienDungChung.matkhauND = "@Daithien2004";
+                BienDungChung.SetQuyenAdmin();
                 NhanVienDAO nhanVienDAO = new NhanVienDAO();
                 string maNV = nhanVienDAO.TaoMaNV();
                 NhanVien nhanVien = new NhanVien(maNV, txtHTen.Text, txtTaiKhoan.Text, txtMatKhau.Text, txtEmail.Text);
