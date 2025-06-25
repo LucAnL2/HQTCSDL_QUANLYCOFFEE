@@ -48,10 +48,10 @@ namespace DemoCSDL.WorkerChildForms
             MessageBox.Show("Rút lương thành công");
         }
 
-        private void btnHienLuong_Click(object sender, EventArgs e)
+        private void btnXemLuong_Click(object sender, EventArgs e)
         {
-            DangKy dk = new DangKy(BienDungChung.maNVND);
-            MessageBox.Show(dkDAO.TinhLuong(dk).ToString());
+            DangKy dk = new DangKy("NV5");
+            MessageBox.Show(dkDAO.TinhLuong(BienDungChung.maNVND).ToString());
         }
     }
 }

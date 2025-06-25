@@ -26,7 +26,6 @@ namespace DemoCSDL.UserControls
             lblWTen.Text = sp.TenSP;
             lblWGia.Text = sp.Gia.ToString();
             lblWMa.Text = sp.MaSP;
-            lblWTinhtrang.Text = sp.TinhTrang;
             picImageSP.Image = ThaoTacAnh.LayAnh(sp.HinhAnh);       
         }
 

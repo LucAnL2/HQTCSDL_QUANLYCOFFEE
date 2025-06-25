@@ -54,9 +54,9 @@
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(569, 333);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(130, 40);
+            this.btnLogin.Size = new System.Drawing.Size(148, 40);
             this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "Login";
+            this.btnLogin.Text = "Đăng Nhập";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label3
@@ -202,7 +202,7 @@
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(130, 40);
             this.btnDangKy.TabIndex = 8;
-            this.btnDangKy.Text = "Register";
+            this.btnDangKy.Text = "Đăng Ký";
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // FLogin

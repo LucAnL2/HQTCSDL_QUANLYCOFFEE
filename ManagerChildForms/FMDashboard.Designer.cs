@@ -28,16 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnDTAll = new Guna.UI2.WinForms.Guna2Button();
             this.btnDTThang = new Guna.UI2.WinForms.Guna2Button();
             this.btnDTNgay = new Guna.UI2.WinForms.Guna2Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnlNhanVien = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblSoNV = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,7 +44,8 @@
             this.lblTongLoiNhuan = new System.Windows.Forms.Label();
             this.lblDoanhThu = new System.Windows.Forms.Label();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnPhatLuong = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLNTN = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDTAll = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -78,24 +77,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(261, 328);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // btnDTAll
-            // 
-            this.btnDTAll.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.btnDTAll.BorderThickness = 2;
-            this.btnDTAll.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDTAll.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDTAll.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDTAll.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDTAll.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.btnDTAll.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDTAll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
-            this.btnDTAll.Location = new System.Drawing.Point(41, 260);
-            this.btnDTAll.Name = "btnDTAll";
-            this.btnDTAll.Size = new System.Drawing.Size(180, 45);
-            this.btnDTAll.TabIndex = 3;
-            this.btnDTAll.Text = "Tổng";
-            this.btnDTAll.Click += new System.EventHandler(this.btnDTAll_Click);
             // 
             // btnDTThang
             // 
@@ -138,25 +119,25 @@
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
-            chartArea6.AxisX.IsMarginVisible = false;
-            chartArea6.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            chartArea6.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea6.AxisY.LineColor = System.Drawing.Color.Transparent;
-            chartArea6.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            chartArea6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
-            chartArea6.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea6);
+            chartArea1.AxisX.IsMarginVisible = false;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Location = new System.Drawing.Point(288, 3);
             this.chart1.Name = "chart1";
-            series6.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            series6.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            series6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
-            series6.BorderWidth = 3;
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            series6.Name = "Series1";
-            this.chart1.Series.Add(series6);
+            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
+            series1.BorderWidth = 3;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(959, 343);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -171,17 +152,6 @@
             this.label1.Size = new System.Drawing.Size(250, 36);
             this.label1.TabIndex = 1;
             this.label1.Text = "Trang tổng quan";
-            // 
-            // pnlNhanVien
-            // 
-            this.pnlNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlNhanVien.AutoScroll = true;
-            this.pnlNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(239)))), ((int)(((byte)(233)))));
-            this.pnlNhanVien.Location = new System.Drawing.Point(379, 9);
-            this.pnlNhanVien.Name = "pnlNhanVien";
-            this.pnlNhanVien.Size = new System.Drawing.Size(859, 368);
-            this.pnlNhanVien.TabIndex = 2;
             // 
             // guna2Panel2
             // 
@@ -264,9 +234,9 @@
             this.lblDoanhThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
             this.lblDoanhThu.Location = new System.Drawing.Point(105, 11);
             this.lblDoanhThu.Name = "lblDoanhThu";
-            this.lblDoanhThu.Size = new System.Drawing.Size(109, 22);
+            this.lblDoanhThu.Size = new System.Drawing.Size(101, 22);
             this.lblDoanhThu.TabIndex = 4;
-            this.lblDoanhThu.Text = "Doanh Thu";
+            this.lblDoanhThu.Text = "Lợi Nhuận";
             // 
             // guna2PictureBox2
             // 
@@ -281,23 +251,41 @@
             this.guna2PictureBox2.TabStop = false;
             this.guna2PictureBox2.UseTransparentBackground = true;
             // 
-            // btnPhatLuong
+            // btnLNTN
             // 
-            this.btnPhatLuong.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.btnPhatLuong.BorderThickness = 2;
-            this.btnPhatLuong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPhatLuong.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPhatLuong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPhatLuong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPhatLuong.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
-            this.btnPhatLuong.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhatLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
-            this.btnPhatLuong.Location = new System.Drawing.Point(109, 310);
-            this.btnPhatLuong.Name = "btnPhatLuong";
-            this.btnPhatLuong.Size = new System.Drawing.Size(180, 45);
-            this.btnPhatLuong.TabIndex = 5;
-            this.btnPhatLuong.Text = "Phát Lương";
-            this.btnPhatLuong.Click += new System.EventHandler(this.btnPhatLuong_Click);
+            this.btnLNTN.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.btnLNTN.BorderThickness = 2;
+            this.btnLNTN.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLNTN.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLNTN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLNTN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLNTN.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.btnLNTN.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLNTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
+            this.btnLNTN.Location = new System.Drawing.Point(27, 310);
+            this.btnLNTN.Name = "btnLNTN";
+            this.btnLNTN.Size = new System.Drawing.Size(319, 45);
+            this.btnLNTN.TabIndex = 5;
+            this.btnLNTN.Text = "Tính Lợi Nhuận Tháng Này";
+            this.btnLNTN.Click += new System.EventHandler(this.btnLNTN_Click);
+            // 
+            // btnDTAll
+            // 
+            this.btnDTAll.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.btnDTAll.BorderThickness = 2;
+            this.btnDTAll.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDTAll.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDTAll.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDTAll.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDTAll.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.btnDTAll.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDTAll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
+            this.btnDTAll.Location = new System.Drawing.Point(41, 260);
+            this.btnDTAll.Name = "btnDTAll";
+            this.btnDTAll.Size = new System.Drawing.Size(180, 45);
+            this.btnDTAll.TabIndex = 3;
+            this.btnDTAll.Text = "Tổng";
+            this.btnDTAll.Click += new System.EventHandler(this.btnDTAll_Click);
             // 
             // FMDashboard
             // 
@@ -305,10 +293,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(216)))), ((int)(((byte)(198)))));
             this.ClientSize = new System.Drawing.Size(1250, 741);
-            this.Controls.Add(this.btnPhatLuong);
+            this.Controls.Add(this.btnLNTN);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.pnlNhanVien);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -333,9 +320,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel pnlNhanVien;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private Guna.UI2.WinForms.Guna2Button btnDTAll;
         private Guna.UI2.WinForms.Guna2Button btnDTThang;
         private Guna.UI2.WinForms.Guna2Button btnDTNgay;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
@@ -347,6 +332,7 @@
         private System.Windows.Forms.Label lblTongLoiNhuan;
         private System.Windows.Forms.Label lblDoanhThu;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2Button btnPhatLuong;
+        private Guna.UI2.WinForms.Guna2Button btnLNTN;
+        private Guna.UI2.WinForms.Guna2Button btnDTAll;
     }
 }

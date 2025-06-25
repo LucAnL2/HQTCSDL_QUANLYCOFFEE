@@ -72,7 +72,6 @@ namespace DemoCSDL.WorkerChildForms
             nametb.ReadOnly = isReadOnly;
             agetb.ReadOnly = isReadOnly;
             sextb.ReadOnly = isReadOnly;
-            unametb.ReadOnly = isReadOnly;
             phonetb.ReadOnly = isReadOnly;
             addresstb.ReadOnly = isReadOnly;
             txtemail.ReadOnly = isReadOnly;

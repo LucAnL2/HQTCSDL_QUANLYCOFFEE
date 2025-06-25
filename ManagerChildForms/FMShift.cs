@@ -176,7 +176,7 @@ namespace DemoCSDL.ManagerChildForms
         }
         private void btnShowAll_Click(object sender, EventArgs e)
         {
-            resetTabPhanCong();
+            gvStaffRegisterShift.DataSource = clvDAO.HienThiCaLamDaDK();
         }
 
         private void cbbMaNV_SelectedIndexChanged(object sender, EventArgs e)

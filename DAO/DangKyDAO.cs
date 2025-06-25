@@ -46,16 +46,16 @@ namespace DemoCSDL.DAO
             }
         }
 
-        public decimal TinhLuong(DangKy dk)
+        public decimal TinhLuong(string MaNV)
         {
             decimal luong = 0;
             SqlParameter[] parameters = new SqlParameter[]
             {
-                    new SqlParameter("@MaNV", dk.MaNV)
+                    new SqlParameter("@MaNV", MaNV)
             };
             try
             {
-                luong = connect.ExecuteScalarDecimal("SELECT dbo.FUNC_TinhLuong(@MaNV)", parameters, CommandType.Text);
+                luong = connect.ExecuteScalarDecimal("SELECT dbo.FUNC_XemLuong(@MaNV)", parameters, CommandType.Text);
             }
             catch
             {

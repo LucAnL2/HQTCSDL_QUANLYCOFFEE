@@ -69,6 +69,7 @@ namespace DemoCSDL.ManagerChildForms
 
         private void btnChitietHD_Click(object sender, EventArgs e)
         {
+            gvChiTietHD.DataSource = null;           
             gvChiTietHD.DataSource = ctd.QLChiTietHD(txtMaHD.Text); 
         }  
     }

@@ -31,6 +31,7 @@ namespace DemoCSDL.ManagerChildForms
 
         private void FMDashboard_Load(object sender, EventArgs e)
         {
+            lblSoNV.Text = Convert.ToString(nvDAO.LayNhanVien().Rows.Count);
             try
             {
                 CapNhatTongLoiNhuan();
@@ -38,12 +39,6 @@ namespace DemoCSDL.ManagerChildForms
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi tải thông tin: " + ex.Message);
-            }
-            foreach (var nhanVien in ListNV)
-            {
-                MStaffInfoInDash md = new MStaffInfoInDash(nhanVien);
-                pnlNhanVien.Controls.Add(md);
-
             }
             if (chart1.Series.Count > 0)
             {
@@ -72,6 +67,11 @@ namespace DemoCSDL.ManagerChildForms
         {
             try
             {
+                nvDAO.PhatLuong();
+                int thangHienTai = DateTime.Now.Month;
+                int namHienTai = DateTime.Now.Year;
+                string chuoiThangNam = $"{namHienTai}-{thangHienTai}";
+                nvDAO.ThemThongTinLoiNhuan(chuoiThangNam);
                 decimal tongLoiNhuan = nvDAO.LayTongLoiNhuan();
                 lblTongLoiNhuan.Text = tongLoiNhuan.ToString();
             }
@@ -90,7 +90,6 @@ namespace DemoCSDL.ManagerChildForms
             {
                 decimal doanhThuNgay = nvDAO.LayDoanhThuNgay(DateTime.Today);
                 lblTongLoiNhuan.Text = doanhThuNgay.ToString();
-                lblDoanhThu.Text = "Total Revenue";
             }
             catch (Exception ex)
             {
@@ -124,22 +123,29 @@ namespace DemoCSDL.ManagerChildForms
         private void btnDTAll_Click(object sender, EventArgs e)
         {
             CapNhatTongLoiNhuan();
+            FMDashboard_Load(sender, e);
         }
 
-        private void btnPhatLuong_Click(object sender, EventArgs e)
+        private void btnLNTN_Click(object sender, EventArgs e)
         {
             try
             {
-                nvDAO.PhatLuong();
                 int thangHienTai = DateTime.Now.Month;
                 int namHienTai = DateTime.Now.Year;
                 string chuoiThangNam = $"{namHienTai}-{thangHienTai}";
-                nvDAO.ThemThongTinLoiNhuan(chuoiThangNam);
-                FMDashboard_Load(sender, e);
+                DataTable dt = nvDAO.LayLoiNhuanThangTruoc(chuoiThangNam);
+                if (dt.Rows.Count > 0)
+                {
+                    lblTongLoiNhuan.Text = dt.Rows[0]["LoiNhuan"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu lợi nhuận cho tháng trước.");
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Đã có lỗi: " + ex.Message);
+                MessageBox.Show("Lỗi khi cập nhật doanh thu tháng: " + ex.Message);
             }
         }
     }

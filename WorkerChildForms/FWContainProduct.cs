@@ -101,9 +101,9 @@ namespace DemoCSDL.WorkerChildForms
                 }
                 MessageBox.Show("Thêm hóa đơn thành công");
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Đã có lỗi!");
             }
         }
 

@@ -41,7 +41,6 @@ namespace DemoCSDL.ManagerChildForms
             txtHTen.ReadOnly = isReadOnly;
             txtTuoi.ReadOnly = isReadOnly;
             txtGioiTinh.ReadOnly = isReadOnly;
-            txtTaiKhoan.ReadOnly = isReadOnly;
             txtSDT.ReadOnly = isReadOnly;
             txtDiaChi.ReadOnly = isReadOnly;
             txtEmail.ReadOnly = isReadOnly; 

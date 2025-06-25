@@ -29,17 +29,16 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.NUpdownSL = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.lblWTinhtrang = new System.Windows.Forms.Label();
             this.lblWMa = new System.Windows.Forms.Label();
             this.lblWGia = new System.Windows.Forms.Label();
             this.lblWTen = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.picImageSP = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.NUpdownSL = new System.Windows.Forms.NumericUpDown();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImageSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUpdownSL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImageSP)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -48,7 +47,6 @@
             this.guna2Panel1.Controls.Add(this.NUpdownSL);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.btnAdd);
-            this.guna2Panel1.Controls.Add(this.lblWTinhtrang);
             this.guna2Panel1.Controls.Add(this.lblWMa);
             this.guna2Panel1.Controls.Add(this.lblWGia);
             this.guna2Panel1.Controls.Add(this.lblWTen);
@@ -58,6 +56,30 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(349, 193);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // NUpdownSL
+            // 
+            this.NUpdownSL.Location = new System.Drawing.Point(270, 154);
+            this.NUpdownSL.Name = "NUpdownSL";
+            this.NUpdownSL.Size = new System.Drawing.Size(46, 22);
+            this.NUpdownSL.TabIndex = 7;
+            this.NUpdownSL.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.label1.Location = new System.Drawing.Point(160, 154);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 19);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "SL Order";
             // 
             // btnAdd
             // 
@@ -76,18 +98,6 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "+";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // lblWTinhtrang
-            // 
-            this.lblWTinhtrang.AutoSize = true;
-            this.lblWTinhtrang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
-            this.lblWTinhtrang.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWTinhtrang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.lblWTinhtrang.Location = new System.Drawing.Point(160, 116);
-            this.lblWTinhtrang.Name = "lblWTinhtrang";
-            this.lblWTinhtrang.Size = new System.Drawing.Size(86, 19);
-            this.lblWTinhtrang.TabIndex = 4;
-            this.lblWTinhtrang.Text = "TinhTrang";
             // 
             // lblWMa
             // 
@@ -125,18 +135,6 @@
             this.lblWTen.TabIndex = 3;
             this.lblWTen.Text = "Cream";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(190)))), ((int)(((byte)(165)))));
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.label1.Location = new System.Drawing.Point(160, 154);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 19);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "SL Order";
-            // 
             // picImageSP
             // 
             this.picImageSP.Image = global::DemoCSDL.Properties.Resources.icecream;
@@ -148,18 +146,6 @@
             this.picImageSP.TabIndex = 0;
             this.picImageSP.TabStop = false;
             // 
-            // NUpdownSL
-            // 
-            this.NUpdownSL.Location = new System.Drawing.Point(270, 154);
-            this.NUpdownSL.Name = "NUpdownSL";
-            this.NUpdownSL.Size = new System.Drawing.Size(46, 22);
-            this.NUpdownSL.TabIndex = 7;
-            this.NUpdownSL.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // WProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -169,8 +155,8 @@
             this.Size = new System.Drawing.Size(349, 193);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImageSP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUpdownSL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImageSP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -182,7 +168,6 @@
         private System.Windows.Forms.Label lblWTen;
         private System.Windows.Forms.Label lblWGia;
         private Guna.UI2.WinForms.Guna2CircleButton btnAdd;
-        private System.Windows.Forms.Label lblWTinhtrang;
         private System.Windows.Forms.Label lblWMa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown NUpdownSL;
